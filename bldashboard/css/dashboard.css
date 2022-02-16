@@ -1,0 +1,66 @@
+body {
+    background-color: #0f0f17!important;
+    /* font-family: 'Poppins', sans-serif; */
+	font-family: 'Montserrat';
+    font-size: 14px;
+    color: #fff;
+}
+
+.upcoming-tour_num {
+    border-radius: 50%;
+    border: 5px solid #fff;   
+    height: 90px;
+    width: 90px;
+    padding: 25px;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    margin: 0 auto;
+	margin-bottom:10px;
+}
+
+.gradient-card1{
+	background: linear-gradient(45deg, #5dd596, #00b4f6);
+	padding:50px;
+}
+.gradient-card2{
+	background: linear-gradient(45deg, #260e4d, #8e0477);
+	padding:50px;
+}
+.table-title{
+	color:#bb077a;
+	font-size:20px;
+	border-bottom: 1px solid red;
+    padding-bottom: 12px;
+}
+.livetournament_num {
+    color: #f0c330;
+    font-size: 35px;
+}
+.dashboard-select{
+	padding: 5px;
+    width: 100%;
+    color: #fff;
+    background: #1b1843;
+    border: 1px solid #00b4f6;
+	margin: 20px 0px;
+}
+.dboard-livetournum-mtb {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.dbaord-viewall-btn {
+    /* text-align: center; */
+    margin: 0 auto;
+    display: table;
+    color: #00b4f6;
+}
+.dbaord-viewall-btn:focus {
+    color: #00b4f6;
+       outline: 0;
+   box-shadow: 0 0 0 0 rgba(0,123,255,.25);
+}
+.dbaord-viewall-btn:hover {
+    color: #00b4f6;
+    border: 0;
+}
