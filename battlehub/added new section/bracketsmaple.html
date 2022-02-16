@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="eSports &amp; Gaming WordPress theme">
+	<title>Bracket sample</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- <link rel='stylesheet' id='fontawesome-css'  href='http://themes.pixiesquad.com/pixiefreak/twisting-nether/wp-content/themes/pixiefreak/assets/css/fontawesome-all.css?ver=1.0.0' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='bootstrap-css'  href='http://themes.pixiesquad.com/pixiefreak/twisting-nether/wp-content/themes/pixiefreak/assets/css/bootstrap.min.css?ver=1.0.0' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='pixiefreak-main-css'  href='http://themes.pixiesquad.com/pixiefreak/twisting-nether/wp-content/themes/pixiefreak/assets/css/main.css?ver=1.0.0' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='jquery-bracket-css'  href='http://themes.pixiesquad.com/pixiefreak/twisting-nether/wp-content/themes/pixiefreak/assets/css/jquery.bracket.min.css?ver=1.0.0' type='text/css' media='all' /> -->
+<link rel="stylesheet" href="css/jquery.bracket.min.css">
+<link rel="stylesheet" href="css/bracket.css">
+<script type='text/javascript' src='http://themes.pixiesquad.com/pixiefreak/twisting-nether/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+
+
+<!-- dragg -->
+ <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<style>
+body{
+background:#0B0B11!important
+}
+
+
+.my_class{
+    border: 1px solid #000 !important;
+    background:yellow !important;
+}
+
+</style>
+</head>
+<body>
+   <section class="brackets page-bg">
+        <div class="container">
+		<div class="row">
+				<div class="zoomInOut ml-auto">
+                <button class="zoomOut"><i class="fa fa-minus"></i></button>
+                <button class="zoomIn"><i class="fa fa-plus"></i></button>
+            </div>
+		</div>
+		<div class="row">
+		<div class="col-md-12">							
+            <div class="bracket-wrapper">
+                <div class="panzoom-elements"></div>
+            </div>
+        </div>
+        </div>
+		</div>
+    </section>
+	
+<div id="draggable">
+  <p style="color:red">Drag me arounddfdfdggggggg</p>
+</div>
+ 
+	
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<!-- <script type='text/javascript' src='http://themes.pixiesquad.com/pixiefreak/twisting-nether/wp-content/themes/pixiefreak/assets/js/jquery.bracket.min.js?ver=1.0.0'></script> -->
+<!-- <script type='text/javascript' src='http://themes.pixiesquad.com/pixiefreak/twisting-nether/wp-content/themes/pixiefreak/assets/js/jquery.panzoom.min.js?ver=1.0.0'></script> -->  
+<script src="js/jquery.bracket.min.js"></script>
+<script src="js/jquery.panzoom.min.js"></script>
+
+<script type='text/javascript'>
+(function($){
+
+    <!-- let bracketData = {"teams":[[{"name":"Team Flawed Bot","teamlogo":"http://themes.pixiesquad.com/pixiefreak/twisting-nether/wp-content/uploads/2018/10/team_logo_01.png"},{"name":"Wings Gaming","teamlogo":"http://themes.pixiesquad.com/pixiefreak/twisting-nether/wp-content/uploads/2018/10/team_logo_03.png"}],[{"name":"Gambit Gaming","teamlogo":"http://themes.pixiesquad.com/pixiefreak/twisting-nether/wp-content/uploads/2018/10/team_logo_06.png"},{"name":"Fnatic eSports","teamlogo":"http://themes.pixiesquad.com/pixiefreak/twisting-nether/wp-content/uploads/2018/10/team_logo_02.png"}]],"results":[[[[1,2],[2,1]],[[null,null]]]]}; -->
+
+    let bracketData = {
+	"teams":[
+	[{"name":"Team Flawed Bot","teamlogo":"http://themes.pixiesquad.com/pixiefreak/twisting-nether/wp-content/uploads/2018/10/team_logo_01.png"},
+	{"name":"riyan","teamlogo":"http://themes.pixiesquad.com/pixiefreak/twisting-nether/wp-content/uploads/2018/10/team_logo_03.png"}],
+	
+	[{"name":"Fnatic eSports","teamlogo":"http://themes.pixiesquad.com/pixiefreak/twisting-nether/wp-content/uploads/2018/10/team_logo_06.png"},
+	{"name":"sundar","teamlogo":"http://themes.pixiesquad.com/pixiefreak/twisting-nether/wp-content/uploads/2018/10/team_logo_02.png"}],
+	
+	[{"name":"kumaran","teamlogo":"http://themes.pixiesquad.com/pixiefreak/twisting-nether/wp-content/uploads/2018/10/team_logo_06.png"},
+	{"name":"aravind","teamlogo":"http://themes.pixiesquad.com/pixiefreak/twisting-nether/wp-content/uploads/2018/10/team_logo_02.png"}],
+	
+	[{"name":"seenu","teamlogo":"http://themes.pixiesquad.com/pixiefreak/twisting-nether/wp-content/uploads/2018/10/team_logo_06.png"},
+	{"name":"arthick","teamlogo":"http://themes.pixiesquad.com/pixiefreak/twisting-nether/wp-content/uploads/2018/10/team_logo_02.png"}],
+	
+	[{"name":"Team Flawed Bot","teamlogo":"http://themes.pixiesquad.com/pixiefreak/twisting-nether/wp-content/uploads/2018/10/team_logo_01.png"},
+	{"name":"riyan","teamlogo":"http://themes.pixiesquad.com/pixiefreak/twisting-nether/wp-content/uploads/2018/10/team_logo_03.png"}],
+	
+	[{"name":"Fnatic eSports","teamlogo":"http://themes.pixiesquad.com/pixiefreak/twisting-nether/wp-content/uploads/2018/10/team_logo_06.png"},
+	{"name":"sundar","teamlogo":"http://themes.pixiesquad.com/pixiefreak/twisting-nether/wp-content/uploads/2018/10/team_logo_02.png"}],
+	
+	[{"name":"kumaran","teamlogo":"http://themes.pixiesquad.com/pixiefreak/twisting-nether/wp-content/uploads/2018/10/team_logo_06.png"},
+	{"name":"aravind","teamlogo":"http://themes.pixiesquad.com/pixiefreak/twisting-nether/wp-content/uploads/2018/10/team_logo_02.png"}],
+	
+	[{"name":"seenu","teamlogo":"http://themes.pixiesquad.com/pixiefreak/twisting-nether/wp-content/uploads/2018/10/team_logo_06.png"},
+	{"name":"arthick","teamlogo":"http://themes.pixiesquad.com/pixiefreak/twisting-nether/wp-content/uploads/2018/10/team_logo_02.png"}]	
+	],
+	
+	"results":[[
+	[[1,2],[2,1]],[[null,null]]]	
+	]};
+	
+	
+	$('.panzoom-elements').bracket({
+        init: bracketData, /* data to initialize the bracket with */
+        teamWidth: 200,
+        scoreWidth: 48,
+        matchMargin: 50,
+        roundMargin: 70,
+        skipConsolationRound: true,
+        centerConnectors: true,
+        decorator: {
+            edit: function acEditFn(container, data, doneCb) {			
+                return false
+				
+            },
+            render: function render_fn(container, data, score, state) {	
+console.log("state"+data);			
+                switch (state) {				
+                    case "empty-bye":
+                        container.append("No team")
+                        return;
+                    case "empty-tbd":
+                        container.append("Upcoming")
+                        return;
+                    case "entry-no-score":
+                    case "entry-default-win":
+                    case "entry-complete":
+                        container.append('<img src="' + data.teamlogo + '" alt="Team logo"> ').append(data.name)
+                        return;
+                }
+            }
+        }
+    });
+
+    // PanZoom
+    $(".panzoom-elements").panzoom({
+        minScale: 0,
+        $zoomIn: $(".brackets").find(".zoomIn"),
+        $zoomOut: $(".brackets").find(".zoomOut"),
+    });
+	
+	
+	
+	 $(".draggable").draggable({
+     start: function( event, ui ) {
+         $(this).addClass('my_class'); 
+     },
+     stop: function( event, ui ) {
+         $(this).removeClass('my_class'); 
+     }
+ });
+ 
+ 
+})(jQuery);
+
+
+
+</script>
+
+
+ <script>
+  $( function() {
+    $( "#draggable" ).draggable();
+  } );
+  </script>
+</body>
+</html>

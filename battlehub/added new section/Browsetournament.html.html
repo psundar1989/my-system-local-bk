@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Browse tournament</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'> -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap" rel="stylesheet">
+  <!-- <link rel="stylesheet" id="google-fonts-css" href="//fonts.googleapis.com/css?family=Montserrat%3A300%2C400%2C500%2C700%2C900&amp;ver=1.0.0" type="text/css" media="all"> -->
+  <link rel="stylesheet" href="css/stylemine.css">
+  <!-- <link rel="stylesheet" href="css/stylebhub3.css"> -->
+  <script src="js/style.js"></script>
+
+<style>
+p {
+   font-family: 'MontserratRegular';
+   font-weight: normal;
+   font-style: normal;
+}
+.foot-sec {
+    color: #fff;
+    text-align: center;
+    margin-top: 11rem;
+    padding: 26px;
+	font-weight: 800;
+}
+
+.bhub3-banner
+{
+background-image: url("images/BL-screen-bg.png");
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-position: bottom;    
+    height: 550px;
+    width: 100%;
+	 <!-- box-shadow: inset -2px -12px 20px 20px #0b0b11; -->
+}
+.overlap-browsetournament
+{
+margin-top:-27rem;
+}
+
+.active_aroundrule  {
+    border:2px solid #6932F9;
+	padding:10px;
+}
+.browsetour-cardbg {
+    background-image: url(/public/theme/images/image.png);
+    background-size: cover!important;
+}
+
+.loadmore-btn {
+    background-color: #6932F9;
+    padding: 12px 30px;
+    border: 0px;
+    color: #fff;
+    outline-style: none!important;
+    border-radius: 0;
+}
+button.btn.tabsec-btn {
+    background: #6932F9;
+    border-radius: 0;
+    border: 0;
+	margin-top: 0;
+}
+a.nav-link.hover-btrule.active {
+    background: #6932F9;
+    /* border-bottom: 1px solid #6932F9; */
+    color: #fff;
+    padding: 5px 20px;
+}
+button.btn.tabsec-btn.dropdown-toggle.text-white::after {
+    color: #fff!important;
+}
+
+
+
+
+.browsetn-card1 {
+    background-color: transparent;
+    height: 11.5rem;
+    border: none;
+    border-radius: 0;
+    line-height: 17px;
+    padding-top: 0px!important;
+	height: auto;
+	width: 100%;
+     <!-- padding-bottom: 10px; -->
+}
+.browsetour-browsetour-cardbg {
+    color: #fff;
+    background-repeat: no-repeat;
+    <!-- padding-right: 15px; -->
+    <!-- padding-left: 15px; -->
+	padding-left: 10px;
+   
+}
+img.browsetn-img {
+    height: 20px;
+}
+
+.browsetour-cardtime {
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 20px!important;
+}
+.browsetn-hover:hover {
+    background: rgba(105, 49, 249, 0.12);
+    transition: 0.5s;
+}
+.browsetour-mt {
+    margin-top: 15px;
+}
+.browsetour-creator
+{
+font-size:10px;
+}
+.browseotur-nav-lifont li a {
+    font-size: 14px!important;
+	}
+
+@media screen and (max-width: 767px)
+{
+	.mq-browsetour_playstation{	
+	text-align: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+	}
+}
+@media (max-width: 425px) and (min-width: 320px)
+{
+	.nav-pills .nav-link {
+	font-size: 10px!important;
+	}
+	
+	.mq-browsetour_playstation
+	{
+	font-size:10px!important;
+	}
+}
+
+.browse_tn_select {
+    background: #6932F9;
+    padding: 7px;
+    border: 0;
+    color: #fff;
+}
+
+
+
+
+<!-- .active { -->
+    <!-- display: block; -->
+<!-- } -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main{
+  <!-- margin:1rem; -->
+  max-width:170px;
+  width:30%;  
+}
+
+select {
+    display: none !important;
+}
+
+.dropdown-select {
+    <!-- background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%); -->
+    <!-- background-repeat: repeat-x; -->
+    <!-- filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#40FFFFFF', endColorstr='#00FFFFFF', GradientType=0); -->
+    background-color: #6932F9;
+    border-radius: 0px;
+    border: 0;
+    box-shadow: 0px 2px 5px 0px rgba(155, 155, 155, 0.5);
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    float: left;
+    font-size: 14px;
+    font-weight: normal;
+    height: 42px;
+    line-height: 40px;
+    outline: none;
+    padding-left: 18px;
+    padding-right: 30px;
+    position: relative;
+    text-align: left !important;
+    transition: all 0.2s ease-in-out;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    white-space: nowrap;
+    width: auto;
+
+}
+
+.dropdown-select:focus {
+    background-color: #fff;
+}
+
+.dropdown-select:hover {
+    background-color: #fff;
+}
+
+.dropdown-select:active,
+.dropdown-select.open {
+        background: #6932F9 !important;
+    border-color: #bbb;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05) inset;
+}
+
+.dropdown-select:after {
+    height: 0;
+    width: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #fff;
+    -webkit-transform: origin(50% 20%);
+    transform: origin(50% 20%);
+    transition: all 0.125s ease-in-out;
+    content: '';
+    display: block;
+    margin-top: -2px;
+    pointer-events: none;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+}
+
+<!-- .dropdown-select.open:after { -->
+    <!-- -webkit-transform: rotate(-180deg); -->
+    <!-- transform: rotate(-180deg); -->
+<!-- } -->
+
+.dropdown-select.open .list {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.dropdown-select.open .option {
+    cursor: pointer;
+}
+
+.dropdown-select.wide {
+    width: 100%;
+}
+
+.dropdown-select.wide .list {
+    left: 0 !important;
+    right: 0 !important;
+}
+
+.dropdown-select .list {
+    box-sizing: border-box;
+    transition: all 0.15s cubic-bezier(0.25, 0, 0.25, 1.75), opacity 0.1s linear;
+    -webkit-transform: scale(0.75);
+    transform: scale(0.75);
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.09);
+    background-color: #202028;
+    border-radius: 6px;
+    margin-top: 4px;
+    padding: 3px 0;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 999;
+    max-height: 250px;
+    overflow: auto;
+    border: 0;
+}
+
+.dropdown-select .list:hover .option:not(:hover) {
+    background-color: transparent !important;
+}
+.dropdown-select .dd-search{
+  <!-- overflow:hidden; -->
+  <!-- display:flex; -->
+  <!-- align-items:center; -->
+  <!-- justify-content:center; -->
+  <!-- margin:0.5rem; -->
+  display:none;
+}
+
+.dropdown-select .dd-searchbox{
+  width:90%;
+  padding:0.5rem;
+  border:1px solid #999;
+  border-color:#999;
+  border-radius:4px;
+  outline:none;
+}
+.dropdown-select .dd-searchbox:focus{
+  border-color:#12CBC4;
+}
+
+.dropdown-select .list ul {
+    padding: 0;
+}
+
+.dropdown-select .option {
+    cursor: default;
+    font-weight: 400;
+    line-height: 40px;
+    outline: none;
+    padding-left: 18px;
+    padding-right: 29px;
+    text-align: left;
+    transition: all 0.2s;
+    list-style: none;
+}
+
+.dropdown-select .option:hover,
+.dropdown-select .option:focus {
+    background-color: #f6f6f6 !important;
+}
+
+.dropdown-select .option.selected {
+    font-weight: 600;
+    color: none;
+}
+
+.dropdown-select .option.selected:focus {
+    background: #f6f6f6;
+}
+
+.dropdown-select a {
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.dropdown-select a:hover {
+    color: #666;
+}
+input#txtSearchValue {
+    display: none;
+}
+.main .dropdown-select {
+    background: #6932F9;
+}
+.dropdown-select .option:focus {
+    background: #202028!important;
+}
+.dropdown-select .option:hover, .dropdown-select .option:focus {
+    background-color: #6932F9 !important;
+}
+.active {
+    display: block!important;
+}
+
+
+</style>
+</head>
+<body> 
+
+<div class="container">
+<nav class="navbar navbar-expand-sm navbar-dark">
+  <!-- Brand -->
+  <a class="" href="#"><img src="images/logo.png" alt="" class="logo"></a>  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"> </span>
+  </button>
+
+  <!-- Links -->
+   <div class="collapse navbar-collapse" id="collapsibleNavbar">
+  <ul class="navbar-nav ml-auto">    
+    <!-- Dropdown -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        GMAMES
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Link 1</a>
+        <a class="dropdown-item" href="#">Link 2</a>
+        <a class="dropdown-item" href="#">Link 3</a>
+      </div>
+    </li>
+	<li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        TOURNAMENTS
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Link 1</a>
+        <a class="dropdown-item" href="#">Link 2</a>
+        <a class="dropdown-item" href="#">Link 3</a>
+      </div>
+    </li>
+	<li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        LEADERBOARDS
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Link 1</a>
+        <a class="dropdown-item" href="#">Link 2</a>
+        <a class="dropdown-item" href="#">Link 3</a>
+      </div>
+    </li>
+	<li class="nav-item dropdown">
+      <a class="nav-link" href="#" id="navbardrop" data-toggle="dropdown">
+        SUPPORTS
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Link 1</a>
+        <a class="dropdown-item" href="#">Link 2</a>
+        <a class="dropdown-item" href="#">Link 3</a>
+      </div>
+    </li>
+	<li class="nav-item dropdown">
+      <a class="nav-link" href="#" id="navbardrop" data-toggle="dropdown">
+        /
+      </a>     
+    </li>
+	
+     <li class="nav-item dropdown">
+      <a class="nav-link" href="#" id="navbardrop" data-toggle="dropdown">
+        KUMSTEST
+      </a>     
+    </li>
+	<li class="nav-item dropdown">
+      <a class="nav-link" href="#" id="navbardrop" data-toggle="dropdown">        
+		<img src="images/Ellipse 5.png" alt="" class="menu-img mq-menuimg mq-menuimg1">
+      </a>      
+    </li>
+	
+  </ul>
+  </div>
+</nav>
+</div>
+ <!--/end menu section -->
+ 
+ <!-- start banner sec -->
+<div class="container-fluid bhub3-banner" style="position:relative;"> 
+		<div class="row">
+			<div class="col-md-12 text-white" style="margin-top: 16rem;">
+			
+			</div>
+		</div>
+		<div class="cover-gradient-bottom" style="position: absolute;right: 0;bottom: 0;left: 0px;top: 0; background-image: linear-gradient(180deg,rgba(40,44,56,0),rgba(40,44,56,.61) 55%,#0f0f17);"></div>
+ </div>
+ <div class="container overlap-browsetournament" style="position:relative;">
+	<div class="row">
+		<div class="" style="margin:0 auto;display:table;">				
+			<h1 class="text-center tournament_page" style="margin-bottom: 3.5rem;border-bottom: 2px solid #6931f9;">Browse Tournaments</h1>
+			<h3 class="text-center mb-3">Choose  your game</h3>
+		</div>
+	</div>		
+		<div class="col-md-12 justify-content-between">
+        <div class="row"> 
+            <div class="col-xl-2 col-xs-6 col-md-2 col-sm-6 item mq-gamessec_xswd aroundrule" id="game1" onclick="getId(this)">
+                <div class="card item-card card-block relativeoverlay">
+                    <img src="images/1582698450.png" alt="FIFA" class="cardimgwd" >                 
+                </div>
+            </div>
+             <div class="col-xl-2 col-xs-6 col-md-2 col-sm-6 item mq-gamessec_xswd aroundrule" id="game2" onclick="getId(this)">
+                <div class="card item-card card-block relativeoverlay" >
+                    <img src="images/game2.png" alt="Fortnite" class="cardimgwd">                  
+                </div>
+            </div>
+             <div class="col-xl-2 col-xs-6 col-md-2 col-sm-6 item mq-gamessec_xswd aroundrule" id="game3" onclick="getId(this)">
+                <div class="card item-card card-block relativeoverlay" >
+                    <img src="images/game3.png" alt="Apex Legends" class="cardimgwd">                    
+                </div>
+            </div>
+            <div class="col-xl-2 col-xs-6 col-md-2 col-sm-6 item mq-gamessec_xswd aroundrule" id="game4" onclick="getId(this)">
+                <div class="card item-card card-block relativeoverlay" >
+                    <img src="images/game1.png" alt="Rocket League" class="cardimgwd">                  
+                </div>
+            </div>
+            <div class="col-xl-2 col-xs-6 col-md-2 col-sm-6 item mq-gamessec_xswd aroundrule" id="game5" onclick="getId(this)">				
+					<div class="card item-card card-block relativeoverlay" >
+						<img src="images/game4.png" alt="NBA" class="cardimgwd">                    
+					</div>				
+            </div>
+            <div class="col-xl-2 col-xs-6 col-md-2 col-sm-6 item mq-gamessec_xswd aroundrule" id="game6" onclick="getId(this)">				
+					<div class="card item-card card-block relativeoverlay" >
+						<img src="images/game5.png" alt="Call of Duty" class="cardimgwd">                    
+					</div>				
+            </div>
+         </div>
+    </div>	
+ </div>
+ 
+ <!-- tab sec -->
+ <section>
+	<div class="container relative mb">
+		<div class="row future-mt mq-featuredsec">
+			<div class="col-sm-6 col-xs-6 mq-browsetour_playstation">							 				
+				  <div class="main">    
+					<select name="">
+					  <option value="1">One</option>
+					  <option value="2">Two</option>
+					  <option value="3">Three</option>
+					  <option value="4">Four</option>
+				  </select>
+				  </div>			
+					
+					
+			</div>
+			<div class=" col-md-6 col-sm-12 col-xs-12 ">
+		
+			  <ul class="nav nav-pills nav-justified justify-content-end browseotur-nav-lifont" role="tablist">			    
+					<li class="nav-item">
+					  <a class="nav-link profilseting-tab active" data-toggle="pill" href="#tab-1">TODAY</a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link profilseting-tab" data-toggle="pill" href="#tab-2">THIS WEEK</a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link profilseting-tab " data-toggle="pill" href="#tab-3">CUSTOM RANGE</a>
+					</li>
+			  </ul>
+			  </div>
+		 </div>
+		  	 <hr class="tabbt-rule">	
+				<div class="tab-content" >
+				<div id="tab-1" class="tab-pane fade  active show"><br>	
+				<div class="row  Tyler1">
+																				
+				<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 browsetour-padding-lr browsetour-mt" >
+				
+					<a href="">
+						
+						<div class="card card1  browsetn-card1  card-hover browsetour-browsetour-cardbg" style="background-image:url('https://battlelounge.io/storage/app/game/card/1582707915.jpg');background-size:cover;" >
+							<div class="browsetn-hover">
+							<div class="card-header">
+								<p class="cardtitles " style="">tab1</p>
+								<p class="browsetour-cardtime" style="margin-botton:0px;">Dec.18.2020 - 06:19 AM EST</p>
+								<figure><img src="https://battlelounge.io/storage/app/game/logo/1582701512.png" alt="Fortnite" height="30px" class="browsetn-img"></figure>
+							</div>
+							
+							<div class="card-body">
+						
+							</div>					
+							<div class="card-footer">
+								<div class="row row-pd0">
+																			<div class="col-xs-6 ">
+											<span class="creator">
+												<a href="" class="browsetour-creator">Created By: kumstest</a>
+											</span>
+										</div>
+																		<div class="col-xs-6  ml-auto ">
+										<span class="morebtn">
+										<a href="" class="browsetour-creator">MORE DETAILS<img src="/public/theme/images/arrow.png" class="more-ml"></a>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						</div>
+					</a>					
+				</div>
+				
+				
+				
+					<!-- <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 browsetour-padding-lr browsetour-mt" > -->
+					
+					<!-- <a href=""> -->
+						<!-- </a><div class="card card1 browsetn-card1  card-hover browsetour-cardbg" style="background-image:url('https://battlelounge.io/storage/app/game/card/1582707915.jpg');background-size:cover;"><a href=""> -->
+							<!-- <div class="browsetn-hover"> -->
+							<!-- <div class="card-header "> -->
+								<!-- <p class="cardtitles">test</p> -->
+								<!-- <p class="browsetour-cardtime">Dec.18.2020 - 06:19 AM EST</p> -->
+								<!-- <figure><img src="https://battlelounge.io/storage/app/game/logo/1582701512.png" alt="Fortnite" height="30px" class="browsetn-img"></figure> -->
+							<!-- </div> -->
+							<!-- </a><div class="card-body"><a href=""> -->
+								<!-- </a><a href=""></a> -->
+							<!-- </div>					 -->
+							<!-- <div class="card-footer"> -->
+								<!-- <div class="row row-pd0  "> -->
+																			<!-- <div class="col-xs-6 "> -->
+											<!-- <span class="creator"> -->
+												<!-- <a href="" class="browsetour-creator">Created By: kumstest</a> -->
+											<!-- </span> -->
+										<!-- </div> -->
+																		<!-- <div class="col-xs-6  ml-auto "> -->
+										<!-- <span class="morebtn"> -->
+										<!-- <a href="" class="browsetour-creator">MORE DETAILS<img src="/public/theme/images/arrow.png" class="more-ml"></a> -->
+										<!-- </span> -->
+									<!-- </div> -->
+								<!-- </div> -->
+							<!-- </div> -->
+						<!-- </div> -->
+						<!-- </div> -->
+						
+				<!-- </div> -->
+				<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 browsetour-padding-lr browsetour-mt" >
+					<a href="">
+						</a><div class="card card1 browsetn-card1  card-hover browsetour-browsetour-cardbg" style="background-image:url('https://battlelounge.io/storage/app/game/card/1582707915.jpg');background-size:cover;"><a href="">
+							<div class="browsetn-hover">
+							<div class="card-header mq-center">
+								<p class="cardtitles">tab1</p>
+								<p class="browsetour-cardtime">Dec.18.2020 - 06:19 AM EST</p>
+								<figure><img src="https://battlelounge.io/storage/app/game/logo/1582701512.png" alt="Fortnite" height="30px" class="browsetn-img"></figure>
+							</div>
+							</a><div class="card-body"><a href="">
+								</a><a href=""></a>
+							</div>					
+							<div class="card-footer">
+								<div class="row row-pd0  mq-center">
+																			<div class="col-xs-6 ">
+											<span class="creator">
+												<a href=""class="browsetour-creator">Created By: kumstest</a>
+											</span>
+										</div>
+																		<div class="col-xs-6  ml-auto ">
+										<span class="morebtn">
+										<a href="" class="browsetour-creator">MORE DETAILS<img src="/public/theme/images/arrow.png" class="more-ml"></a>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						</div>						
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 browsetour-padding-lr browsetour-mt" >
+					<a href="">
+						</a><div class="card card1 browsetn-card1  card-hover browsetour-browsetour-cardbg" style="background-image:url('https://battlelounge.io/storage/app/game/card/1582707915.jpg');background-size:cover;"><a href="">
+							<div class="card-header mq-center">
+								<p class="cardtitles">tab 1</p>
+								<p class="browsetour-cardtime">Dec.18.2020 - 06:19 AM EST</p>
+								<figure><img src="https://battlelounge.io/storage/app/game/logo/1582701512.png" alt="Fortnite" height="30px" class="browsetn-img"></figure>
+							</div>
+							</a><div class="card-body"><a href="">
+								</a><a href=""></a>
+							</div>					
+							<div class="card-footer">
+								<div class="row row-pd0  mq-center">
+																			<div class="col-xs-6 ">
+											<span class="creator">
+												<a href="" class="browsetour-creator">Created By: kumstest</a>
+											</span>
+										</div>
+																		<div class="col-xs-6  ml-auto ">
+										<span class="morebtn">
+										<a href="" class="browsetour-creator">MORE DETAILS<img src="/public/theme/images/arrow.png" class="more-ml"></a>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 browsetour-padding-lr browsetour-mt" >
+					<a href="">
+						</a><div class="card card1 browsetn-card1  card-hover browsetour-browsetour-cardbg" style="background-image:url('https://battlelounge.io/storage/app/game/card/1582707915.jpg');background-size:cover;"><a href="">
+							<div class="card-header mq-center">
+								<p class="cardtitles">test</p>
+								<p class="browsetour-cardtime">Dec.18.2020 - 06:19 AM EST</p>
+								<figure><img src="https://battlelounge.io/storage/app/game/logo/1582701512.png" alt="Fortnite" height="30px" class="browsetn-img"></figure>
+							</div>
+							</a><div class="card-body"><a href="">
+								</a><a href=""></a>
+							</div>					
+							<div class="card-footer">
+								<div class="row row-pd0  mq-center">
+																			<div class="col-xs-6 ">
+											<span class="creator">
+												<a href=""class="browsetour-creator">Created By: kumstest</a>
+											</span>
+										</div>
+																		<div class="col-xs-6  ml-auto ">
+										<span class="morebtn">
+										<a href="" class="browsetour-creator">MORE DETAILS<img src="/public/theme/images/arrow.png" class="more-ml"></a>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 browsetour-padding-lr browsetour-mt" >
+					<a href="">
+						</a><div class="card card1 browsetn-card1   card-hover browsetour-browsetour-cardbg" style="background-image:url('https://battlelounge.io/storage/app/game/card/1582707915.jpg');background-size:cover;"><a href="">
+							<div class="card-header mq-center">
+								<p class="cardtitles">test</p>
+								<p class="browsetour-cardtime">Dec.18.2020 - 06:19 AM EST</p>
+								<figure><img src="https://battlelounge.io/storage/app/game/logo/1582701512.png" alt="Fortnite" height="30px" class="browsetn-img"></figure>
+							</div>
+							</a><div class="card-body"><a href="">
+								</a><a href=""></a>
+							</div>					
+							<div class="card-footer">
+								<div class="row row-pd0  mq-center">
+																			<div class="col-xs-6 ">
+											<span class="creator">
+												<a href="" class="browsetour-creator">Created By: kumstest</a>
+											</span>
+										</div>
+																		<div class="col-xs-6  ml-auto ">
+										<span class="morebtn">
+										<a href="" class="browsetour-creator">MORE DETAILS<img src="/public/theme/images/arrow.png" class="more-ml"></a>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+				</div>
+				</div>
+				</div>
+					<div id="tab-2" class="tab-pane fade  show"><br>	
+				<div class="row  Tyler1">
+																				
+				<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 browsetour-padding-lr browsetour-mt" >
+				
+					<a href="">
+						</a><div class="card card1  browsetn-card1  card-hover browsetour-browsetour-cardbg" style="background-image:url('https://battlelounge.io/storage/app/game/card/1582707915.jpg');background-size:cover;" ><a href="">
+							<div class="browsetn-hover">
+							<div class="card-header mq-center">
+								<p class="cardtitles " style="">tab2</p>
+								<p class="browsetour-cardtime" style="margin-botton:0px;">Dec.18.2020 - 06:19 AM EST</p>
+								<figure><img src="https://battlelounge.io/storage/app/game/logo/1582701512.png" alt="Fortnite" height="30px" class="browsetn-img"></figure>
+							</div>
+							</a><div class="card-body"><a href="">
+								</a><a href=""></a>
+							</div>					
+							<div class="card-footer">
+								<div class="row row-pd0  mq-center">
+																			<div class="col-xs-6 ">
+											<span class="creator">
+												<a href="" class="browsetour-creator">Created By: kumstest</a>
+											</span>
+										</div>
+																		<div class="col-xs-6  ml-auto ">
+										<span class="morebtn">
+										<a href="" class="browsetour-creator">MORE DETAILS<img src="/public/theme/images/arrow.png" class="more-ml"></a>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						</div>
+						
+				</div>
+					<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 browsetour-padding-lr browsetour-mt" >
+					
+					<a href="">
+						</a><div class="card card1 browsetn-card1  card-hover browsetour-cardbg" style="background-image:url('https://battlelounge.io/storage/app/game/card/1582707915.jpg');background-size:cover;"><a href="">
+							<div class="browsetn-hover">
+							<div class="card-header mq-center">
+								<p class="cardtitles">test</p>
+								<p class="browsetour-cardtime">Dec.18.2020 - 06:19 AM EST</p>
+								<figure><img src="https://battlelounge.io/storage/app/game/logo/1582701512.png" alt="Fortnite" height="30px" class="browsetn-img"></figure>
+							</div>
+							</a><div class="card-body"><a href="">
+								</a><a href=""></a>
+							</div>					
+							<div class="card-footer">
+								<div class="row row-pd0  mq-center">
+																			<div class="col-xs-6 ">
+											<span class="creator">
+												<a href="" class="browsetour-creator">Created By: kumstest</a>
+											</span>
+										</div>
+																		<div class="col-xs-6  ml-auto ">
+										<span class="morebtn">
+										<a href="" class="browsetour-creator">MORE DETAILS<img src="/public/theme/images/arrow.png" class="more-ml"></a>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						</div>
+						
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 browsetour-padding-lr browsetour-mt" >
+					<a href="">
+						</a><div class="card card1 browsetn-card1  card-hover browsetour-browsetour-cardbg" style="background-image:url('https://battlelounge.io/storage/app/game/card/1582707915.jpg');background-size:cover;"><a href="">
+							<div class="browsetn-hover">
+							<div class="card-header mq-center">
+								<p class="cardtitles">test</p>
+								<p class="browsetour-cardtime">Dec.18.2020 - 06:19 AM EST</p>
+								<figure><img src="https://battlelounge.io/storage/app/game/logo/1582701512.png" alt="Fortnite" height="30px" class="browsetn-img"></figure>
+							</div>
+							</a><div class="card-body"><a href="">
+								</a><a href=""></a>
+							</div>					
+							<div class="card-footer">
+								<div class="row row-pd0  mq-center">
+																			<div class="col-xs-6 ">
+											<span class="creator">
+												<a href=""class="browsetour-creator">Created By: kumstest</a>
+											</span>
+										</div>
+																		<div class="col-xs-6  ml-auto ">
+										<span class="morebtn">
+										<a href="" class="browsetour-creator">MORE DETAILS<img src="/public/theme/images/arrow.png" class="more-ml"></a>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						</div>						
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 browsetour-padding-lr browsetour-mt" >
+					<a href="">
+						</a><div class="card card1 browsetn-card1  card-hover browsetour-browsetour-cardbg" style="background-image:url('https://battlelounge.io/storage/app/game/card/1582707915.jpg');background-size:cover;"><a href="">
+							<div class="card-header mq-center">
+								<p class="cardtitles">test</p>
+								<p class="browsetour-cardtime">Dec.18.2020 - 06:19 AM EST</p>
+								<figure><img src="https://battlelounge.io/storage/app/game/logo/1582701512.png" alt="Fortnite" height="30px" class="browsetn-img"></figure>
+							</div>
+							</a><div class="card-body"><a href="">
+								</a><a href=""></a>
+							</div>					
+							<div class="card-footer">
+								<div class="row row-pd0  mq-center">
+																			<div class="col-xs-6 ">
+											<span class="creator">
+												<a href="" class="browsetour-creator">Created By: kumstest</a>
+											</span>
+										</div>
+																		<div class="col-xs-6  ml-auto ">
+										<span class="morebtn">
+										<a href="" class="browsetour-creator">MORE DETAILS<img src="/public/theme/images/arrow.png" class="more-ml"></a>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 browsetour-padding-lr browsetour-mt" >
+					<a href="">
+						</a><div class="card card1 browsetn-card1  card-hover browsetour-browsetour-cardbg" style="background-image:url('https://battlelounge.io/storage/app/game/card/1582707915.jpg');background-size:cover;"><a href="">
+							<div class="card-header mq-center">
+								<p class="cardtitles">test</p>
+								<p class="browsetour-cardtime">Dec.18.2020 - 06:19 AM EST</p>
+								<figure><img src="https://battlelounge.io/storage/app/game/logo/1582701512.png" alt="Fortnite" height="30px" class="browsetn-img"></figure>
+							</div>
+							</a><div class="card-body"><a href="">
+								</a><a href=""></a>
+							</div>					
+							<div class="card-footer">
+								<div class="row row-pd0  mq-center">
+																			<div class="col-xs-6 ">
+											<span class="creator">
+												<a href=""class="browsetour-creator">Created By: kumstest</a>
+											</span>
+										</div>
+																		<div class="col-xs-6  ml-auto ">
+										<span class="morebtn">
+										<a href="" class="browsetour-creator">MORE DETAILS<img src="/public/theme/images/arrow.png" class="more-ml"></a>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 browsetour-padding-lr browsetour-mt" >
+					<a href="">
+						</a><div class="card card1 browsetn-card1   card-hover browsetour-browsetour-cardbg" style="background-image:url('https://battlelounge.io/storage/app/game/card/1582707915.jpg');background-size:cover;"><a href="">
+							<div class="card-header mq-center">
+								<p class="cardtitles">test</p>
+								<p class="browsetour-cardtime">Dec.18.2020 - 06:19 AM EST</p>
+								<figure><img src="https://battlelounge.io/storage/app/game/logo/1582701512.png" alt="Fortnite" height="30px" class="browsetn-img"></figure>
+							</div>
+							</a><div class="card-body"><a href="">
+								</a><a href=""></a>
+							</div>					
+							<div class="card-footer">
+								<div class="row row-pd0  mq-center">
+																			<div class="col-xs-6 ">
+											<span class="creator">
+												<a href="" class="browsetour-creator">Created By: kumstest</a>
+											</span>
+										</div>
+																		<div class="col-xs-6  ml-auto ">
+										<span class="morebtn">
+										<a href="" class="browsetour-creator">MORE DETAILS<img src="/public/theme/images/arrow.png" class="more-ml"></a>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+				</div>
+				</div>
+				</div>
+				
+				<div id="tab-3" class="tab-pane fade show"><br>	
+				<div class="row  Tyler1">
+																				
+				<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 browsetour-padding-lr browsetour-mt" >
+				
+					<a href="">
+						</a><div class="card card1  browsetn-card1  card-hover browsetour-browsetour-cardbg" style="background-image:url('https://battlelounge.io/storage/app/game/card/1582707915.jpg');background-size:cover;" ><a href="">
+							<div class="browsetn-hover">
+							<div class="card-header mq-center">
+								<p class="cardtitles " style="">tab 3</p>
+								<p class="browsetour-cardtime" style="margin-botton:0px;">Dec.18.2020 - 06:19 AM EST</p>
+								<figure><img src="https://battlelounge.io/storage/app/game/logo/1582701512.png" alt="Fortnite" height="30px" class="browsetn-img"></figure>
+							</div>
+							</a><div class="card-body"><a href="">
+								</a><a href=""></a>
+							</div>					
+							<div class="card-footer">
+								<div class="row row-pd0  mq-center">
+																			<div class="col-xs-6 ">
+											<span class="creator">
+												<a href="" class="browsetour-creator">Created By: kumstest</a>
+											</span>
+										</div>
+																		<div class="col-xs-6  ml-auto ">
+										<span class="morebtn">
+										<a href="" class="browsetour-creator">MORE DETAILS<img src="/public/theme/images/arrow.png" class="more-ml"></a>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						</div>
+						
+				</div>
+					<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 browsetour-padding-lr browsetour-mt" >
+					
+					<a href="">
+						</a><div class="card card1 browsetn-card1  card-hover browsetour-cardbg" style="background-image:url('https://battlelounge.io/storage/app/game/card/1582707915.jpg');background-size:cover;"><a href="">
+							<div class="browsetn-hover">
+							<div class="card-header mq-center">
+								<p class="cardtitles">test</p>
+								<p class="browsetour-cardtime">Dec.18.2020 - 06:19 AM EST</p>
+								<figure><img src="https://battlelounge.io/storage/app/game/logo/1582701512.png" alt="Fortnite" height="30px" class="browsetn-img"></figure>
+							</div>
+							</a><div class="card-body"><a href="">
+								</a><a href=""></a>
+							</div>					
+							<div class="card-footer">
+								<div class="row row-pd0  mq-center">
+																			<div class="col-xs-6 ">
+											<span class="creator">
+												<a href="" class="browsetour-creator">Created By: kumstest</a>
+											</span>
+										</div>
+																		<div class="col-xs-6  ml-auto ">
+										<span class="morebtn">
+										<a href="" class="browsetour-creator">MORE DETAILS<img src="/public/theme/images/arrow.png" class="more-ml"></a>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						</div>
+						
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 browsetour-padding-lr browsetour-mt" >
+					<a href="">
+						</a><div class="card card1 browsetn-card1  card-hover browsetour-browsetour-cardbg" style="background-image:url('https://battlelounge.io/storage/app/game/card/1582707915.jpg');background-size:cover;"><a href="">
+							<div class="browsetn-hover">
+							<div class="card-header mq-center">
+								<p class="cardtitles">test</p>
+								<p class="browsetour-cardtime">Dec.18.2020 - 06:19 AM EST</p>
+								<figure><img src="https://battlelounge.io/storage/app/game/logo/1582701512.png" alt="Fortnite" height="30px" class="browsetn-img"></figure>
+							</div>
+							</a><div class="card-body"><a href="">
+								</a><a href=""></a>
+							</div>					
+							<div class="card-footer">
+								<div class="row row-pd0  mq-center">
+																			<div class="col-xs-6 ">
+											<span class="creator">
+												<a href=""class="browsetour-creator">Created By: kumstest</a>
+											</span>
+										</div>
+																		<div class="col-xs-6  ml-auto ">
+										<span class="morebtn">
+										<a href="" class="browsetour-creator">MORE DETAILS<img src="/public/theme/images/arrow.png" class="more-ml"></a>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						</div>						
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 browsetour-padding-lr browsetour-mt" >
+					<a href="">
+						</a><div class="card card1 browsetn-card1  card-hover browsetour-browsetour-cardbg" style="background-image:url('https://battlelounge.io/storage/app/game/card/1582707915.jpg');background-size:cover;"><a href="">
+							<div class="card-header mq-center">
+								<p class="cardtitles">test</p>
+								<p class="browsetour-cardtime">Dec.18.2020 - 06:19 AM EST</p>
+								<figure><img src="https://battlelounge.io/storage/app/game/logo/1582701512.png" alt="Fortnite" height="30px" class="browsetn-img"></figure>
+							</div>
+							</a><div class="card-body"><a href="">
+								</a><a href=""></a>
+							</div>					
+							<div class="card-footer">
+								<div class="row row-pd0  mq-center">
+																			<div class="col-xs-6 ">
+											<span class="creator">
+												<a href="" class="browsetour-creator">Created By: kumstest</a>
+											</span>
+										</div>
+																		<div class="col-xs-6  ml-auto ">
+										<span class="morebtn">
+										<a href="" class="browsetour-creator">MORE DETAILS<img src="/public/theme/images/arrow.png" class="more-ml"></a>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 browsetour-padding-lr browsetour-mt" >
+					<a href="">
+						</a><div class="card card1 browsetn-card1  card-hover browsetour-browsetour-cardbg" style="background-image:url('https://battlelounge.io/storage/app/game/card/1582707915.jpg');background-size:cover;"><a href="">
+							<div class="card-header mq-center">
+								<p class="cardtitles">test</p>
+								<p class="browsetour-cardtime">Dec.18.2020 - 06:19 AM EST</p>
+								<figure><img src="https://battlelounge.io/storage/app/game/logo/1582701512.png" alt="Fortnite" height="30px" class="browsetn-img"></figure>
+							</div>
+							</a><div class="card-body"><a href="">
+								</a><a href=""></a>
+							</div>					
+							<div class="card-footer">
+								<div class="row row-pd0  mq-center">
+																			<div class="col-xs-6 ">
+											<span class="creator">
+												<a href=""class="browsetour-creator">Created By: kumstest</a>
+											</span>
+										</div>
+																		<div class="col-xs-6  ml-auto ">
+										<span class="morebtn">
+										<a href="" class="browsetour-creator">MORE DETAILS<img src="/public/theme/images/arrow.png" class="more-ml"></a>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 browsetour-padding-lr browsetour-mt" >
+					<a href="">
+						</a><div class="card card1 browsetn-card1   card-hover browsetour-browsetour-cardbg" style="background-image:url('https://battlelounge.io/storage/app/game/card/1582707915.jpg');background-size:cover;"><a href="">
+							<div class="card-header mq-center">
+								<p class="cardtitles">test</p>
+								<p class="browsetour-cardtime">Dec.18.2020 - 06:19 AM EST</p>
+								<figure><img src="https://battlelounge.io/storage/app/game/logo/1582701512.png" alt="Fortnite" height="30px" class="browsetn-img"></figure>
+							</div>
+							</a><div class="card-body"><a href="">
+								</a><a href=""></a>
+							</div>					
+							<div class="card-footer">
+								<div class="row row-pd0  mq-center">
+																			<div class="col-xs-6 ">
+											<span class="creator">
+												<a href="" class="browsetour-creator">Created By: kumstest</a>
+											</span>
+										</div>
+																		<div class="col-xs-6  ml-auto ">
+										<span class="morebtn">
+										<a href="" class="browsetour-creator">MORE DETAILS<img src="/public/theme/images/arrow.png" class="more-ml"></a>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+				</div>
+				</div>
+				</div>			
+			  </div>
+			  
+
+<button class=" btn loadmore-btn mt-5 text-white" style="margin:0 auto;display:table;">LOAD MORE</button>
+
+		 
+	</div>
+ 
+ </section>
+ 
+ 
+ <!-- /tab sec -->
+
+ 
+ 
+ 
+ 
+ <!-- end banner sec -->
+
+
+  
+
+
+ 
+
+ 
+ 
+
+
+
+ 
+<div class="showdiv">aravind</div>
+		   	  
+<!-- start footer -->	   
+<footer class=" foot-sec">
+ <!-- <span> Privacy Policy / Terms / About us</span><br> -->
+ <!-- <span> C game Site 2020 All Rights Reserved</span>   -->
+ <img src="images/bllogo.png" alt="" style="width: 180px;margin-bottom:28px">
+ 
+ <p style="margin-bottom: 1.5rem;">© 2020, Epic Games, Inc. Epic, Epic Games, the Epic Games logo, Fortnite, the Fortnite logo, Unreal,<br>
+ Unreal Engine 4 and UE4 are trademarks or registered trademarks of Epic Games, Inc.<br>
+ in the United states of America and elsewhere.
+ </p>
+ <p style="margin-bottom: 8px;">Privacy Policy ｜ Terms ｜ About us</p>
+ <p>Powered by Hub Technologies 2020 All Rights Reserved </p>
+ <i class="fa fa-envelope message_icon mr-2 mt-2" style="font-size:12px"></i>		  
+ <i class="fa fa-twitter message_icon" style="font-size:12px"></i>
+ 
+</footer>
+<!-- /end footer -->	
+
+<!-- <script> -->
+<!-- $(document).ready(function(){ -->
+
+	<!-- $(".game1,game2,.game").click(function(){ -->
+    <!-- $(this).removeClass('active_aroundrule'); -->
+	<!-- }); -->
+	<!-- $(".card").click(function(){ -->
+    <!-- $(this).addClass('active_aroundrule'); -->
+	<!-- }); -->
+
+<!-- }); -->
+
+<!-- function getId(data){ -->
+<!-- <!-- $(data.id).removeClass('active_aroundrule'); --> -->
+<!-- $('.aroundrule').removeClass('active_aroundrule'); -->
+<!-- $('#'+data.id).addClass('active_aroundrule'); -->
+	<!-- console.log(data);	 -->
+	
+<!-- } -->
+
+
+<!-- </script>  -->
+
+<script>
+$(document).ready(function()
+{
+$(".showdiv").hide();
+alert("dfdf");
+$(".tab-3").click(function(){
+	$(".tab-pane,.fade,.show,.active").removeClass("show");
+	<!-- $("p").removeClass("intro"); -->
+
+});
+
+});
+</script>
+
+  
+ <script>
+function create_custom_dropdowns() {
+    $('select').each(function (i, select) {
+        if (!$(this).next().hasClass('dropdown-select')) {
+            $(this).after('<div class="dropdown-select wide ' + ($(this).attr('class') || '') + '" tabindex="0"><span class="current"></span><div class="list"><ul></ul></div></div>');
+            var dropdown = $(this).next();
+            var options = $(select).find('option');
+            var selected = $(this).find('option:selected');
+            dropdown.find('.current').html(selected.data('display-text') || selected.text());
+            options.each(function (j, o) {
+                var display = $(o).data('display-text') || '';
+                dropdown.find('ul').append('<li class="option ' + ($(o).is(':selected') ? 'selected' : '') + '" data-value="' + $(o).val() + '" data-display-text="' + display + '">' + $(o).text() + '</li>');
+            });
+        }
+    });
+
+    $('.dropdown-select ul').before('<div class="dd-search"><input id="txtSearchValue" autocomplete="off" onkeyup="filter()" class="dd-searchbox" type="text"></div>');
+}
+
+// Event listeners
+
+// Open/close
+$(document).on('click', '.dropdown-select', function (event) {
+    if($(event.target).hasClass('dd-searchbox')){
+        return;
+    }
+    $('.dropdown-select').not($(this)).removeClass('open');
+    $(this).toggleClass('open');
+    if ($(this).hasClass('open')) {
+        $(this).find('.option').attr('tabindex', 0);
+        $(this).find('.selected').focus();
+    } else {
+        $(this).find('.option').removeAttr('tabindex');
+        $(this).focus();
+    }
+});
+
+// Close when clicking outside
+$(document).on('click', function (event) {
+    if ($(event.target).closest('.dropdown-select').length === 0) {
+        $('.dropdown-select').removeClass('open');
+        $('.dropdown-select .option').removeAttr('tabindex');
+    }
+    event.stopPropagation();
+});
+
+function filter(){
+    var valThis = $('#txtSearchValue').val();
+    $('.dropdown-select ul > li').each(function(){
+     var text = $(this).text();
+        (text.toLowerCase().indexOf(valThis.toLowerCase()) > -1) ? $(this).show() : $(this).hide();         
+   });
+};
+// Search
+
+// Option click
+$(document).on('click', '.dropdown-select .option', function (event) {
+    $(this).closest('.list').find('.selected').removeClass('selected');
+    $(this).addClass('selected');
+    var text = $(this).data('display-text') || $(this).text();
+    $(this).closest('.dropdown-select').find('.current').text(text);
+    $(this).closest('.dropdown-select').prev('select').val($(this).data('value')).trigger('change');
+});
+
+// Keyboard events
+$(document).on('keydown', '.dropdown-select', function (event) {
+    var focused_option = $($(this).find('.list .option:focus')[0] || $(this).find('.list .option.selected')[0]);
+    // Space or Enter
+    //if (event.keyCode == 32 || event.keyCode == 13) {
+    if (event.keyCode == 13) {
+        if ($(this).hasClass('open')) {
+            focused_option.trigger('click');
+        } else {
+            $(this).trigger('click');
+        }
+        return false;
+        // Down
+    } else if (event.keyCode == 40) {
+        if (!$(this).hasClass('open')) {
+            $(this).trigger('click');
+        } else {
+            focused_option.next().focus();
+        }
+        return false;
+        // Up
+    } else if (event.keyCode == 38) {
+        if (!$(this).hasClass('open')) {
+            $(this).trigger('click');
+        } else {
+            var focused_option = $($(this).find('.list .option:focus')[0] || $(this).find('.list .option.selected')[0]);
+            focused_option.prev().focus();
+        }
+        return false;
+        // Esc
+    } else if (event.keyCode == 27) {
+        if ($(this).hasClass('open')) {
+            $(this).trigger('click');
+        }
+        return false;
+    }
+});
+
+$(document).ready(function () {
+    create_custom_dropdowns();
+});
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Game site</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'> -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <!-- <link rel="stylesheet" id="google-fonts-css" href="//fonts.googleapis.com/css?family=Montserrat%3A300%2C400%2C500%2C700%2C900&amp;ver=1.0.0" type="text/css" media="all"> -->
+  <link rel="stylesheet" href="css/stylemine.css">
+    <!-- <link rel="stylesheet" href="css/stylebhub3.css"> -->
+   <script src="js/style.js"></script>
+
+<style>
+
+<!-- menu section -->
+.col-md-6.whatto-mt {
+    margin-top: 21px;
+}
+
+.bhub3-banner
+{
+background-image: url("images/game banner.png");
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-position: bottom;  
+    height: 500px;
+	width: 100%;
+	    <!-- box-shadow: inset -2px -12px 20px 20px #0b0b11; -->
+}
+
+
+
+ .bg-image
+{
+background-image: url("images/image.png");
+  background-repeat:repeat;
+  color:#fff;
+  font-weight:800px;
+  margin-top: 40px;
+  background-size: 50%;
+}
+.col-md-12.tyler-mt {
+   margin-top: 165px;
+	margin-bottom: 40px;
+}
+<!-- copyright-sec -->
+
+h5{
+font-weight:800;
+}
+.col-md-6.pl-0 {
+    padding-left: 0;
+}
+
+<!-- img.more-ml { -->
+    <!-- margin-left: 15px; -->
+	<!-- width:10%; -->
+<!-- } -->
+.foot-sec {
+    color: #fff;
+    text-align: center;
+    margin-top: 11rem;
+    padding: 26px;
+	font-weight: 800;
+}
+
+
+
+.mt-2, .my-2 {
+    margin-top: .5rem!important;
+    margin-bottom: 6rem;
+}
+<!-- games secction cards -->
+
+<!-- img{ -->
+  <!-- height:150px; -->
+  <!-- width:100%; -->
+<!-- } -->
+
+.item {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 16px;
+}
+.item-card{
+  transition:0.5s;
+  cursor:pointer;
+}
+.item-card-title{  
+  font-size:15px;
+  transition:1s;
+  cursor:pointer;
+}
+.item-card-title i{  
+  font-size:15px;
+  transition:1s;
+  cursor:pointer;
+  color:#ffa710
+}
+.card-title i:hover{
+  transform: scale(1.25) rotate(100deg); 
+  color:#18d4ca;
+  
+}
+<!-- .card:hover{ -->
+  <!-- <!-- transform: scale(1.05); --> -->
+  <!-- box-shadow: 10px 10px 15px rgba(0,0,0,0.3); -->
+<!-- } -->
+.card-text{
+  height:80px;  
+}
+
+.card::before, .card::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: scale3d(0, 0, 1);
+  transition: transform .3s ease-out 0s;
+  background: rgba(255, 255, 255, 0.1);
+  content: '';
+  pointer-events: none;
+}
+.card::before {
+  transform-origin: left top;
+}
+.card::after {
+  transform-origin: right bottom;
+}
+<!-- .card:hover::before, .card:hover::after, .card:focus::before, .card:focus::after { -->
+  <!-- transform: scale3d(1, 1, 1); -->
+<!-- } -->
+
+img.cardimgwd {
+    width: 100%;
+}
+
+.col-xl-2.col-md-2.col-sm-6.item.card-ml {
+    margin-left: 13px;
+}
+
+ul.right {
+    padding-left: 0;
+    padding-right: 0;
+    float: right;
+}
+.col-md-6.col-sm-6.right1 {
+    /* float: right; */
+    margin-top: 22px;
+}
+.row.divcenter {
+    margin: 0 auto;
+    display: table;
+	 width: 100%;
+    font-size: 15px;
+	<!-- padding: 60px 12px 60px 12px; -->
+}
+.megalink {
+    text-align: center;
+    margin: 0 auto;!important;
+}
+.mbb {
+    margin-top: 2rem;
+	color:#FFF;
+	font-size:12px;
+	    font-weight: 800;
+}
+
+
+
+<!-- /*Tyler sections*/ -->
+.card1 {
+    background-color: transparent;
+    height: 18rem;
+    border: none;
+    border-radius: 0;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 17px;
+	padding-top: 20px;
+	 padding-bottom: 10px;
+}
+.cardbg{
+	color: #fff;	
+	 background-image: url("images/image.png");
+	 background-size: cover;
+	 padding-right:0px;
+	 padding-left:0px;
+		
+}
+h4{
+font-weight: 700;
+}
+.row-pd0
+{
+    margin-right: 0;
+    margin-left: 0;
+}
+.row-mlr2 {      
+    margin-left: 1px;
+    margin-right: 1px;
+}
+.morebtn {
+   background-color: #6932F9;
+    padding: 20px 20px;
+    font-size: 12px;   
+    font-weight: 800;
+}
+.card-footer {
+    /* padding: .75rem; */
+    background-color: rgba(0,0,0,.03);
+    /* border-top: 1px solid rgba(0,0,0,.125); */
+    padding: 0px 0px 14px 18px;
+}
+
+.card-icon_pdlr {
+    padding-left: 14px;
+    padding-right: 14px;
+}
+
+
+
+.welcomebl-bg {
+    background-image: url(images/BattleHub-Homepage.jpg);
+    width: 100%;
+    height: 500px;
+	 background-repeat:no-repeat;
+  background-size: cover;  
+  background-position: bottom; 
+  background-position: top center;
+}
+
+.text-pd {
+    padding: 13rem 5.5rem;
+}
+
+</style>
+</head>
+<body> 
+<!-- <div class=""> -->
+<nav class="navbar navbar-expand-sm navbar-dark menu-ptb">
+<div class="container">
+  <!-- Brand -->
+  <a class="" href="#"><img src="images/logo.png" alt="" class="logo"></a>  
+  <!-- <a class="" href="#"><span class="logo">BATTLE HUB</span></a>   -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"> </span>
+  </button>
+
+  <!-- Links -->
+   <div class="collapse navbar-collapse" id="collapsibleNavbar">
+  <ul class="navbar-nav ml-auto">    
+    <!-- Dropdown -->
+	<li class="dropdown menu-large nav-item  li-pdr mq-li-pdr">
+	<!-- <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown"> GAMES </a> -->
+	 <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">GAMES</a>
+                    <ul class="dropdown-menu megamenu megamenu1">
+                        <li class="dropdown-item bg-none">
+                            <div class="row ">
+                            <div class="col-lg-2 col-xl-2 col-6 col-xs-2 col-sm-2 col-md-3 text-center">
+                                <div class="card wd-fitcontend">
+                              <a href=""><img src="images/game img3.png" alt="" class="games-submenu_img"></a>
+                            </div></div>
+                            <div class="col-lg-2 col-xl-2 col-6 col-xs-2 col-sm-2 col-md-3 text-center">
+                                <div class="card wd-fitcontend">
+                           <a href=""><img src="images/game1.png" alt="" class="games-submenu_img"></a>
+                            </div>
+                            </div>
+                            <div class="col-lg-2 col-xl-2 col-6 col-xs-2 col-sm-2 col-md-3 text-center">
+                                <div class="card wd-fitcontend">
+                            <a href=""><img src="images/game2.png" alt="" class="games-submenu_img"></a>
+                            </div>
+                            </div>
+                            <div class="col-lg-2 col-xl-2 col-6 col-xs-2 col-sm-2 col-md-3 text-center">
+                                <div class="card wd-fitcontend">
+                             <a href=""><img src="images/game3.png" alt="" class="games-submenu_img"></a>
+                            </div>
+                            </div>
+							  <div class="col-lg-2 col-xl-2 col-6 col-xs-2 col-sm-2 col-md-3 text-center">
+                                <div class="card wd-fitcontend">
+                                <a href=""><img src="images/game4.png" alt="" class="games-submenu_img"></a>
+                            </div>
+                            </div>
+							  <div class="col-lg-2 col-xl-2 col-6 col-xs-2 col-sm-2 col-md-3 text-center">
+                                <div class="card wd-fitcontend">
+                                <a href=""><img src="images/game5.png" alt="" class="games-submenu_img"></a>
+                            </div>
+                            </div>							
+                            </div>
+                        </li>
+            </ul>
+            </li>
+	<li class="nav-item dropdown menu-large  li-pdr mq-li-pdr">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        TOURNAMENTS
+      </a>	 
+      <div class="dropdown-menu megamenu2 dropmenu-bg bg-none">
+        <!-- <a class="dropdown-item " href="#">		 -->
+		<div class="row">
+		<div class="col-12">
+			 <div class="d-flex justify-content-center p-3  dflxtext-white mq-flex-columns">				  
+			 <div class="media mega-submenu">
+					<!-- <img src="img_avatar1.png" class="align-self-center mr-3" style="width:60px"> -->
+					<img src="images/Cup icon.png"  alt="" class="cupicon">
+					<div class="media-body">					  
+					  <p class="mega-submenu_mb ">Joined</p>
+					  <p class="mega-submenu_mb">Tournaments</p>					  
+					</div>
+			 </div>
+			  <div class="media mega-submenu">
+					<!-- <img src="img_avatar1.png" class="align-self-center mr-3" style="width:60px"> -->					
+					<div class="media-body vertline-lr_pd mq-vertlinel-lr_pd ">					  
+					  <p class="verticle-line"></p>					  					 
+					</div>
+			 </div>
+			  <div class="media mega-submenu">
+					<!-- <img src="img_avatar1.png" class="align-self-center mr-3" style="width:60px"> -->
+					<img src="images/Cup icon.png"  alt="" class="cupicon">
+					<div class="media-body">					  
+					  <p class="mega-submenu_mb">Create</p>
+					  <p class="mega-submenu_mb">Tournaments</p>					  
+					</div>
+			 </div>
+			  <div class="media mega-submenu col-xs-2">
+					<!-- <img src="img_avatar1.png" class="align-self-center mr-3" style="width:60px"> -->					
+					<div class="media-body vertline-lr_pd mq-vertlinel-lr_pd ">					  
+					  <p class="verticle-line"></p>					  					 
+					</div>
+			 </div>
+			 <div class="media mega-submenu">
+					<!-- <img src="img_avatar1.png" class="align-self-center mr-3" style="width:60px"> -->
+					<img src="images/Cup icon.png"  alt="" class="cupicon">
+					<div class="media-body">					  
+					  <p class="mega-submenu_mb">Browse</p>
+					  <p class="mega-submenu_mb">Tournaments</p>					  
+					</div>
+			 </div>
+			 </div>
+			 </div>
+		</div> 
+  </div>			
+		<!-- </a>               -->
+    </li>
+	<li class="nav-item dropdown  li-pdr mq-li-pdr">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        LEADERBOARDS
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Link 1</a>
+        <a class="dropdown-item" href="#">Link 2</a>
+        <a class="dropdown-item" href="#">Link 3</a>
+      </div>
+    </li>
+	<li class="nav-item dropdown li-pdr mq-li-pdr">
+      <a class="nav-link" href="#" id="navbardrop" data-toggle="dropdown">
+        SUPPORTS
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Link 1</a>
+        <a class="dropdown-item" href="#">Link 2</a>
+        <a class="dropdown-item" href="#">Link 3</a>
+      </div>
+    </li>
+	<li class="nav-item li-pdl mq-li-pdl">
+      <a class=" " href="#" id="navbardrop" data-toggle="dropdown">
+        <button class="loginbtnbg">LOGIN / SIGN UP</button>		
+      </a>     
+    </li>	  	
+  </ul>
+  </div>
+  </div>
+</nav>
+ <!--/end menu section -->
+ 
+
+<header class="">
+	<!-- start carousel section  -->
+ <div id="demo" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+  
+  <!-- The slideshow -->
+  <div class="carousel-inner">    
+	  <div class="carousel-item  active" style="background-image: url('images/banner1.png');">
+        <div class=" d-none d-md-block">         
+        </div>
+      </div>
+    <div class="carousel-item " style="background-image: url('images/game banner.png')">
+        <div class=" d-none d-md-block">       
+        </div>
+      </div>
+    <div class="carousel-item " style="background-image: url('images/banner2.png')">
+        <div class="d-none d-md-block">        
+        </div>
+      </div>
+  </div>
+  
+  <!-- Left and right controls -->
+  <!-- <a class="carousel-control-prev" href="#demo" data-slide="prev"> -->
+    <!-- <span class="carousel-control-prev-icon"></span> -->
+  <!-- </a> -->
+  <!-- <a class="carousel-control-next" href="#demo" data-slide="next"> -->
+    <!-- <span class="carousel-control-next-icon"></span> -->
+  <!-- </a> -->
+</div>
+</header>
+<!-- /end carousel section -->
+ <div class="container ">
+    <div class="row row_pd-0">
+	<div class="col-12">        
+        <div class="thepath_pd-l thepathto-sec carousel-caption_pathprosec mq-pathpro ">
+           <h2 class="">THE PATH TO PRO.<br> START YOUR JOURNEY</h2>
+           <img src="images/Xbox icon.png" class="xbox"><img src="images/Playstation icon.png"class="xbox1"><img src="images/PC icon.png" class="xbox">                  
+        </div>               
+     </div>
+  </div>
+  </div>   
+<!-- start games section -->
+  <div class="container mt-2 relative"> 
+ <div class="row">
+  <div class="col-12">
+                  <h2 class="text-white"><strong>GAMES</strong></h2>                  
+               </div>
+               </div>
+		<hr>	   
+ <div class="col-md-12 justify-content-between"> 
+ <div class="row">
+    <div class="col-xl-2 col-xs-6 col-md-2 col-sm-4 item mq-gamessec_xswd">
+     <div class="card item-card card-block relativeoverlay">      
+       <img src="images/game img1.png" alt="" class="cardimgwd">  
+		 <div class="overlay"> 
+			<div class="icon">  
+				  <span class=""><img src="images/xboxcard.png" class="rounded-circle" style="background-color:#6931f9;padding:5px;"></span>
+				  <span class="card-icon_pdlr"><img src="images/Playstationcard.png" class="rounded-circle" style="width:40px;height:40px;background-color:#6931f9;padding:5px;"></span>
+				  <span><img src="images/pc icon.png" class="rounded-circle" style="width:40px;height:40px;background-color:#6931f9;padding:5px;"></span>  
+			  </div>
+		  </div>	   
+  </div> 
+    </div>
+    <div class=" col-xl-2 col-xs-6 col-md-2 col-sm-4 item mq-gamessec_xswd">	
+     <div class="card item-card card-block relativeoverlay">     
+     <img src="images/game img2.png" alt="" class="cardimgwd">
+ <div class="overlay "> 
+	<div class="icon">  
+		  <span class=""><img src="images/xboxcard.png" class="rounded-circle" style="background-color:#6931f9;padding:5px;"></span>
+		  <span class="card-icon_pdlr"><img src="images/Playstationcard.png" class="rounded-circle" style="width:40px;height:40px;background-color:#6931f9;padding:5px;"></span>
+		  <span><img src="images/pc icon.png" class="rounded-circle" style="width:40px;height:40px;background-color:#6931f9;padding:5px;"></span>  
+	  </div>
+  </div>	 
+    </div>	 
+    </div>
+    <div class=" col-xl-2 col-xs-6 col-md-2 col-sm-4 item mq-gamessec_xswd">
+      <div class="card item-card card-block relativeoverlay" >     
+    <img src="images/game img3.png" alt="" class="cardimgwd"> 
+ <div class="overlay"> 
+	<div class="icon">  
+		  <span class=""><img src="images/xboxcard.png" class="rounded-circle" style="background-color:#6931f9;padding:5px;"></span>
+		  <span class="card-icon_pdlr"><img src="images/Playstationcard.png" class="rounded-circle" style="width:40px;height:40px;background-color:#6931f9;padding:5px;"></span>
+		  <span><img src="images/pc icon.png" class="rounded-circle" style="width:40px;height:40px;background-color:#6931f9;padding:5px;"></span>  
+	  </div>
+  </div>	
+  </div> 
+    </div>
+    <div class="col-xl-2 col-xs-6 col-md-2 col-sm-4 item mq-gamessec_xswd">
+      <div class="card item-card card-block relativeoverlay">     
+    <img src="images/game img4.png" alt="" class="cardimgwd "> 
+   <div class="overlay "> 
+	<div class="icon">  
+		  <span class=""><img src="images/xboxcard.png" class="rounded-circle" style="background-color:#6931f9;padding:5px;"></span>
+		  <span class="card-icon_pdlr"><img src="images/Playstationcard.png" class="rounded-circle" style="width:40px;height:40px;background-color:#6931f9;padding:5px;"></span>
+		  <span><img src="images/pc icon.png" class="rounded-circle" style="width:40px;height:40px;background-color:#6931f9;padding:5px;"></span>  
+	  </div>
+  </div>	
+  </div>
+    </div>
+ <div class="col-xl-2 col-xs-6 col-md-2 col-sm-4 item mq-gamessec_xswd">
+      <div class="card item-card card-block relativeoverlay">     
+    <img src="images/game img5.png" alt="" class="cardimgwd">
+ <div class="overlay"> 
+	<div class="icon">  
+		  <span class=""><img src="images/xboxcard.png" class="rounded-circle" style="background-color:#6931f9;padding:5px;"></span>
+		  <span class="card-icon_pdlr"><img src="images/Playstationcard.png" class="rounded-circle" style="width:40px;height:40px;background-color:#6931f9;padding:5px;"></span>
+		  <span><img src="images/pc icon.png" class="rounded-circle" style="width:40px;height:40px;background-color:#6931f9;padding:5px;"></span>  
+	  </div>
+  </div>	
+  </div> 
+    </div> 	
+	 <div class="col-xl-2 col-xs-6 col-md-2 col-sm-4 item mq-gamessec_xswd">
+      <div class="card item-card card-block relativeoverlay">     
+    <img src="images/game img5.png" alt="" class="cardimgwd">
+  <div class="overlay"> 
+	<div class="icon">  
+		  <span class=""><img src="images/xboxcard.png" class="rounded-circle" style="background-color:#6931f9;padding:5px;"></span>
+		  <span class="card-icon_pdlr"><img src="images/Playstationcard.png" class="rounded-circle" style="width:40px;height:40px;background-color:#6931f9;padding:5px;"></span>
+		  <span><img src="images/pc icon.png" class="rounded-circle" style="width:40px;height:40px;background-color:#6931f9;padding:5px;"></span>  
+	  </div>
+  </div>	
+  </div>
+    </div> 
+  </div>
+</div>  
+</div>
+<!-- /end games section -->
+ 
+ <!-- no need start tabs section -->
+<!-- <div class="container"> -->
+  <!-- <div class="row divcenter"> -->
+      <!-- <!-- <div class="col-12 col-md-8 col-lg-6"> --> -->
+      <!-- <div class="col-xs-12"> -->
+        <!-- <ul class="nav nav-pills nav-justified whattodo mq-whattodofnt"> -->
+          <!-- <li class="nav-item"> -->
+            <!-- <a class="nav-link active tab-txtcolor" data-toggle="pill" href="#whattodo" role="tab" aria-controls="pills-flamingo" aria-selected="true">WHAT TO DO</a> -->
+          <!-- </li> -->
+          <!-- <li class="nav-item"> -->
+            <!-- <a class="nav-link tab-txtcolor" data-toggle="pill" href="#whattodoplay" role="tab" aria-controls="pills-cuckoo" aria-selected="false">WHAT TO PLAY</a> -->
+          <!-- </li> -->
+          <!-- <li class="nav-item"> -->
+            <!-- <a class="nav-link tab-txtcolor" data-toggle="pill" href="#community" role="tab" aria-controls="pills-ostrich" aria-selected="false">COMMUNITY</a> -->
+          <!-- </li>           -->
+        <!-- </ul> -->
+		<!-- <hr class="tabbt-rule"> -->
+        <!-- <div class="tab-content mt-3" style="text-align:center; color:#fff;"> -->
+        <!-- <div class="tab-pane fade show " id="whattodo" role="tabpanel" aria-labelledby="flamingo-tab"> -->
+          <!-- <h5 class="Ladders">Ladders</h5> -->
+                  <!-- <p class="workyour">Work your up the ranks and prove uourself against the best.<br> Join a team or go solo hone your  skills and compete at your own pace.</p> -->
+                  <!-- <h5 class="Ladders">Ladders</h5> -->
+                  <!-- <p class="workyour">Work your up the ranks and prove uourself against the best.<br> Join a team or go solo hone your  skills and compete at your own pace.</p> -->
+                  <!-- <h5 class="Ladders">Ladders</h5> -->
+                  <!-- <p class="workyour">Work your up the ranks and prove uourself against the best.<br> Join a team or go solo hone your  skills and compete at your own pace.</p> -->
+        <!-- </div> -->
+		<!-- <div class="tab-pane fade show active" id="whattodoplay" role="tabpanel" aria-labelledby="flamingo-tab"> -->
+          <!-- <h5 class="Ladders">Tournaments</h5> -->
+                  <!-- <p class="workyour">Work your up the ranks and prove uourself against the best.<br> Join a team or go solo hone your  skills and compete at your own pace.</p> -->
+                  <!-- <h5 class="Ladders">Tournaments</h5> -->
+                  <!-- <p class="workyour">Work your up the ranks and prove uourself against the best.<br> Join a team or go solo hone your  skills and compete at your own pace.</p> -->
+                  <!-- <h5 class="Ladders">Tournaments</h5> -->
+                  <!-- <p class="workyour">Work your up the ranks and prove uourself against the best.<br> Join a team or go solo hone your  skills and compete at your own pace.</p> -->
+        <!-- </div> -->
+        <!-- <div class="tab-pane fade show " id="community" role="tabpanel" aria-labelledby="flamingo-tab"> -->
+          <!-- <h5 class="Ladders">Leagues</h5> -->
+                  <!-- <p class="workyour">Work your up the ranks and prove uourself against the best.<br> Join a team or go solo hone your  skills and compete at your own pace.</p> -->
+                  <!-- <h5 class="Ladders">Leagues</h5> -->
+                  <!-- <p class="workyour">Work your up the ranks and prove uourself against the best.<br> Join a team or go solo hone your  skills and compete at your own pace.</p> -->
+                  <!-- <h5 class="Ladders">Leagues</h5> -->
+                  <!-- <p class="workyour">Work your up the ranks and prove uourself against the best.<br> Join a team or go solo hone your  skills and compete at your own pace.</p> -->
+        <!-- </div>         -->
+      <!-- </div>         -->
+      <!-- </div> -->
+  <!-- </div> -->
+  <!-- </div> -->
+ 
+   <!--/no nedd end tabs sec -->
+<div class="welcomebl-bg">
+<div class=" container text-white">
+	<div class="row" style="padding-top:10rem;">
+		<div class="col-md-6">
+		<h4 style="border-bottom: 1px solid #6931f9;padding-bottom: 12px;width: 15rem;"> WELCOME TO <br>BATTLEHUB!</h4>		
+		<p class="mt-4" style="line-height:2">It is a  long established fact that a reader  will be distracted by the  readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,content here', making it look like readable English.</p>
+		</div>
+		<div class="col-md-6"></div>		
+	</div>
+	</div>
+</div>
+   
+ <!--start Featured Tournaments sec -->     
+<div class="container relative mb">
+<div class="row future-mt mq-featuredsec">
+<div class="col-sm-6 col-xs-6">
+<h4 class="Featured" style="color:#fff;font-weight: 800;">Featured Tournaments</h4>
+</div>
+<div class=" col-sm-6 col-xs-6">
+  <ul class="nav nav-pills  justify-content-end nav-lifont" role="tablist">
+    <li class="nav-item showdot1">
+      <!-- <span class="dot1"><i class="fa fa-circle" style="font-size:10px;color:#6932F9"></i></span><a class="active" data-toggle="pill" href="#tab-1">TOUR 1</a> -->
+      <a class="nav-link active hover-btrule tour1" data-toggle="pill" href="#tab-1">TOUR 1</a>
+    </li>
+    <li class="nav-item navli-pdlr showdot2">
+      <a class="nav-link hover-btrule tour2" data-toggle="pill" href="#tab-2">TOUR 2</a>
+    </li>
+	<li class="nav-item showdot3">
+      <a class="nav-link hover-btrule tour3" data-toggle="pill" href="#tab-3">TOUR 3</a>
+    </li>
+  </ul>
+  </div>
+  </div>
+  <hr class="tabbt-rule">
+  <div class="row">
+    <div class="tab-content">
+    <div id="tab-1" class="container tab-pane fade show active"><br>	
+      <img src="images/Rectangle 42.png" class="rectacngle relative img11">
+    </div>
+    <div id="tab-2" class="container tab-pane fade"><br>
+      <img src="images/Rectangle 42.png" class="rectacngle relative img11">
+    </div>
+    <div id="tab-3" class="container tab-pane fade"><br>
+      <img src="images/Rectangle 42.png" class="rectacngle relative img11">
+    </div>
+  </div>
+    <div class=" txtcolor-white absolute mq-absolute">
+  <div class="col-md-8">
+   <div class="media mt-3">
+  <img src="images/Rectangle 43.png" class="align-self-center mr-3 media-img mq-media_img" >
+  <div class="media-body bhub4-mediamt">    
+    <h5 class="meidaobject-Pick mq-eu2v2">EU 2v2 Search and Destory 06-01 Prize:$300 USD/10 Credits</h5>    
+  </div> 
+</div>
+<hr class="destory mq-destory"> 
+ <div class="Starts">   
+  <p>Starts : <br>Mon Jun 1 @ 9:25 PM IST</p>  
+</div>
+ </div>
+ <div class="col-md-4"></div>  
+</div>
+  </div>
+</div>
+<!-- <div class="container"> -->
+  <!-- <div class="row txtcolor-white"> -->
+
+<!-- </div> -->
+<!-- </div> -->
+
+ <!--/end Featured Tournaments sec -->
+	 	  
+<div class="container">
+<div class="row row-mlr2 Tyler1">
+<div class="col-md-6 col-sm-6 cardbg ">
+  <div class="card card1 card-hover">
+    <div class="card-header mq-center"><p>one Tyler - Reoccuring Test</p><p>JUN.2.2020 - 01:00 PM EST</p></div>
+    <div class="card-body"></div>     
+    <div class="card-footer">
+		<div class="row row-pd0 mq-rowmt">
+			<div class="col-xs-6 mq-center"><span>Created By: John smith </span></div>
+			<div class="col-xs-6 mq-center ml-auto mq-mt"><a href=""><span class="morebtn">MORE DETAILS<img src="images/Icon awesome-arrow-right.png" class="more-ml"></span></a></div>
+			<!-- <a href="" class="btn-default">More details <i class="fas fa-arrow-right"></i></a> -->
+		</div>		
+	</div>	  
+  </div>
+</div>
+<div class="col-md-6 col-sm-6 cardbg ">
+  <div class="card card1 card-hover">
+    <div class="card-header mq-center"><p>Tyler - Reoccuring Test</p><p>JUN.2.2020 - 01:00 PM EST</p></div>
+    <div class="card-body"></div>     
+    <div class="card-footer">
+		<div class="row row-pd0 mq-rowmt">
+			<div class="col-xs-6 mq-center"><span>Created By: John smith </span></div>
+			<div class="col-xs-6 mq-center ml-auto mq-mt"><span class="morebtn">MORE DETAILS<img src="images/Icon awesome-arrow-right.png" class="more-ml"></span></div>
+		</div>		
+	</div>	  
+  </div>
+</div>
+</div>
+
+<div class="row row-mlr2 Tyler2">
+<div class="col-md-6 col-sm-6 cardbg">
+  <div class="card card1 card-hover">
+    <div class="card-header mq-center"><p> two Tyler - Reoccuring Test</p><p>JUN.2.2020 - 01:00 PM EST</p></div>
+    <div class="card-body"></div>    
+    <div class="card-footer">
+		<div class="row row-pd0 mq-rowmt">
+			<div class="col-xs-6 mq-center"><span>Created By: John smith </span></div>
+			<div class="col-xs-6 mq-center ml-auto mq-mt"><span class="morebtn">MORE DETAILS<img src="images/Icon awesome-arrow-right.png" class="more-ml"></span></div>
+		</div>		
+	</div>	  
+  </div>
+</div>
+<div class="col-md-6 col-sm-6 cardbg">
+  <div class="card card1 card-hover">
+    <div class="card-header mq-center"><p>Tyler - Reoccuring Test</p><p>JUN.2.2020 - 01:00 PM EST</p></div>
+    <div class="card-body"></div> 
+    <div class="card-footer">
+		<div class="row row-pd0 mq-rowmt">
+			<div class="col-xs-6 mq-center"><span>Created By: John smith </span></div>
+			<div class="col-xs-6 mq-center ml-auto mq-mt"><span class="morebtn">MORE DETAILS<img src="images/Icon awesome-arrow-right.png" class="more-ml"></span></div>
+		</div>		
+	</div>	  
+  </div>
+</div>
+</div>
+
+<div class="row row-mlr2 Tyler3">
+<div class="col-md-6 col-sm-6 cardbg">
+  <div class="card card1 card-hover">
+    <div class="card-header mq-center"><p> three Tyler - Reoccuring Test</p><p>JUN.2.2020 - 01:00 PM EST</p></div>
+    <div class="card-body"></div>     
+    <div class="card-footer">
+		<div class="row row-pd0 mq-rowmt">
+			<div class="col-xs-6 mq-center"><span>Created By: John smith </span></div>
+			<div class="col-xs-6 mq-center ml-auto mq-mt"><span class="morebtn">MORE DETAILS<img src="images/Icon awesome-arrow-right.png" class="more-ml"></span></div>
+		</div>		
+	</div>	  
+  </div>
+</div>
+<div class="col-md-6 col-sm-6 cardbg">
+  <div class="card card1 card-hover">
+    <div class="card-header mq-center"><p>Tyler - Reoccuring Test</p><p>JUN.2.2020 - 01:00 PM EST</p></div>
+    <div class="card-body"></div>  
+    <div class="card-footer">
+		<div class="row row-pd0 mq-rowmt">
+			<div class="col-xs-6 mq-center"><span>Created By: John smith </span></div>
+			<div class="col-xs-6 mq-center ml-auto mq-mt"><span class="morebtn">MORE DETAILS<img src="images/Icon awesome-arrow-right.png" class="more-ml"></span></div>
+		</div>		
+	</div>	  
+  </div>
+</div>
+</div>
+</div>	  	  
+<!-- start footer -->	   
+<footer class="megalink-bg foot-sec">
+ <span> Privacy Policy / Terms / About us</span><br>
+ <span> C game Site 2020 All Rights Reserved</span>  
+</footer>
+<!-- /end footer -->
+<script>
+$("document").ready(function()
+{
+$(".tour1").click(function()
+{
+$(".Tyler1").show();
+$(".Tyler2,.Tyler3").hide();
+});
+$(".tour2").click(function()
+{
+$(".Tyler2").show();
+$(".Tyler1,.Tyler3").hide();
+});
+$(".tour3").click(function()
+{
+$(".Tyler3").show();
+$(".Tyler2,.Tyler1").hide();
+});
+
+});
+</script>
+  
+</body>
+</html>

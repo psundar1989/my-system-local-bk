@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>FAQ</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'> -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <!-- <link rel="stylesheet" id="google-fonts-css" href="//fonts.googleapis.com/css?family=Montserrat%3A300%2C400%2C500%2C700%2C900&amp;ver=1.0.0" type="text/css" media="all"> -->
+  <link rel="stylesheet" href="css/stylemine.css">
+  <!-- <link rel="stylesheet" href="css/stylebhub3.css"> -->
+  <script src="js/style.js"></script>
+
+<style>
+.foot-sec {
+    color: #fff;
+    text-align: center;
+    margin-top: 11rem;
+    padding: 26px;
+	font-weight: 800;
+}
+
+.bhub3-banner
+{
+background-image: url("images/game banner.png");
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-position: bottom;    
+    height: 400px;
+    width: 100%;
+	 <!-- box-shadow: inset -2px -12px 20px 20px #0b0b11; -->
+}
+
+
+
+
+button.matchesbtn {
+    background-color: #6932F9;
+    padding: 12px 20px;
+    border: 0px;
+    color: #fff;
+    outline-style: none!important;
+	margin: 0 auto;
+    display: table;
+}	
+	
+	figcaption.matchesprofile-icon_caption {
+    font-size: 10px;
+}
+.matchesbtn-ml
+{
+    margin-left: 6px;
+    width: 5%;
+}
+.stand-secpd1
+{
+padding:50px 20px;
+}
+.matches-invietfriends {
+margin-top:20px;
+    color: #fff;
+    background-color: #202028;    
+}
+
+.matchesprofile-icon {   
+    height: 75px;
+    min-width: 75px;
+    max-width: 75px;
+    object-fit: cover;
+    border-radius: 50%!important;
+}
+.pdlr{
+padding: 0px 130px;
+}
+
+
+
+
+
+
+
+
+.panel-title > a:before {
+    float: right !important;
+    font-family: FontAwesome;
+    content:"";
+    <!-- content:"\f068"; -->
+    padding-right: 5px;
+	width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #fff;
+    transform: rotate(0deg);
+    transform-origin: 50% 50%;
+    transition: transform .3s ease-in-out;	
+	    padding-top: 8px;
+	
+}
+
+.panel-title > a.collapsed:before {
+    float: right !important;
+    <!-- content:"\f067"; -->
+    content:"";	
+	transform: rotate(180deg);
+}
+.panel-title > a:hover, 
+.panel-title > a:active, 
+.panel-title > a:focus  {
+    text-decoration:none;
+}
+
+h4.panel-title {
+    font-size: 16px;
+	padding: 15px 0px 8px 0px;
+}
+.panel-body {
+    font-size: 14px;
+	padding-bottom: 10px;
+	padding-left: 15px;
+}
+.panel.panel-default {
+    border-bottom: 1px solid hsla(0,0%,100%,.1);   
+}
+.panel.panel-default.collapsed {
+    cursor: pointer;
+}
+.panel-heading {
+    cursor: pointer;
+}
+.borderbt_none {
+    border-bottom: 0!important;
+}
+
+
+
+
+input.form-control.radiusnoneform2 {
+    border-radius: 0px;
+    background: #0b0b11;
+    border: 0px;
+    font-size: 12px;
+    padding: 20px 15px!important;
+}
+input.form-control.radiusnoneform2:focus {
+    border-radius: 0px;
+    background: #0b0b11;        
+}
+
+
+textarea.textareaform2 {
+    background: #0b0b11;
+    border-radius: 0;
+    border: 0;
+    font-size: 12px;
+}
+.btn_sendmeassage {
+    background-color: #6932F9;
+    padding: 10px 10px;
+    font-weight: 600 !important;
+	width: 100%;
+}
+textarea.textareaform2:focus {
+    background: #0b0b11;
+    box-shadow: 0 0 0 0.1rem #6931f9;
+}
+input.form-control.radiusnoneform2:focus {
+    box-shadow: 0 0 0 0.1rem #6931f9;
+}
+
+.message_icon
+{
+font-size: 12px;
+    background: #6924fb;
+    padding: 9px;
+    border-radius: 24px;
+	}
+<!-- .address { -->
+    <!-- font-size: 16px; -->
+<!-- } -->
+.div-right_rule
+{
+border-right: 1px solid #65656a;
+}
+
+.form_pd {
+    padding: 0px 28px;
+}
+.address-div-_pd {
+    padding: 0px 28px;
+}
+
+
+
+@media screen and (max-width: 768px)
+{
+.mq-TakeBattleHub {
+    margin-top: 4rem!important;
+}
+}
+
+</style>
+</head>
+<body> 
+
+<div class="container">
+<nav class="navbar navbar-expand-sm navbar-dark">
+  <!-- Brand -->
+  <a class="" href="#"><img src="images/logo.png" alt="" class="logo"></a>  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"> </span>
+  </button>
+
+  <!-- Links -->
+   <div class="collapse navbar-collapse" id="collapsibleNavbar">
+  <ul class="navbar-nav ml-auto">    
+    <!-- Dropdown -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        GMAMES
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Link 1</a>
+        <a class="dropdown-item" href="#">Link 2</a>
+        <a class="dropdown-item" href="#">Link 3</a>
+      </div>
+    </li>
+	<li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        TOURNAMENTS
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Link 1</a>
+        <a class="dropdown-item" href="#">Link 2</a>
+        <a class="dropdown-item" href="#">Link 3</a>
+      </div>
+    </li>
+	<li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        LEADERBOARDS
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Link 1</a>
+        <a class="dropdown-item" href="#">Link 2</a>
+        <a class="dropdown-item" href="#">Link 3</a>
+      </div>
+    </li>
+	<li class="nav-item dropdown">
+      <a class="nav-link" href="#" id="navbardrop" data-toggle="dropdown">
+        SUPPORTS
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Link 1</a>
+        <a class="dropdown-item" href="#">Link 2</a>
+        <a class="dropdown-item" href="#">Link 3</a>
+      </div>
+    </li>
+	<li class="nav-item dropdown">
+      <a class="nav-link" href="#" id="navbardrop" data-toggle="dropdown">
+        /
+      </a>     
+    </li>
+	
+     <li class="nav-item dropdown">
+      <a class="nav-link" href="#" id="navbardrop" data-toggle="dropdown">
+        KUMSTEST
+      </a>     
+    </li>
+	<li class="nav-item dropdown">
+      <a class="nav-link" href="#" id="navbardrop" data-toggle="dropdown">        
+		<img src="images/Ellipse 5.png" alt="" class="menu-img mq-menuimg mq-menuimg1">
+      </a>      
+    </li>
+	
+  </ul>
+  </div>
+</nav>
+</div>
+ <!--/end menu section -->
+ 
+ <!-- start cup iocn section -->
+<div class="container-fluid bhub3-banner"> 
+		<div class="row">
+			<div class="col-md-12 text-white" style="margin-top: 11rem;">
+			<div class="" style="margin:0 auto;display:table;">
+				<h2 class="text-center" >Support</h2>
+				<p class="text-center">For questions abount your account, <br>purchases, or general inquries.</p>
+				</div>
+			</div>
+		</div>
+ </div>
+ <!-- strat get in touch -->
+ <div class="container bhub3-invietfriends mt-5" style="border-top: 2px solid #6932F9;margin-bottom: 4rem;"> 
+ <div class="row" style="padding:45px 5px;">
+	<div class="col-md-12 mb-5"><h5 class="text-center">GET IN TOUCH</h5></div>	
+	<div class="col-md-8 address div-right_rule">				
+				<form class="contact_form form_pd" name="contact_form">								
+						<div class="form-group">  
+						<label for="name">Name<span style="color:#fff">*</span></label>
+							<input type="text" name="name" class="form-control radiusnoneform2" placeholder="Enter Name" id="name">							
+						</div>
+						<div class="form-group">
+							<label for="email">Email<span style="color:#fff">*</span></label>						
+							<input type="text" name="email" class="form-control radiusnoneform2" placeholder="Enter Email" id="email">
+						</div>
+						<div class="form-group"> 
+								<label for="message">Message<span style="color:#fff">*</span></label>
+								<textarea class="form-control  textareaform2" placeholder="Enter Message" rows="10" id="message" name="message"></textarea>
+							</div>
+						<button type="submit" class="btn  btn_sendmeassage text-white" style="border-radius:0px;">Send Message</button>											
+					</form>	
+	</div>
+	
+	<div class="col-md-4" >
+	<div class="address-div-_pd">
+		<address class="address">
+		  <strong>Address :</strong><br>
+		  <div class="mt-2" style="color:#fff">Park House, 38 Abby Forgate,<br>
+		  Shrewsbury, shrosphire SY2 6BL, UK</div>		  
+		</address>
+
+		<address class="address pt-2">
+		  <strong>Call :</strong><br>
+		  <div class="mt-2" style="color:#fff">+441743235770</div>
+		</address>
+		
+		<address class="address pt-2">
+		  <strong class="mb-3">Connect us :</strong><br>
+		  <i class="fa fa-envelope message_icon mr-2 mt-2" style="font-size:12px"></i>		  
+		  <i class="fa fa-twitter message_icon" style="font-size:12px"></i>
+		</address>
+		</div>
+	</div>
+ </div>
+ </div>
+ <!-- end get in touch -->
+ 
+<!-- start accordion sec -->
+ <div class="container bhub3-invietfriends" style="margin-bottom: 4rem;">
+ <div class="row stand-secpd">
+ <div class="col-md-12">
+ <div style="margin:0 auto;display:table;font-size:32px;">FAQ's</h1></div>	
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+<!-- tab1 -->
+<div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingOne" data-toggle="collapse" href="#collapseOne">
+             <h4 class="panel-title">
+        <a class="collapsed"  data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          What Is GameBattles Premium? 
+        </a>
+      </h4>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse" data-parent="#accordion" role="tabpanel" aria-labelledby="test">
+            <div class="panel-body">GameBattles Premium allows you to take your competitive experience to the next level. Premium members gain access to additional features such as superior match support, free access to Premium Tournaments, discounts, and much more!</div>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingTwo" data-toggle="collapse" href="#collapseTwo" >
+             <h4 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          What are credits?
+        </a>
+      </h4>
+
+        </div>
+        <div id="collapseTwo" class="panel-collapse collapse" data-parent="#accordion" role="tabpanel" aria-labelledby="headingTwo">
+            <div class="panel-body">Credits are the digital currency used on GameBattles. Credits grant you access to many GameBattles services,</div>
+        </div>
+    </div>
+	
+	<!-- tab3 -->
+    <div class="panel panel-default">
+        <div class="panel-heading" data-toggle="collapse" href="#collapseThree" role="tab" id="headingThree">
+             <h4 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          How do I change my password?
+        </a>
+      </h4>
+        </div>
+        <div id="collapseThree" class="panel-collapse collapse" data-parent="#accordion" role="tabpanel" aria-labelledby="headingThree">
+            <div class="panel-body">Your password can be changed in your account settings page. </div>
+        </div>
+    </div>
+	<!-- tab14 -->
+	  <div class="panel panel-default">
+        <div class="panel-heading" data-toggle="collapse" href="#collapseFour" role="tab" id="headingFour">
+             <h4 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          How do I submit a ticket?
+        </a>
+      </h4>
+        </div>
+        <div id="collapseFour" class="panel-collapse collapse" data-parent="#accordion" role="tabpanel" aria-labelledby="headingFour">
+            <div class="panel-body">You can submit a ticket to GameBattles support by hovering over your username on the navigation and selecting “Tickets & Escalations”. You may also submit a ticket here. </div>
+        </div>
+    </div>
+	<!-- tab5 -->
+	  <div class="panel panel-default borderbt_none ">
+        <div class="panel-heading" data-toggle="collapse" href="#collapseFive" role="tab" id="headingFive">
+             <h4 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+          How does someone get banned?
+        </a>
+      </h4>
+
+        </div>
+        <div id="collapseFive" class="panel-collapse collapse"data-parent="#accordion" role="tabpanel" aria-labelledby="headingFive">
+            <div class="panel-body">Bans are issued when someone has violated GameBattles Rules. Ban lengths and punishments are determined based on the severity of the offense. In addition to being banned on GameBattles, accounts that have broken GameBattles rules are also subject to having their GB rank and overall record reset. Once banned, a player has the option to contest their ban. Once contested, a senior staff member will review the ban and verify the ban has been placed properly. </div>
+        </div>
+    </div>
+</div>
+</div>
+ </div>  
+ </div>
+  <!-- end accordion sec -->
+  
+ <div class="container text-white">
+	<div class="row"style="" >
+		<div class="col-md-6">
+		<div class="TakeBattleHub mq-TakeBattleHub" style="margin-top: 8rem; margin-bottom: 20px;">
+			<h3 style="margin-bottom: 20px;">Take BattleHub <br>with you wherever you go!</h3>
+			<img src="images/appstore.png" style="width: 100px;">
+			<img src="images/googleplay.png" style="width: 100px;">
+		</div>
+		</div>
+		<div class="col-md-6">			
+			<img src="images/mobile.png" alt="" style="">
+		</div>
+	</div>
+ </div>
+
+ 
+
+ 
+ 
+
+
+
+ 
+
+		   	  
+<!-- start footer -->	   
+<footer class=" foot-sec">
+ <!-- <span> Privacy Policy / Terms / About us</span><br> -->
+ <!-- <span> C game Site 2020 All Rights Reserved</span>   -->
+ <img src="images/bllogo.png" alt="" style="width: 180px;margin-bottom:28px">
+ 
+ <p style="margin-bottom: 1.5rem;">© 2020, Epic Games, Inc. Epic, Epic Games, the Epic Games logo, Fortnite, the Fortnite logo, Unreal,<br>
+ Unreal Engine 4 and UE4 are trademarks or registered trademarks of Epic Games, Inc.<br>
+ in the United states of America and elsewhere.
+ </p>
+ <p style="margin-bottom: 8px;">Privacy Policy ｜ Terms ｜ About us</p>
+ <p>Powered by Hub Technologies 2020 All Rights Reserved </p>
+ <i class="fa fa-envelope message_icon mr-2 mt-2" style="font-size:12px"></i>		  
+ <i class="fa fa-twitter message_icon" style="font-size:12px"></i>
+ 
+</footer>
+<!-- /end footer -->	  
+</body>
+</html>

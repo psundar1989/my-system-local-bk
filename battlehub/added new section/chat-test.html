@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>bhub-3-chat</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+  <!-- <link rel="stylesheet" id="google-fonts-css" href="//fonts.googleapis.com/css?family=Montserrat%3A300%2C400%2C500%2C700%2C900&amp;ver=1.0.0" type="text/css" media="all"> -->
+  <link rel="stylesheet" href="css/stylemine.css">
+  <!-- <link rel="stylesheet" href="css/stylebhub3.css"> -->
+  <script src="js/style.js"></script>
+
+<style>
+.foot-sec {
+    color: #fff;
+    text-align: center;
+    margin-top: 11rem;
+    padding: 26px;
+	font-weight: 800;
+}
+
+.bhub3-banner
+{
+background-image: url("images/game banner.png");
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-position: bottom;    
+    height: 500px;
+    width: 100%;
+	 box-shadow: inset -2px -12px 20px 20px #0b0b11;
+}
+
+
+
+
+button.matchesbtn {
+    background-color: #6932F9;
+    padding: 12px 20px;
+    border: 0px;
+    color: #fff;
+    outline-style: none!important;
+	margin: 0 auto;
+    display: table;
+}	
+	
+	figcaption.matchesprofile-icon_caption {
+    font-size: 10px;
+}
+.matchesbtn-ml
+{
+    margin-left: 6px;
+    width: 5%;
+}
+.stand-secpd1
+{
+padding:50px 20px;
+}
+.matches-invietfriends {
+margin-top:20px;
+    color: #fff;
+    background-color: #202028;    
+}
+
+.matchesprofile-icon {   
+    height: 75px;
+    min-width: 75px;
+    max-width: 75px;
+    object-fit: cover;
+    border-radius: 50%!important;
+}
+.pdlr{
+padding: 0px 130px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.chater {
+    <!-- border-bottom: 0.1px solid #dedede40;   -->
+    padding: 10px;
+    margin: 0px 10px;
+}
+
+.darker {
+  border-color: #ccc;
+  background-color: #ddd;
+}
+
+.chater::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.chater img {
+  float: left;
+  max-width: 30px;
+  width: 100%;
+  margin-right: 12px;
+  border-radius: 50%;
+   margin-bottom: 14px;
+}
+
+.chater img.right {
+  float: right;
+  margin-left: 12px;
+  margin-right:0; 
+}
+
+.time-right {
+  color: #676777;
+  font-size:10px;
+  margin-bottom: 0;
+}
+
+.time-left { 
+  color: #676777;
+    font-size:10px;
+	margin-bottom: 0;
+}
+
+.chat-div{
+	background: #29293e;
+    padding: 15px 10px;;
+    border-radius: 5px;
+	border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.chat-div_title{
+	font-variant: all-small-caps;
+	text-align:center;
+	border: 5px solid #29293e;
+    border-bottom: 0;    
+    padding: 10px;
+	border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+input.form-control.chatdiv_input {
+    border-radius: 0px;
+    background: #29293e;
+    border: 0px;
+    font-size: 12px;
+    padding: 20px 15px!important;
+	border-right: 1px solid;
+
+}
+
+.input-group-text1 {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: .375rem .75rem;
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #29293e;    
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+input.form-control.chatdiv_input:focus {
+    box-shadow: 0 0 0 0.1rem #6931f9;
+}
+
+.chat-div {
+    overflow: auto;
+    height: 450px;
+}
+
+.chat-div::-webkit-scrollbar {
+    width: 5px;
+}
+
+.chat-div::-webkit-scrollbar-corner {
+    background: rgba(0,0,0,0);
+}
+.chat-div::-webkit-scrollbar-track
+{
+	background-color: #222;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+	box-shadow: inset 0 0 15px #2b3641;
+}
+
+.chat-div::-webkit-scrollbar-thumb
+{
+	 -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #6931f9; 
+}
+
+
+
+
+.form-control:focus {
+    color: #495057;
+    /* background-color: #fff; */
+    /* border-color: #80bdff; */
+    outline: 0;
+    /* box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25); */
+}
+
+.text-right    
+{
+text-align:right;
+}
+.text-para
+{
+margin-bottom:0px;
+font-size:12px;
+color:#C2C2C8;
+}
+
+.chater-sepration_rule {
+    border-bottom: 1px solid #39394A;
+	padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+
+.media-body_left
+{
+margin-right:42px;
+}
+
+.media-body_right
+{
+margin-left:42px;
+}
+
+
+</style>
+</head>
+<body> 
+<div class="">
+<br>
+<div class="container">
+<nav class="navbar navbar-expand-sm navbar-dark">
+  <!-- Brand -->
+  <a class="" href="#"><img src="images/logo.png" alt="" class="logo"></a>  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"> </span>
+  </button>
+
+  <!-- Links -->
+   <div class="collapse navbar-collapse" id="collapsibleNavbar">
+  <ul class="navbar-nav ml-auto">    
+    <!-- Dropdown -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        GMAMES
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Link 1</a>
+        <a class="dropdown-item" href="#">Link 2</a>
+        <a class="dropdown-item" href="#">Link 3</a>
+      </div>
+    </li>
+	<li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        TOURNAMENTS
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Link 1</a>
+        <a class="dropdown-item" href="#">Link 2</a>
+        <a class="dropdown-item" href="#">Link 3</a>
+      </div>
+    </li>
+	<li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        LEADERBOARDS
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Link 1</a>
+        <a class="dropdown-item" href="#">Link 2</a>
+        <a class="dropdown-item" href="#">Link 3</a>
+      </div>
+    </li>
+	<li class="nav-item dropdown">
+      <a class="nav-link" href="#" id="navbardrop" data-toggle="dropdown">
+        SUPPORTS
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Link 1</a>
+        <a class="dropdown-item" href="#">Link 2</a>
+        <a class="dropdown-item" href="#">Link 3</a>
+      </div>
+    </li>
+	<li class="nav-item dropdown">
+      <a class="nav-link" href="#" id="navbardrop" data-toggle="dropdown">
+        /
+      </a>     
+    </li>
+	
+     <li class="nav-item dropdown">
+      <a class="nav-link" href="#" id="navbardrop" data-toggle="dropdown">
+        KUMSTEST
+      </a>     
+    </li>
+	<li class="nav-item dropdown">
+      <a class="nav-link" href="#" id="navbardrop" data-toggle="dropdown">        
+		<img src="images/Ellipse 5.png" alt="" class="menu-img mq-menuimg mq-menuimg1">
+      </a>      
+    </li>
+	
+  </ul>
+  </div>
+</nav>
+</div>
+ <!--/end menu section -->
+ 
+ <!-- start cup iocn section -->
+<div class="container-fluid bhub3-banner"> 
+<div class="container">
+<!-- <img src="images/game banner.png" alt="" class="bhub3-banner"> -->
+<!-- <div class=""> -->
+<div class="row appexsecpd" style="color:#fff">
+<div class="col-md-4">
+<p class="appeximg"><img src="images/apex logo.png"></p><br>
+<p class="bhub3-appexhubplay">HUP PLAY PAGE</p><br>
+<p class="bhub3-appexhubplay">29 FEB 2020 12:00 PM EST</p>
+</div>
+
+<div class="col-md-8"></div>
+</div>
+<div class="row">
+<div class="col-md-6"><img src="images/dummyimg.png"></div>
+<div class="col-md-6 regbtnsec-pdrl0"><button type="button" class="btn rigsterbtn">RIGISTER NOW</button></div>
+</div>
+ <!-- </div> -->
+ </div>
+ </div>
+ <br>
+ <br>
+ <br>
+ <div class="container bhub3-invietfriends">
+ <div class="row stand-secpd">
+ <div class="col-md-10">
+ <h6>STANDARD TOURNAMENT</h6>
+ <br>
+ <p>This is tournament is a standard single-elimination tournament<br> for Apex Legents. Win each round to be the Champion. Battle on!.</p>
+ </div>
+ <div class="col-md-2 bhub3-invite">
+ <p style="color:#6932F9">INVITE FRIENDS</p>
+ <br>
+ <p>0/16<br>REGISTERED</p>
+ </div> 
+ </div>  
+ </div>
+ 
+ <!-- start matches sec -->
+<section>
+<div class="container matches-invietfriends">	
+		 <div class="row stand-secpd1">
+		<div class="col-md-12 p-0"><h6>MATCHES</h6></div>
+			<div class=" col-lg-3  col-md-3"></div>
+			  <div class="col-lg-6 col-md-6">
+					<div class="row pdlr">
+						 <div class="col">
+						   <figure class="match-icon1 text-center" id="">
+							  <img src="images/matchesprofile-icon1.png" alt="Trulli" style="" class=" rounded matchesprofile-icon">
+							  <figcaption class="text-black matchesprofile-icon_caption">Peter Dager</figcaption>		  		  
+							</figure>						
+						 </div>
+						  <div class="col">
+						   <figure class="match-icon1 text-center" id="">
+							  <img src="images/matchesprofile-icon2.png" alt="Trulli" style="" class=" rounded matchesprofile-icon">
+							  <figcaption class="text-black matchesprofile-icon_caption">Andres Hojesleth</figcaption>		  		  
+							</figure>						
+						 </div>
+						
+					</div>				
+			<button class="matchesbtn">YES WE HAVE COMPLETED THE GAME <img src="images/Icon awesome-arrow-right.png" class="matchesbtn-ml"></button>			
+		      </div>
+			<div class=" col-lg-3 col-md-3"></div>		
+	</div>
+ </div>
+ </section>
+ <!-- end matches sec -->
+ <br>
+ <br>
+ <!-- new -->
+	<div class="container bhub3-invietfriends">
+	<div class="row stand-secpd">
+		<div class="col-md-8">
+			<div class="row">
+				<div class="col-md-10 mq-mtilte">
+					<h6>MATCH DETAILS</h6></div>
+			</div>
+			<div class="row">
+				<div class="col-md-2"></div>
+				<div class="col-md-8" style="width:100%;height:auto;">
+					<!-- <div class="submitscore-bg">SUBMIT SCORE <i class="fa fa-times-circle-o" aria-hidden="true" style="float:right"></i></div> -->
+					<div class="row pagesubmitbody-bg">
+						<div class="col-md-6 avatar-mobile-view">
+							<figure class="match-icon1 text-center" id="">
+								<!-- <img src="/public/theme/images/matchesprofile-icon1.png" alt="Trulli" style="" class=" matchesprofile-icon"> -->
+								<div class="avatar-img alignlft avatar_opt" id="avatartxt">S</div>
+								<figcaption class="text-black matchesprofile-icon_caption">sundar 1</figcaption>
+							</figure>
+							<input type="hidden" class="enteryourscore form-control radiusone mq-enteryourscore" id="myscore" name="myscore" placeholder="ENTER YOUR SCORE" value="0"> </div>
+						<div class="col-md-6 avatar-mobile-view">
+							<figure class="match-icon1 text-center" id="">
+								<div class="avatar-img alignlft avatar_opt" id="avatartxt">Y</div>
+								<!-- <img src="/public/theme/images/matchesprofile-icon2.png" alt="Trulli" style="" class=" rounded matchesprofile-icon"> -->
+								<figcaption class="text-black matchesprofile-icon_caption">YahooBro</figcaption>
+							</figure>
+							<input type="hidden" class="form-control radiusone mq-enteryourscore" id="opsdscore" placeholder="ENTER YOUR SCORE" value="0">
+							<!-- <div class="versus scoresubdis">0</div> --></div>
+						<div class="col-md-12 mt-4">
+							<!-- <button class="submitscore-btn btn btn-default" style="margin:0 auto; display:table;">SUBMIT SCORE</button> -->
+							<div>
+								<form name="gamecomplete" id="gamecomplete3" method="post" action="https://dev.battlelounge.io/player/game-complete-action">
+									<input type="hidden" name="url" value="https://dev.battlelounge.io/player/tournament_detail/13/0">
+									<input type="hidden" name="_token" value="w55vc228gzcnX5sVxLx5kdBGK3BpOmQhzJ9bTRuT">
+									<input type="hidden" name="trnmtid" value="13">
+									<input type="hidden" name="matchautoId" value="55">
+									<input type="hidden" name="myid" value="138">
+									<button type="submit" style="margin:0 auto; display:table;" class="submitscore-btn btn btn-default" id="gamecomplete" name="gamecomplete">YES WE HAVE COMPLETED THE GAME<img src="/public/theme/images/icon-awesome-arrow-right.png" class="matchesbtn-ml"></button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2"></div>
+			</div>
+		</div>
+		<div class="col-md-4" style="border-left: 1px solid #dedede40;padding: 15px 15px 15px 20px">
+			<h6 class="chat-div_title" >BATTLE LOUNGE CHAT </h6>
+			<div class="chat-div" style="">				
+				<div class="chater">
+				  <img src="images/Ellipse13.png" alt="Avatar" style="width:100%;">			
+				  <p class="text-para;">Hello. How are you today?</p>
+				  <span class="time-right">11:00</span>
+				</div>
+
+				<div class="chater ">
+				  <img src="images/Ellipse6.png" alt="Avatar" class="right" style="width:100%;">					
+				  <p class="text-para;">Hey! I'm fine. Thanks for asking!</i></p>
+				  <span class="time-left">11:01</span>
+				</div>
+
+				<div class="chater">
+				  <img src="images/Ellipse6.png" alt="Avatar" style="width:100%;">
+				  <p class="text-para;">Sweet! So, what do you wanna do today?</p>
+				  <span class="time-right">11:02</span>
+				   <hr class="test">
+				</div>
+
+				<div class="chater ">
+				  <img src="images/Ellipse13.png" alt="Avatar" class="right" style="width:100%;">
+				  <p class="text-para;">Nah, I dunno. Play soccer.. or learn more coding perhaps?</p>
+				  <span class="time-left">11:05</span>
+				  <hr class="test">
+				</div>							
+			</div>
+			
+			<div class="input-group mb-3 mt-3">
+				<input type="text" class="form-control chatdiv_input " placeholder="Type your message here" style="border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
+				<div class="input-group-append">
+					<span class=" input-group-text1 glyphicon"><i style="font-size:14px;color:#6931f9" class="fa">&#xf1d9;</i> </span>					
+				</div>		
+			</div>
+	</div>
+	<!-- match div start -->
+	<!-- <div class="row row stand-secpd"></div> -->
+	<!-- match div end -->
+</div>
+</div>
+ 
+ <!-- /new -->
+ 
+ <br>
+ <br>
+ <br>
+ 
+
+ 
+ 
+ 
+ 
+ <!-- new -->
+ 
+<div class="container p-0">
+    <div class="row divcenter">
+      <!-- <div class="col-12 col-md-8 col-lg-6"> -->
+      <div class="col-md-8 p-0">
+        <ul class="nav nav-pills  whattodo mq-whattodofnt">
+         <li class="nav-item" style="text-align:left;">
+            <a class="nav-link tab-txtcolor mq-tab-txtcolor" style="padding-left:25px;padding-right:25px" data-toggle="pill" href="#description" role="tab" aria-controls="pills-ostrich" aria-selected="false">Info</a>
+          </li>
+          <li class="nav-item" style="text-align:left;">
+            <a class="nav-link tab-txtcolor mq-tab-txtcolor" style="padding-left:25px;padding-right:25px" data-toggle="pill" href="#rules" role="tab" aria-controls="pills-ostrich" aria-selected="false">Rules</a>
+          </li>
+          <li class="nav-item" style="text-align:left;">
+            <a class="nav-link tab-txtcolor mq-tab-txtcolor" style="padding-left:25px;padding-right:25px" data-toggle="pill" href="#prize" role="tab" aria-controls="pills-flamingo" aria-selected="true">Prize</a>
+          </li>
+          <li class="nav-item" style="text-align:left;">
+            <a class="nav-link tab-txtcolor mq-tab-txtcolor" style="padding-left:25px;padding-right:25px" data-toggle="pill" href="#players" role="tab" aria-controls="pills-flamingo" aria-selected="false">Players</a>
+          </li>
+          <li class="nav-item" style="text-align:left;">
+            <a class="nav-link tab-txtcolor mq-tab-txtcolor active" style="padding-left:25px;padding-right:25px" data-toggle="pill" href="#brackets" role="tab" aria-controls="pills-cuckoo" aria-selected="true">Brackets</a>
+          </li>
+          <li class="nav-item" style="text-align:left;">
+            <a class="nav-link tab-txtcolor mq-tab-txtcolor" style="padding-left:25px;padding-right:25px" data-toggle="pill" href="#support" role="tab" aria-controls="pills-ostrich" aria-selected="false">Support</a>
+          </li>
+        </ul>
+        <hr class="tabbt-rule">
+        <!-- </div> -->
+      </div>
+	  <div class="col-md-2"></div>
+    </div>
+</div>
+
+<div class="container"> 
+    <div class="row">
+        <div class="col-md-8 bhub3-invietfriends bracketscroll" style="padding: 25px 35px;">
+            <div class="tab-content mt-3">
+                <div id="description" class="tab-pane fade" role="tabpanel" aria-labelledby="flamingo-tab">
+                    <p class="text-white">      
+                        </p><p>Description</p>                    <p></p>
+                </div>
+                <div id="rules" class="tab-pane fade" role="tabpanel" aria-labelledby="flamingo-tab">      
+                    <p class="text-white">
+                        </p><p>Rules</p>                    <p></p>
+                </div>
+                <div class="tab-pane fade " id="prize" role="tabpanel" aria-labelledby="flamingo-tab">
+                    <div class="">  
+                                            </div>
+                </div>
+                <div id="players" class="tab-pane fade" role="tabpanel" aria-labelledby="flamingo-tab">
+                    <div class="row text-center text-lg-left">
+                                                                                    <div class="col-lg-2 col-xl-2 col-md-3 col-sm-3 col-xs-4 mq-playermbview">
+                                    <form action="https://dev.battlelounge.io/player/viewprofile" method="post" name="testfrm">
+                                        <input type="hidden" name="_token" value="Qm9lilgXmxDPJtATKgqvQUKgXzWKXXNcG7wXcFFJ">	
+                                        <input type="hidden" name="player_id" value="135">	 
+                                        <button type="submit" class="btn btn-link" value="view profile"> 
+                                                                                                <a href="#" class="d-block mb-1 h-100">
+                                                    <!-- <img class="img-fluid players-tab-image" src="https://source.unsplash.com/pWkk7iiCoDM/400x300" alt=""> -->
+                                                    <div class="bracket_avatar_img" id="avatartxt">A</div>
+                                                </a>
+                                                <div class="desc" style="color:#fff;">Aravinth H</div>
+                                                                                    </button>
+                                    </form>
+                                </div>
+                                                            <div class="col-lg-2 col-xl-2 col-md-3 col-sm-3 col-xs-4 mq-playermbview">
+                                    <form action="https://dev.battlelounge.io/player/viewprofile" method="post" name="testfrm">
+                                        <input type="hidden" name="_token" value="Qm9lilgXmxDPJtATKgqvQUKgXzWKXXNcG7wXcFFJ">	
+                                        <input type="hidden" name="player_id" value="152">	 
+                                        <button type="submit" class="btn btn-link" value="view profile"> 
+                                                                                                <a href="#" class="d-block mb-1 h-100">
+                                                    <!-- <img class="img-fluid players-tab-image" src="https://source.unsplash.com/pWkk7iiCoDM/400x300" alt=""> -->
+                                                    <div class="bracket_avatar_img" id="avatartxt">A</div>
+                                                </a>
+                                                <div class="desc" style="color:#fff;">Aravinth Gokul</div>
+                                                                                    </button>
+                                    </form>
+                                </div>
+                                                            <div class="col-lg-2 col-xl-2 col-md-3 col-sm-3 col-xs-4 mq-playermbview">
+                                    <form action="https://dev.battlelounge.io/player/viewprofile" method="post" name="testfrm">
+                                        <input type="hidden" name="_token" value="Qm9lilgXmxDPJtATKgqvQUKgXzWKXXNcG7wXcFFJ">	
+                                        <input type="hidden" name="player_id" value="111">	 
+                                        <button type="submit" class="btn btn-link" value="view profile"> 
+                                                                                                <a href="#" class="d-block mb-1 h-100">
+                                                    <!-- <img class="img-fluid players-tab-image" src="https://source.unsplash.com/pWkk7iiCoDM/400x300" alt=""> -->
+                                                    <div class="bracket_avatar_img" id="avatartxt">E</div>
+                                                </a>
+                                                <div class="desc" style="color:#fff;">eighth</div>
+                                                                                    </button>
+                                    </form>
+                                </div>
+                                                            <div class="col-lg-2 col-xl-2 col-md-3 col-sm-3 col-xs-4 mq-playermbview">
+                                    <form action="https://dev.battlelounge.io/player/viewprofile" method="post" name="testfrm">
+                                        <input type="hidden" name="_token" value="Qm9lilgXmxDPJtATKgqvQUKgXzWKXXNcG7wXcFFJ">	
+                                        <input type="hidden" name="player_id" value="110">	 
+                                        <button type="submit" class="btn btn-link" value="view profile"> 
+                                                                                            <!-- <img class="img-circle" src="https://dev.battlelounge.io/storage/app/player/1585662158.jpg" alt="YahooBro" /> -->
+                                                <a href="#" class="d-block mb-1 h-100">
+                                                    <img class="img-fluid players-tab-image" src="https://dev.battlelounge.io/storage/app/player/1585662158.jpg" alt="YahooBro">
+                                                </a>
+                                                <div class="desc" style="color:#fff;">YahooBro</div>
+                                                                                    </button>
+                                    </form>
+                                </div>
+                                                            <div class="col-lg-2 col-xl-2 col-md-3 col-sm-3 col-xs-4 mq-playermbview">
+                                    <form action="https://dev.battlelounge.io/player/viewprofile" method="post" name="testfrm">
+                                        <input type="hidden" name="_token" value="Qm9lilgXmxDPJtATKgqvQUKgXzWKXXNcG7wXcFFJ">	
+                                        <input type="hidden" name="player_id" value="120">	 
+                                        <button type="submit" class="btn btn-link" value="view profile"> 
+                                                                                            <!-- <img class="img-circle" src="https://dev.battlelounge.io/storage/app/player/1588641185.png" alt="Eleven aven" /> -->
+                                                <a href="#" class="d-block mb-1 h-100">
+                                                    <img class="img-fluid players-tab-image" src="https://dev.battlelounge.io/storage/app/player/1588641185.png" alt="Eleven aven">
+                                                </a>
+                                                <div class="desc" style="color:#fff;">Eleven aven</div>
+                                                                                    </button>
+                                    </form>
+                                </div>
+                                                            <div class="col-lg-2 col-xl-2 col-md-3 col-sm-3 col-xs-4 mq-playermbview">
+                                    <form action="https://dev.battlelounge.io/player/viewprofile" method="post" name="testfrm">
+                                        <input type="hidden" name="_token" value="Qm9lilgXmxDPJtATKgqvQUKgXzWKXXNcG7wXcFFJ">	
+                                        <input type="hidden" name="player_id" value="106">	 
+                                        <button type="submit" class="btn btn-link" value="view profile"> 
+                                                                                            <!-- <img class="img-circle" src="https://dev.battlelounge.io/storage/app/player/1587840707.png" alt="Kumaran Vedagiri" /> -->
+                                                <a href="#" class="d-block mb-1 h-100">
+                                                    <img class="img-fluid players-tab-image" src="https://dev.battlelounge.io/storage/app/player/1587840707.png" alt="Kumaran Vedagiri">
+                                                </a>
+                                                <div class="desc" style="color:#fff;">Kumaran Vedagiri</div>
+                                                                                    </button>
+                                    </form>
+                                </div>
+                                                                        </div>      
+                </div>
+                <div id="brackets" class="tab-pane fade active show" role="tabpanel" aria-labelledby="flamingo-tab">                       
+                    <div class="d-flex flex-row flex-nowrap align-items-center">
+                        <section class="round league" style="margin-right:20px;">
+			<div class="winners">
+				<div class="matchups"><div class="matchup">
+								<div class="participants">
+									<div class="participant ">
+										<span>Aravinth H</span>
+									</div>
+									<div class="participant ">
+										<span>-</span>
+									</div>
+								</div>
+								
+							</div><div class="matchup">
+								<div class="participants">
+									<div class="participant ">
+										<span>Aravinth Gokul</span>
+									</div>
+									<div class="participant ">
+										<span>-</span>
+									</div>
+								</div>
+								
+							</div><div class="matchup">
+								<div class="participants">
+									<div class="participant ">
+										<span>eighth</span>
+									</div>
+									<div class="participant ">
+										<span>YahooBro</span>
+									</div>
+								</div>
+								
+							</div><div class="matchup">
+								<div class="participants">
+									<div class="participant ">
+										<span>Eleven aven</span>
+									</div>
+									<div class="participant ">
+										<span>Kumaran Vedagiri</span>
+									</div>
+								</div>
+								
+							</div></div>
+				</div>
+			</section><section class="round league" style="margin-right:20px;">
+			<div class="winners">
+				<div class="matchups"><div class="matchup">
+								<div class="participants">
+									<div class="participant ">
+										<span>Aravinth H</span>
+									</div>
+									<div class="participant ">
+										<span>Aravinth Gokul</span>
+									</div>
+								</div>
+								
+							</div><div class="matchup">
+								<div class="participants">
+									<div class="participant ">
+										<span>-</span>
+									</div>
+									<div class="participant ">
+										<span>-</span>
+									</div>
+								</div>
+								
+							</div></div>
+				</div>
+			</section><section class="round league" style="margin-right:20px;">
+			<div class="winners">
+				<div class="matchups"><div class="matchup">
+								<div class="participants">
+									<div class="participant ">
+										<span>-</span>
+									</div>
+									<div class="participant ">
+										<span>Aravinth Gokul</span>
+									</div>
+								</div>
+								
+							</div></div>
+				</div>
+			</section><section class="round league">
+			<div class="winners">
+				<div class="matchups"><div class="matchup">
+								<div class="participants">
+									<div class="participant ">
+										<span><img src="/public/theme/images/champion.png" width="50" alt="Winner">Aravinth Gokul</span>
+									</div>
+								</div>
+							</div></div>
+				</div>
+			</section>                    </div>
+                </div>
+                <div id="support" class="tab-pane fade" role="tabpanel" aria-labelledby="flamingo-tab">
+                    <p class="text-white">
+                        </p><p><b>Support</b></p><br><br><p>If there is anything that you might need help with, please refer to our <a href="/player/contact-us" target="__blank">Frequently Asked Questions</a> page first to see if your question might be answered there.</p><br><br><p>If you still need help, please <a href="/player/contact-us" target="__blank">contact us</a> and we’ll be sure to get back to you!</p><br><br><br><p>Thanks,</p><br><p><b>Battle Lounge Team</b></p>                    <p></p>
+                </div>
+            </div>
+        </div>
+       <div class="col-md-4" style="">
+			<div class="chat-div_title">
+				<h6 style="margin-bottom:0px;">BATTLE LOUNGE CHAT </h6>
+			</div>
+			<div class="chat-div" style="">				
+				<!-- Left-aligned media object -->
+				<div class="chater">
+					  <div class="media">
+						<div class="media-left">
+						  <img src="images/Ellipse6.png" alt="Avatar" class=" media-object " style="width:100%;">
+						  <!-- <img src="img_avatar1.png" class="" style="width:60px"> -->
+						</div>
+						<div class="media-body media-body_left chater-sepration_rule">				  
+						  <p class="text-para">Hi</p>
+						  <!-- <hr class="chater-sepration_rule"> -->
+						</div>
+					  </div>
+				 </div>
+				  
+				  
+				  <!-- Right-aligned media object -->
+				  <div class="chater">
+					  <div class="media">
+						<div class="media-body media-body_right text-right chater-sepration_rule" style="">
+						  <p class="text-para ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>    
+						  <p class="time-right">8:00am</p>
+						   <!-- <hr class="chater-sepration_rule"> -->
+						</div>    
+						 <div class="media-right">
+							<!-- <img src="img_avatar1.png" class="media-object" style="border-radius:50px; width:60px;"> -->
+							<img src="images/Ellipse6.png" alt="Avatar" class=" media-object right" style="width:100%;">
+						</div>
+					  </div>
+				  </div>
+				  
+				  <div class="chater">
+					  <div class="media">
+						<div class="media-left">
+						  <img src="images/Ellipse6.png" alt="Avatar" class=" media-object " style="width:100%;">
+						  <!-- <img src="img_avatar1.png" class="" style="width:60px"> -->
+						</div>
+						<div class="media-body media-body_left chater-sepration_rule">				  
+						  <p class="text-para">hi</p>
+						  <p class="time-left">7:00am</p>
+						  <!-- <hr class="chater-sepration_rule"> -->
+						</div>
+					  </div>
+				 </div>
+				  
+				  
+				  <!-- Right-aligned media object -->
+				  <div class="chater">
+					  <div class="media">
+						<div class="media-body media-body_right text-right chater-sepration_rule" style="">
+						  <p class="text-para ">how r u?</p>    
+						  <p class="time-right">8:00am</p>
+						   <!-- <hr class="chater-sepration_rule"> -->
+						</div>    
+						 <div class="media-right">
+							<!-- <img src="img_avatar1.png" class="media-object" style="border-radius:50px; width:60px;"> -->
+							<img src="images/Ellipse6.png" alt="Avatar" class=" media-object right" style="width:100%;">
+						</div>
+					  </div>
+				  </div>
+				  <div class="chater">
+					  <div class="media">
+						<div class="media-body media-body_right text-right chater-sepration_rule" style="">
+						  <p class="text-para ">siva machi ?</p>    
+						  <p class="time-right">8:00am</p>
+						   <!-- <hr class="chater-sepration_rule"> -->
+						</div>    
+						 <div class="media-right">
+							<!-- <img src="img_avatar1.png" class="media-object" style="border-radius:50px; width:60px;"> -->
+							<img src="images/Ellipse6.png" alt="Avatar" class=" media-object right" style="width:100%;">
+						</div>
+					  </div>
+				  </div>
+				    <div class="chater">
+					  <div class="media">
+						<div class="media-body media-body_right text-right chater-sepration_rule" style="">
+						  <p class="text-para ">siva new ?
+						  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						  Lorem ipsum dolor sit amet, consectetur</p>    
+						  <p class="time-right">8:00am</p>
+						   <!-- <hr class="chater-sepration_rule"> -->
+						</div>    
+						 <div class="media-right">
+							<!-- <img src="img_avatar1.png" class="media-object" style="border-radius:50px; width:60px;"> -->
+							<img src="images/Ellipse6.png" alt="Avatar" class=" media-object right" style="width:100%;">
+						</div>
+					  </div>
+				  </div>
+				  
+				  
+				</div>	
+				<div class="input-group mb-3 mt-3">
+					<input type="text" class="form-control chatdiv_input " placeholder="Type your message here" style="border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
+					<div class="input-group-append">
+						<button class=" btn input-group-text1 glyphicon"><i style="font-size:14px;color:#6931f9" class="fa">&#xf1d9;</i> </button>					
+					</div>		
+				</div>				
+			</div>
+			
+		
+			
+			
+							
+	<div class="chat-div" style="">		
+	
+	</div>
+			
+			
+			
+			
+			
+	</div>
+    </div>
+</div>
+ <!-- /new -->
+ 
+ 
+ <div class="container mt-4"> 
+ <hr> 
+ </div>
+
+<div class="container">
+<div class="row bhub3-pdl">
+  <ul class="nav nav-pills  justify-content-end">
+    <li class="nav-item showdot1">
+    <a class="nav-link active hover-btrule" data-toggle="pill" href="#Prize-1">Prize</a>
+    </li>
+    <li class="navli-pdlr showdot2">
+     <a class="nav-link hover-btrule" data-toggle="pill" href="#Brackets">Brackets</a>
+    </li>
+	<li class="nav-item">
+    <a class="nav-link hover-btrule" data-toggle="pill" href="#Brackets2">Support</a>
+    </li>
+	<li class="navli-pdlr showdot4">
+      <a class="nav-link hover-btrule" data-toggle="pill" href="#Rules">Rules</a>
+    </li>
+  </ul>
+</div>
+</div>
+ <div class="container"> 
+ <div class="row">
+ <div class="col-md-10 bhub3-invietfriends stand-secpd1"> 
+  <div class="tab-content">
+    <div id="Prize" class="tab-pane show in active">
+      <p>Prizes for 64 Teams</p>
+      <p class="place">1st Place</p>
+	  <ul class="bhub3-lh">
+	  <li>The first Place Team shall receive $300.00 USD</li>
+	  <li>5 Credits Per Player</li>
+	  <li>Each Player shall recive an achivement</li>
+	  </ul>
+	  <br>
+	  <p class="place">2st Place</p>
+	  <ul class="bhub3-lh">
+	  <li>The first Place Team shall receive $300.00 USD</li>
+	  <li>6 Credits Per Player</li>
+	  <li>Each Player shall recive an achivement</li>
+	  </ul>
+    </div>
+    <div id="Brackets" class="tab-pane fade">
+      <p>Prizes for 64 Teams</p>
+      <p class="place">1st Place</p>
+	  <ul class="bhub3-lh">
+	  <li>The first Place Team shall receive $300.00 USD</li>
+	  <li>5 Credits Per Player</li>
+	  <li>Each Player shall recive an achivement</li>
+	  </ul>
+	  <br>
+	  <p class="place">2st Place</p>
+	  <ul class="bhub3-lh">
+	  <li>The first Place Team shall receive $300.00 USD</li>
+	  <li>5 Credits Per Player</li>
+	  <li>Each Player shall recive an achivement</li>
+	  </ul>
+    </div>
+    <div id="Support" class="tab-pane fade">
+      <p>Prizes for 64 Teams</p>
+      <p class="place">1st Place</p>
+	  <ul class="bhub3-lh">
+	  <li>The first Place Team shall receive $300.00 USD</li>
+	  <li>5 Credits Per Player</li>
+	  <li>Each Player shall recive an achivement</li>
+	  </ul>
+	  <br>
+	  <p class="place">2st Place</p>
+	  <ul class="bhub3-lh">
+	  <li>The first Place Team shall receive $300.00 USD</li>
+	  <li>5 Credits Per Player</li>
+	  <li>Each Player shall recive an achivement</li>
+	  </ul>
+    </div>
+    <div id="Rules" class="tab-pane fade">      
+      <p>Prizes for 64 Teams</p>
+      <p class="place">1st Place</p>
+	  <ul class="bhub3-lh">
+	  <li>The first Place Team shall receive $300.00 USD</li>
+	  <li>5 Credits Per Player</li>
+	  <li>Each Player shall recive an achivement</li>
+	  </ul>
+	  <br>
+	  <p class="place">2st Place</p>
+	  <ul class="bhub3-lh">
+	  <li>The first Place Team shall receive $300.00 USD</li>
+	  <li>5 Credits Per Player</li>
+	  <li>Each Player shall recive an achivement</li>
+	  </ul>
+    </div>
+  </div>
+ </div>
+ 
+ 
+<div class="col bhub3-invite">
+ <img src="images/adv banner1.png" alt="" class="advbanner">
+ </div>  
+ </div>  
+ </div>
+ 
+		   	  
+			  
+
+
+		  
+<!-- start footer -->	   
+<footer class="megalink-bg foot-sec">
+ <span> Privacy Policy / Terms / About us</span><br>
+ <span> C game Site 2020 All Rights Reserved</span>  
+</footer>
+<!-- /end footer -->
+<script>
+$("document").ready(function()
+{
+  alert("dfdfdf");
+  <!-- $('.chat-div,.chater').children().last().remove(); -->
+
+  <!-- $('.chat-div,.chater').removeClass("chater-sepration_rule"); -->
+  <!-- $('.chat-div .chater .media.media-body .chater-sepration_rule').children().last().remove(); -->
+  <!-- $('.chat-divbrowse .chater, .media.media-body, .chater-sepration_rule').removeClass("chater-sepration_rule") -->
+  $('.chat-div').children().last().children().children().removeClass("chater-sepration_rule");
+
+
+
+
+});
+
+</script>	  
+</body>
+</html>
+

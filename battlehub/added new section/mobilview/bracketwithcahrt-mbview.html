@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>mobile view Barcket with chart </title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+  <!-- <link rel="stylesheet" id="google-fonts-css" href="//fonts.googleapis.com/css?family=Montserrat%3A300%2C400%2C500%2C700%2C900&amp;ver=1.0.0" type="text/css" media="all"> -->
+  <link rel="stylesheet" href="css/stylemine.css">
+  <!-- <link rel="stylesheet" href="css/stylebhub3.css"> -->
+  <script src="js/style.js"></script>
+
+<style>
+//accordion css
+.panel-title > a:before {
+    float: right !important;
+    font-family: FontAwesome;
+    content:"";
+    <!-- content:"\f068"; -->
+    padding-right: 5px;
+	width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #fff;
+    transform: rotate(0deg);
+    transform-origin: 50% 50%;
+    transition: transform .3s ease-in-out;	
+	    padding-top: 8px;
+	
+}
+
+.panel-title > a.collapsed:before {
+    float: right !important;
+    <!-- content:"\f067"; -->
+    content:"";	
+	transform: rotate(180deg);
+}
+.panel-title > a:hover, 
+.panel-title > a:active, 
+.panel-title > a:focus  {
+    text-decoration:none;
+}
+
+h4.panel-title {
+    font-size: 16px;
+	padding: 15px 0px 8px 0px;
+}
+.panel-body {
+    font-size: 14px;
+	padding-bottom: 10px;
+	padding-left: 15px;
+}
+.panel.panel-default {
+    border-bottom: 1px solid hsla(0,0%,100%,.1);   
+}
+.panel.panel-default.collapsed {
+    cursor: pointer;
+}
+.panel-heading {
+    cursor: pointer;
+}
+.borderbt_none {
+    border-bottom: 0!important;
+}
+
+
+
+
+
+
+
+
+//chat css
+
+.chater {
+    <!-- border-bottom: 0.1px solid #dedede40;   -->
+    padding: 10px;
+    margin: 0px 10px;
+}
+
+.darker {
+  border-color: #ccc;
+  background-color: #ddd;
+}
+
+.chater::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.chater img {
+  float: left;
+  max-width: 30px;
+  width: 100%;
+  margin-right: 12px;
+  border-radius: 50%;
+   margin-bottom: 14px;
+}
+
+.chater img.right {
+  float: right;
+  margin-left: 12px;
+  margin-right:0; 
+}
+
+.time-right {
+  color: #676777;
+  font-size:10px;
+  margin-bottom: 0;
+}
+
+.time-left { 
+  color: #676777;
+    font-size:10px;
+	margin-bottom: 0;
+}
+
+.chat-div{
+	background: #29293e;
+    padding: 15px 10px;;
+    border-radius: 5px;
+	border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.chat-div_title{
+	font-variant: all-small-caps;
+	text-align:center;
+	border: 5px solid #29293e;
+    border-bottom: 0;    
+    padding: 10px;
+	border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+input.form-control.chatdiv_input {
+    border-radius: 0px;
+    background: #29293e;
+    border: 0px;
+    font-size: 12px;
+    padding: 20px 15px!important;
+	border-right: 1px solid;
+
+}
+
+.input-group-text1 {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: .375rem .75rem;
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #29293e;    
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+input.form-control.chatdiv_input:focus {
+    box-shadow: 0 0 0 0.1rem #6931f9;
+}
+
+.chat-div {
+    overflow: auto;
+    height: 450px;
+}
+
+.chat-div::-webkit-scrollbar {
+    width: 5px;
+}
+
+.chat-div::-webkit-scrollbar-corner {
+    background: rgba(0,0,0,0);
+}
+.chat-div::-webkit-scrollbar-track
+{
+	background-color: #222;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+	box-shadow: inset 0 0 15px #2b3641;
+}
+
+.chat-div::-webkit-scrollbar-thumb
+{
+	 -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #6931f9; 
+}
+
+
+
+
+.form-control:focus {
+    color: #495057;
+    /* background-color: #fff; */
+    /* border-color: #80bdff; */
+    outline: 0;
+    /* box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25); */
+}
+
+.text-right    
+{
+text-align:right;
+}
+.text-para
+{
+margin-bottom:0px;
+font-size:12px;
+color:#C2C2C8;
+}
+
+.chater-sepration_rule {
+    border-bottom: 1px solid #39394A;
+	padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+
+.media-body_left
+{
+margin-right:42px;
+}
+
+.media-body_right
+{
+margin-left:42px;
+}
+
+
+@media (min-width: 576px) { 
+.turmntdetail-bracket_mobileview { 
+    display:none;
+	}
+}
+
+
+</style>
+</head>
+<body> 
+
+
+<div class="container turmntdetail-bracket_mobileview">	
+		<div class="col-md-12 p-0" style="margin: 0 auto;display: table;border: 1px solid #6931f9;">
+			<ul class="nav nav-pills" role="tablist">
+				<li class="nav-item" style="width:50%">
+					<a class="nav-link active" style="border-bottom: 0;padding-left: 40px; padding-right: 40px;text-align:center;" data-toggle="pill" href="#details">DETAILS</a>
+				</li>
+				<li class="nav-item" style="width:50%">
+				<a class="nav-link" id="" style="border-bottom: 0;padding-left: 35px; padding-right: 35px;text-align:center;" data-toggle="pill" href="#chat">CHAT</a>
+				</li>
+			</ul>
+		</div>
+
+	<!-- start Tab panes -->
+	
+		<div class="tab-content row">
+		<div id="details" class="container tab-pane active">
+			<br>
+			<!-- strat winner banner -->
+			<div class="container bhub3-invietfriends">
+					<div class="row stand-secpd">
+							<div class="col-md-8 match_details_win_lose col-md-12">                                             
+								<div class="team-box team-tabs rules match-summary w-100 champion-banner" style="position:relative;">
+									<img src="https://battlelounge.io/public/theme/images/champion-bg.jpg" class="champion-center" style="margin:0 auto;display:table;width: 100%;height: auto;">
+									<h2 class="winnername" style="font-size : 14px;position: absolute;bottom: 6%;text-align: center;width: 100%;">kumstest</h2>
+								</div>
+													 
+							</div>
+					</div>    
+			</div>
+			<!-- end winner banner -->
+			
+			<!-- start collapse -->
+			<div class="container bhub3-invietfriends" style="">
+				<div class="row stand-secpd">
+					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true" style="width:100%">
+				<!-- tab1 -->
+					<div class="panel panel-default" id="panel-default_mbview">
+						<div class="panel-heading" role="tab" id="headingOne" data-toggle="collapse" href="#collapseOne">
+							 <h4 class="panel-title">
+						<a class="collapsed"  data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+						  Info
+						</a>
+					  </h4>
+						</div>
+						<div id="collapseOne" class="panel-collapse collapse" data-parent="#accordion" role="tabpanel" aria-labelledby="test">
+							<div class="panel-body">
+							<div id="description" >
+                    <p class="text-white">      
+                        </p><p><br></p><p><strong>Standard Tournament</strong></p><p>This tournament is a standard single elimination tournament for Fortnite. Win each round to progress to be the Champion. Battle On! (In Purple Battle On)</p><p>(For the Champions Circuit)</p><p><strong>Qualifying Tournament</strong></p><p>This tournament is a qualifying tournament for the Champions Circuit of Fortnite. It is played as a single elimination tournament where you must win each round in order to progress and be the Champion. </p><div class="champcaption"><span>Battle On!</span></div><p></p><p><strong>Standard Tournament</strong></p><p>This tournament is a standard single elimination tournament for Fortnite. Win each round to progress to be the Champion. Battle On! (In Purple Battle On)</p><p>(For the Champions Circuit)</p><p><strong>Qualifying Tournament</strong></p><p>This tournament is a qualifying tournament for the Champions Circuit of Fortnite. It is played as a single elimination tournament where you must win each round in order to progress and be the Champion. </p><div class="champcaption"><span>Battle On!</span></div><p></p>                    <p></p>
+						</div>
+
+							
+							</div>
+						</div>
+					</div>
+				<!-- tab2 -->
+					<div class="panel panel-default">
+						<div class="panel-heading" role="tab" id="headingTwo" data-toggle="collapse" href="#collapseTwo" >
+							 <h4 class="panel-title">
+						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+						  Rules
+						</a></h4>
+						</div>
+						<div id="collapseTwo" class="panel-collapse collapse" data-parent="#accordion" role="tabpanel" aria-labelledby="headingTwo">
+							<div class="panel-body">
+								<div id="rules">      
+                    <p class="text-white">
+                        </p><p><br></p><p><strong>General Rules:</strong></p><ol><li><p>Each tournament match has a max grace period of 15 minutes to start the game after check in. If both players check in, the game must commence within 15 minutes of the check in.&nbsp;</p></li><li><p>If the number of players for a tournament is uneven, the tournament will issue BYES on a random basis as to be fair.</p></li><li><p>After winning a match, players must wait for their next opponent to finish their game in order to check in for the next game. The timer will not start until both players have finished their previous game.</p></li><li><p>If a player does not check into their match within the first 15 minutes, they may suffer an automatic loss by virtue of not showing up in the system.</p></li><li><p>Both players are responsible for entering&nbsp; the correct score. Scores must be submitted after every game within 5 minutes of game completion.&nbsp;</p></li><li><p>If at any time a player violates the rules of a tournament, or if something is unclear to a player, they can use the dispute function to report this misconduct. However, abuse of the dispute system may result in a ban.&nbsp;</p></li></ol><p><br></p><p>(**It is every player's responsibility to record and screenshot gameplay if they wish to dispute something. Any dispute without evidence will be ignored.)</p><p>Game Settings: Unless otherwise specified, or unless BOTH players agree on a specific setting, the following settings must be used (If there are any disputes of players changing these settings they must be recorded/screenshotted and filed in the dispute tab):</p><p>Game Mode: Head to Head Games must be played in Duos mode</p><p><strong>Win Conditions:</strong></p><p>You and your opponent will join the same duo game and compete to score the most kills.. The player with the most kills at the end of the game wins. If both players are tied, the player that survived longer wins the tie-breaker. If you are eliminated simultaneously, the player with the most damage wins.</p><p><strong>Illegal Play:</strong></p><ul><li><p>You are not allowed to intentionally interfere with your opponents' ability to move and/or kill other opponents</p></li><li><p>You are not allowed to intentionally put your opponent in a situation where they will more than likely die. (Example: Crashing a helicopter you are both traveling in).</p></li></ul><p><br></p><p><strong>Legal Play:</strong></p><ul><li><p>If you are downed but downed someone in the process and they are finished by another team or teammate, that counts the same as it would in game. Meaning that is your kill. If you die and a player you downed then dies, it counts the same as in game as well, meaning that does count as your kill unfortunately. Whatever the kill count reads at the end of the match is your score.</p></li><li><p>Reviving/Respawning your teammate is fair game if you choose to do so.</p></li><li><p>What would be defined as “Kill-stealing” is allowed. If you and your opponent choose to stay together throughout the duration of the game, "Stealing" each others kills would be allowed and is part of the game. Kills that are scored by the game as kills are the kills that count towards each players score for the tournament.</p></li></ul><p><br></p><p><strong>Additional Support Rules:</strong></p><p><strong>Lag Spikes:</strong> Video evidence is required, but if a player is experiencing game-breaking lag during the game that hinders their play, the game is subject to a rematch. There must be proof sent to the moderators in order for this to take place. If a player submits multiple lag reports in one day, they might be subject to a temporary ban.</p><p><strong>Disconnections:</strong> Disconnects before entering the game must be replayed. If a player disconnects past the first minute of the game or after their opponent gets a minimum of 1 kill, whichever comes first, it is considered a death.</p><p><strong>Cheating:</strong> Video evidence is required. Any proof of any player cheating results in an immediate ban of their account and forfeit of all prizes won.</p><p><strong>General Rules:</strong></p><ol><li><p>Each tournament match has a max grace period of 15 minutes to start the game after check in. If both players check in, the game must commence within 15 minutes of the check in.&nbsp;</p></li><li><p>If the number of players for a tournament is uneven, the tournament will issue BYES on a random basis as to be fair.</p></li><li><p>After winning a match, players must wait for their next opponent to finish their game in order to check in for the next game. The timer will not start until both players have finished their previous game.</p></li><li><p>If a player does not check into their match within the first 15 minutes, they may suffer an automatic loss by virtue of not showing up in the system.</p></li><li><p>Both players are responsible for entering&nbsp; the correct score. Scores must be submitted after every game within 5 minutes of game completion.&nbsp;</p></li><li><p>If at any time a player violates the rules of a tournament, or if something is unclear to a player, they can use the dispute function to report this misconduct. However, abuse of the dispute system may result in a ban.&nbsp;</p></li></ol><p><br></p><p>(**It is every player's responsibility to record and screenshot gameplay if they wish to dispute something. Any dispute without evidence will be ignored.)</p><p>Game Settings: Unless otherwise specified, or unless BOTH players agree on a specific setting, the following settings must be used (If there are any disputes of players changing these settings they must be recorded/screenshotted and filed in the dispute tab):</p><p>Game Mode: Head to Head Games must be played in Duos mode</p><p><strong>Win Conditions:</strong></p><p>You and your opponent will join the same duo game and compete to score the most kills.. The player with the most kills at the end of the game wins. If both players are tied, the player that survived longer wins the tie-breaker. If you are eliminated simultaneously, the player with the most damage wins.</p><p><strong>Illegal Play:</strong></p><ul><li><p>You are not allowed to intentionally interfere with your opponents' ability to move and/or kill other opponents</p></li><li><p>You are not allowed to intentionally put your opponent in a situation where they will more than likely die. (Example: Crashing a helicopter you are both traveling in).</p></li></ul><p><br></p><p><strong>Legal Play:</strong></p><ul><li><p>If you are downed but downed someone in the process and they are finished by another team or teammate, that counts the same as it would in game. Meaning that is your kill. If you die and a player you downed then dies, it counts the same as in game as well, meaning that does count as your kill unfortunately. Whatever the kill count reads at the end of the match is your score.</p></li><li><p>Reviving/Respawning your teammate is fair game if you choose to do so.</p></li><li><p>What would be defined as “Kill-stealing” is allowed. If you and your opponent choose to stay together throughout the duration of the game, "Stealing" each others kills would be allowed and is part of the game. Kills that are scored by the game as kills are the kills that count towards each players score for the tournament.</p></li></ul><p><br></p><p><strong>Additional Support Rules:</strong></p><p><strong>Lag Spikes:</strong> Video evidence is required, but if a player is experiencing game-breaking lag during the game that hinders their play, the game is subject to a rematch. There must be proof sent to the moderators in order for this to take place. If a player submits multiple lag reports in one day, they might be subject to a temporary ban.</p><p><strong>Disconnections:</strong> Disconnects before entering the game must be replayed. If a player disconnects past the first minute of the game or after their opponent gets a minimum of 1 kill, whichever comes first, it is considered a death.</p><p><strong>Cheating:</strong> Video evidence is required. Any proof of any player cheating results in an immediate ban of their account and forfeit of all prizes won.</p>                    <p></p>
+							</div>
+							</div>
+						</div>
+					</div>
+					
+					<!-- tab3 -->
+					<div class="panel panel-default">
+						<div class="panel-heading" data-toggle="collapse" href="#collapseThree" role="tab" id="headingThree">
+							 <h4 class="panel-title">
+						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+						  Prize
+						</a>
+					  </h4>
+						</div>
+						<div id="collapseThree" class="panel-collapse collapse" data-parent="#accordion" role="tabpanel" aria-labelledby="headingThree">
+							<div class="panel-body">
+									<div id="players" >
+										<div class="row text-center text-lg-left">
+																										<div class="col-lg-2 col-xl-2 col-md-3 col-sm-3 col-xs-4 mq-playermbview">
+														<form action="https://battlelounge.io/player/viewprofile/7" method="get" name="testfrm"> 
+															<button type="submit" class="btn btn-link" value="view profile"> 
+																																									<a href="#" class="d-block mb-1 h-100">
+																			<img class="img-fluid players-tab-image" src="https://battlelounge.io/storage/app/player/1588168505.png" alt="kumstest">
+																		</a>
+																		<div class="desc" style="color:#fff;">kumstest</div>
+																																						</button>
+														</form>
+													</div>
+																				<div class="col-lg-2 col-xl-2 col-md-3 col-sm-3 col-xs-4 mq-playermbview">
+														<form action="https://battlelounge.io/player/viewprofile/105" method="get" name="testfrm"> 
+															<button type="submit" class="btn btn-link" value="view profile"> 
+																												<a href="#" class="d-block mb-1 h-100">
+																		<div class="bracket_avatar_img" id="avatartxt">K</div>
+																	</a>
+																	<div class="desc" style="color:#fff;">kumsfour</div>
+																										</button>
+														</form>
+													</div>
+																				<div class="col-lg-2 col-xl-2 col-md-3 col-sm-3 col-xs-4 mq-playermbview">
+														<form action="https://battlelounge.io/player/viewprofile/112" method="get" name="testfrm"> 
+															<button type="submit" class="btn btn-link" value="view profile"> 
+																												<a href="#" class="d-block mb-1 h-100">
+																		<div class="bracket_avatar_img" id="avatartxt">N</div>
+																	</a>
+																	<div class="desc" style="color:#fff;">Nienth</div>
+																										</button>
+														</form>
+													</div>
+																							</div>      
+									</div>
+							</div>
+						</div>
+					</div>	
+
+				<!-- tab4 -->
+					<div class="panel panel-default">
+						<div class="panel-heading" data-toggle="collapse" href="#collapseFour" role="tab" id="headingFour">
+							 <h4 class="panel-title">
+						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+						  Player
+						</a>
+					  </h4>
+						</div>
+						<div id="collapseFour" class="panel-collapse collapse" data-parent="#accordion" role="tabpanel" aria-labelledby="headingFour">
+							<div class="panel-body">
+							<div id="players" >
+                    <div class="row text-center text-lg-left">
+                                                                                    <div class="col-lg-2 col-xl-2 col-md-3 col-sm-3 col-xs-4 mq-playermbview">
+                                    <form action="https://battlelounge.io/player/viewprofile/7" method="get" name="testfrm"> 
+                                        <button type="submit" class="btn btn-link" value="view profile"> 
+                                                                                                                                                <a href="#" class="d-block mb-1 h-100">
+                                                        <img class="img-fluid players-tab-image" src="https://battlelounge.io/storage/app/player/1588168505.png" alt="kumstest">
+                                                    </a>
+                                                    <div class="desc" style="color:#fff;">kumstest</div>
+                                                                                                                                    </button>
+                                    </form>
+                                </div>
+                                                            <div class="col-lg-2 col-xl-2 col-md-3 col-sm-3 col-xs-4 mq-playermbview">
+                                    <form action="https://battlelounge.io/player/viewprofile/105" method="get" name="testfrm"> 
+                                        <button type="submit" class="btn btn-link" value="view profile"> 
+                                                                                            <a href="#" class="d-block mb-1 h-100">
+                                                    <div class="bracket_avatar_img" id="avatartxt">K</div>
+                                                </a>
+                                                <div class="desc" style="color:#fff;">kumsfour</div>
+                                                                                    </button>
+                                    </form>
+                                </div>
+                                                            <div class="col-lg-2 col-xl-2 col-md-3 col-sm-3 col-xs-4 mq-playermbview">
+                                    <form action="https://battlelounge.io/player/viewprofile/112" method="get" name="testfrm"> 
+                                        <button type="submit" class="btn btn-link" value="view profile"> 
+                                                                                            <a href="#" class="d-block mb-1 h-100">
+                                                    <div class="bracket_avatar_img" id="avatartxt">N</div>
+                                                </a>
+                                                <div class="desc" style="color:#fff;">Nienth</div>
+                                                                                    </button>
+                                    </form>
+                                </div>
+                                                                        </div>      
+                </div>
+									
+							</div>
+						</div>
+					</div>	
+
+
+			<!-- tab5-->
+					<div class="panel panel-default">
+						<div class="panel-heading" data-toggle="collapse" href="#collapseFive" role="tab" id="headingFive">
+							 <h4 class="panel-title">
+						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+						  Brackets
+						</a>
+					  </h4>
+						</div>
+						<div id="collapseFive" class="panel-collapse collapse" data-parent="#accordion" role="tabpanel" aria-labelledby="headingFive">
+							<div class="panel-body">
+								<div id="brackets" >      
+                    
+                    <div class="d-flex flex-row flex-nowrap align-items-center" style="overflow: auto;">
+                        <section class="round league" style="margin-right:20px;">
+			<div class="winners">
+				<div class="matchups"><div class="matchup">
+								<div class="participants">
+									<div class="participant ">
+										<span>kumstest</span>
+									</div>
+									<div class="participant ">
+										<span>-</span>
+									</div>
+								</div>
+								
+							</div><div class="matchup">
+								<div class="participants">
+									<div class="participant ">
+										<span>kumsfour</span>
+									</div>
+									<div class="participant ">
+										<span>Nienth</span>
+									</div>
+								</div>
+								
+							</div></div>
+				</div>
+			</section><section class="round league" style="margin-right:20px;">
+			<div class="winners">
+				<div class="matchups"><div class="matchup">
+								<div class="participants">
+									<div class="participant ">
+										<span>kumstest</span>
+									</div>
+									<div class="participant ">
+										<span>Nienth</span>
+									</div>
+								</div>
+								
+							</div></div>
+				</div>
+			</section><section class="round league">
+			<div class="winners">
+				<div class="matchups"><div class="matchup">
+								<div class="participants">
+									<div class="participant ">
+										<span><img src="/public/theme/images/champion.png" width="50" alt="Winner">kumstest</span>
+									</div>
+								</div>
+							</div></div>
+				</div>
+			</section>                    </div>
+                </div>
+									
+							</div>
+						</div>
+					</div>	
+			<!-- tab6-->
+					<div class="panel panel-default">
+						<div class="panel-heading" data-toggle="collapse" href="#collapseSix" role="tab" id="headingSix">
+							 <h4 class="panel-title">
+						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+						  Supports
+						</a>
+					  </h4>
+						</div>
+						<div id="collapseSix" class="panel-collapse collapse" data-parent="#accordion" role="tabpanel" aria-labelledby="headingSix">
+							<div class="panel-body">
+								<div id="support" >
+                    <p class="text-white">
+                        </p><p>test</p>                    <p></p>
+                </div>
+									
+							</div>
+						</div>
+					</div>						
+				</div>
+				</div>
+			</div>				
+		<!-- end collapse -->
+		</div>
+		<div id="chat" class="container tab-pane fade">	
+			<br>		
+			<div class="chat-div_title">
+				<h6 style="margin-bottom:0px;">BATTLE LOUNGE CHAT </h6>
+			</div>
+			<div class="chat-div" style="">				
+				<!-- Left-aligned media object -->
+				<div class="chater">
+					  <div class="media">
+						<div class="media-left">
+						  <img src="images/Ellipse6.png" alt="Avatar" class=" media-object " style="width:100%;">
+						  <!-- <img src="img_avatar1.png" class="" style="width:60px"> -->
+						</div>
+						<div class="media-body media-body_left chater-sepration_rule">				  
+						  <p class="text-para">Hi</p>
+						  <!-- <hr class="chater-sepration_rule"> -->
+						</div>
+					  </div>
+				 </div>
+				  
+				  
+				  <!-- Right-aligned media object -->
+				  <div class="chater">
+					  <div class="media">
+						<div class="media-body media-body_right text-right chater-sepration_rule" style="">
+						  <p class="text-para ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>    
+						  <p class="time-right">8:00am</p>
+						   <!-- <hr class="chater-sepration_rule"> -->
+						</div>    
+						 <div class="media-right">
+							<!-- <img src="img_avatar1.png" class="media-object" style="border-radius:50px; width:60px;"> -->
+							<img src="images/Ellipse6.png" alt="Avatar" class=" media-object right" style="width:100%;">
+						</div>
+					  </div>
+				  </div>
+				  
+				  <div class="chater">
+					  <div class="media">
+						<div class="media-left">
+						  <img src="images/Ellipse6.png" alt="Avatar" class=" media-object " style="width:100%;">
+						  <!-- <img src="img_avatar1.png" class="" style="width:60px"> -->
+						</div>
+						<div class="media-body media-body_left chater-sepration_rule">				  
+						  <p class="text-para">hi</p>
+						  <p class="time-left">7:00am</p>
+						  <!-- <hr class="chater-sepration_rule"> -->
+						</div>
+					  </div>
+				 </div>
+				  
+				  
+				  <!-- Right-aligned media object -->
+				  <div class="chater">
+					  <div class="media">
+						<div class="media-body media-body_right text-right chater-sepration_rule" style="">
+						  <p class="text-para ">how r u?</p>    
+						  <p class="time-right">8:00am</p>
+						   <!-- <hr class="chater-sepration_rule"> -->
+						</div>    
+						 <div class="media-right">
+							<!-- <img src="img_avatar1.png" class="media-object" style="border-radius:50px; width:60px;"> -->
+							<img src="images/Ellipse6.png" alt="Avatar" class=" media-object right" style="width:100%;">
+						</div>
+					  </div>
+				  </div>
+				  <div class="chater">
+					  <div class="media">
+						<div class="media-body media-body_right text-right chater-sepration_rule" style="">
+						  <p class="text-para ">siva machi ?</p>    
+						  <p class="time-right">8:00am</p>
+						   <!-- <hr class="chater-sepration_rule"> -->
+						</div>    
+						 <div class="media-right">
+							<!-- <img src="img_avatar1.png" class="media-object" style="border-radius:50px; width:60px;"> -->
+							<img src="images/Ellipse6.png" alt="Avatar" class=" media-object right" style="width:100%;">
+						</div>
+					  </div>
+				  </div>
+				    <div class="chater">
+					  <div class="media">
+						<div class="media-body media-body_right text-right" style="">
+						  <p class="text-para ">siva new ?
+						  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						  Lorem ipsum dolor sit amet, consectetur</p>    
+						  <p class="time-right">8:00am</p>
+						   <!-- <hr class="chater-sepration_rule"> -->
+						</div>    
+						 <div class="media-right">
+							<!-- <img src="img_avatar1.png" class="media-object" style="border-radius:50px; width:60px;"> -->
+							<img src="images/Ellipse6.png" alt="Avatar" class=" media-object right" style="width:100%;">
+						</div>
+					  </div>
+				  </div>
+				  
+				  
+				</div>	
+				<div class="input-group mb-3 mt-3">
+					<input type="text" class="form-control chatdiv_input " placeholder="Type your message here" style="border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
+					<div class="input-group-append">
+						<button class=" btn input-group-text1 glyphicon"><i style="font-size:14px;color:#6931f9" class="fa"></i> </button>					
+					</div>		
+				</div>							
+		</div>
+	</div>
+		
+		<!-- end Tab panes -->
+</div>
+
+			  
+</body>
+</html>
+
