@@ -1,0 +1,1358 @@
+/* media Queries */
+@media screen and (max-width: 768px)
+{
+.mq-li-pdr
+{
+padding-right:0px;
+}
+.mq-li-pdl
+{
+padding-left:0px;
+}
+.mq-center {
+    margin: 0 auto;
+	text-align: center;	
+	
+}
+
+.col-xs-6.mq-center.ml-auto.mq-mt {
+    margin-top: 26px;
+}
+
+.row.row-pd0.mq-rowmt {
+    margin-top: -31px;
+}
+
+.card-images5
+{
+margin: 0 auto;
+}
+.mq-menuimg1
+{
+width: 100%!important;
+  margin-top: 0px!important;
+}
+.mq-absolute{
+    top: 170px;	
+}
+.mq-eu2v2
+{
+	font-size: 15px!important;
+}
+.mq-media_img {
+    width: 90px!important;
+}
+.mq-myprofilecard-mt {
+    margin-top: 12px;
+}
+.match-box {
+    padding-left: 20px!important;
+    padding-right: 20px!important;
+}
+
+}
+
+@media screen and (max-width: 767px)
+{
+	.mq-flex-columns
+	{
+	flex-direction: column!important;
+	}
+.mq-center 
+{
+    margin: 0 auto;
+	text-align: center!important;
+padding-right:7px;	
+}
+.mq-mobile
+{
+    display: inline-block;
+    border-left: 1px solid #cc7b97;
+    margin: 0px 7px;
+    vertical-align: middle;
+    height: 12px;
+	padding-left:2px;
+}
+.mlink-mr {
+    margin-right: 0px!important;
+}
+.p-2
+{
+padding:0px!important;
+}
+.mq-featuredsec {
+    margin: 0 auto;
+    display: table;
+}
+.mq-gamessec_xswd {
+    width: 45%;
+	margin-left: 8px;
+    margin-right: 8px;
+}
+.mq-whattodofnt {
+    font-size: 11px!important;
+}
+img.menu-img.mq-menuimg {
+    width: 50px!important;
+	float:left;
+}
+.mq-usertourbtn {
+    margin-top: -18px;
+}
+.mq-homeplay-mt 
+{
+margin-top:65px!important;
+}
+.mq-headermediamt
+{
+margin-top:46px;
+}
+h6.txtcolor-white.body-fpara.mq-body-fpara1 {
+    padding-left: 0px!important;
+}
+.mq-meida_palypage {
+    font-size: 20px;
+}
+.mq-rigsterbtn
+{
+padding:0px;
+}
+.mq-usertourbtn-mt
+{
+	margin-top:0px!important;
+}
+.mq-media_img {
+    width: 70px!important;
+}
+.mq-absolute{
+  top: 124px;
+left:30px;	
+}
+.mq-destory {
+    margin-top: 5px!important;
+    margin-bottom: 5px;
+    border: 0;
+    border-top: 1.5px solid #fff;
+    margin-right: 121px;
+}
+.mq-eu2v2
+{
+	font-size: 12px!important;
+}
+.mq-vertlinel-lr_pd
+{
+	padding-left:5px;
+	padding-right:5px;
+}
+ul.stats.player-stats.pull-right {
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+    /* justify-content: space-between; */
+    width: 100%;
+    padding: 0!important;
+}
+ul.stats.player-stats li {
+    padding-left: 0px!important;
+}
+.right2.mq-myprfile_center {
+     position: absolute;
+    right: 0;
+    left: 175px;
+}
+.left3.mq-myprfile_center {
+    float: right!important;
+	    position: absolute;
+    right: 0;
+    left: 175px;
+}
+
+.right4.mq-myprfile_center {
+    float: left!important;
+}
+.profile1:after {
+    content: '\A';
+    white-space: pre;
+}
+.profile1
+{
+	margin-left:0px!important;
+}
+span.ml-2.playername {
+    margin: 0px!important;
+	line-height: 6;
+}
+.mypro-result {    
+   padding-top: 5.5rem!important;
+    padding-bottom: 4.5rem;
+}
+.product-img-mt {
+    margin-top: 0px!important;
+}
+.mq-yoyo
+{
+	margin-bottom:2.5rem;
+}
+.mq-myprofile_tshirtwd {
+    width: 70%!important;    
+    float: right;  
+    padding-top: 20px;
+
+}
+.buynowbtn {
+    background-color: #6932F9;
+    padding: 10px 30px!important;
+    font-size: 15px;
+    font-weight: 800;  
+}
+.w3-card_bg {
+    background-color: #202028;
+    padding: 0 0 10px 0!important;
+}
+p.mq-myprofile-p_center {
+    text-align: center;
+}
+.mq-cash_prizes {
+    margin-top: 15px!important;
+}
+.mq-loss {
+    margin-top: 15px;
+}
+
+.fifa
+{
+	margin-top:4rem!important;
+}
+.match-box {
+    padding-left: 20px!important;
+    padding-right: 20px!important;
+}
+
+
+}
+
+@media screen and (max-width: 375px)
+{
+.mq-myprofile_tshirtwd {
+    width: 70%!important;
+    float: right;
+    padding-top:50px;
+}
+.right2.mq-myprfile_center {
+    position: absolute;
+    right: 0;
+    left: 150px
+}
+.left3.mq-myprfile_center {
+    float: right!important;
+    position: absolute;
+    right: 0;
+    left: 150px
+}
+}
+
+@media screen and (max-width: 320px)
+{
+.mq-myprofile_tshirtwd {
+    width: 70%!important;
+    float: right;
+    padding-top:50px;
+	padding-bottom:25px;
+}
+.right2.mq-myprfile_center {
+        position: absolute;
+    right: 0;
+    left: 125px;
+}
+.left3.mq-myprfile_center {
+    float: right!important;
+    position: absolute;
+    right: 0;
+    left: 125px;
+}
+}
+
+/* media queries */
+
+
+
+body
+{
+background-color:#0B0B11!important;  
+font-family: 'Montserrat';font-size: 12px;
+}
+
+/* menusection */
+.menu-ptb {
+    padding-top: 26px;
+    padding-bottom: 20px;
+}
+.megamenu1
+{
+	 background-color: #0B0B11!important;
+	  border: 0px;	
+    /* padding: 20px 20px; */
+    width: 100%;	
+}
+.megamenu2 {
+    background: #202028;
+	 border: 0px;	
+    width: 100%;
+}
+
+
+.dropdown-toggle::after {
+    display: inline-block;
+    margin-left: .255em;
+    vertical-align: .255em;
+    content: "";
+    border-top: .3em solid;
+    border-right: .3em solid transparent;
+    border-bottom: 0;
+    border-left: .3em solid transparent;
+    color: #6932F9;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #c8c7ca;
+}
+
+img.logo {
+    width: 125px;
+    height: auto;
+}
+.menu-large {
+  position: static !important;
+}
+
+
+a.dropdown-item.bg-none {
+    background: #202028;
+}
+li.dropdown-item.bg-none {
+    background: none;
+	display: flex;
+    place-content: center;
+}
+.megamenu {
+   padding: 0px 0px 5px 0px;
+    width: 100%;
+}
+.games-submenu_img {
+    width: 130px;
+    height: 160px;
+	border: 1px solid #0B0B11;
+    border-radius: 5px;
+}
+  .wd-fitcontend{
+   width: fit-content;
+    margin-top: 6px;
+	border: 0px;
+	background:none;
+}
+
+
+.dropdown-menu {
+	display: table-header-group;
+	visibility: collapse;
+	opacity:0;
+	transform: translateY(-15px);
+	transition:1s ease all;	
+	}
+.dropdown-menu.show {
+	display: block;
+	visibility: visible;
+	opacity:1;
+	transform: translateY(0px);
+	transition: 1s ease all;
+}
+
+li.dropdown:hover
+{ 
+border-bottom:2px solid #6932F9;
+}
+
+/* .caret */
+/* { */
+/* color:#93030B; */
+/* } */
+/* .dropdown-toggle[aria-expanded="true"]{ */
+/* background:#FFF!important; */
+/* color:#6932F9!important; */
+/* } */
+.loginbtnbg {
+    background-color: #6932F9;
+    padding: 12px 20px;
+    border: 0px;
+   color: #fff;
+   outline-style: none!important;
+}
+.li-pdl
+{
+	
+  padding-left: 26px;
+}
+.login-ml
+{
+	/* margin-left:15px */
+}
+.dflxtext-white
+{
+color:#FFF;	
+}
+
+
+
+/* megalink */
+.mega-submenu {
+    font-size: 10px;
+}
+.mega-submenu_mb {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+
+.megalink-bg
+{
+background-color:#6932F9;
+}
+.vertline-lr_pd {
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+.verticle-line{
+display:inline-block;border-left:1px solid #6932F9;
+margin:0 10px;
+vertical-align:middle ;
+height:30px;
+}
+.megalink
+{
+text-align:center;
+}
+.mlink-mr
+{
+ margin-right: 0.5rem;
+}
+
+
+.meagalink-pd {
+    color: #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+img.cupicon {
+   vertical-align: middle;
+    margin-right: 5px;
+}
+
+
+
+/* carousel section */
+.carousel-item {
+  height: 100%;
+  min-height: 720px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  /* box-shadow: inset -2px -12px 20px 20px #0b0b11; */
+}
+
+.carousel-caption_pathprosec {
+    position: absolute;       
+    z-index: 10;
+   top: -378px;       
+	color:#fff;
+}
+
+
+
+
+ /* the path to pro section */
+.startyour
+{
+color:#fff;
+margin-top:14rem;
+    font-weight: 800;
+}
+.xbox {
+    height: 20px;
+}
+.xbox1 {
+    height:24px;
+    margin-left: 34px;
+    margin-right: 34px;
+}
+.cover-banner1 {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    <!-- background: red; -->
+    left: 10px;
+   top: -15px;
+	left: 0;
+    z-index: -1;
+}
+/* megalink */
+
+/* <!-- .container { --> */
+     /* <!-- padding-right: 0px; --> */
+     /* <!-- padding-left: 0px;  --> */
+    /* <!-- margin-right: auto; --> */
+    /* <!-- margin-left: auto; --> */
+/* <!-- } --> */
+/* .thepath_pd-l { */
+    /* margin-left: 9rem;	 */
+/* } */
+
+/* <!-- cardimages sec --> */
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 20%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+	
+.text-white {
+    color: #fff;    
+	        margin-top: 26px;
+}
+hr {
+    margin-top: 20px;
+    /* margin-bottom: 20px; */
+    border: 0;
+    border-top: 1px solid #6931f9;
+    
+}
+/* gamesh section */
+.rounded-icon_absolute {
+    position: absolute;
+    top: 200px;
+    left: 14px;
+}
+.card-block {
+    background: none;   
+}
+img.cardimgwd {
+    width: 100%;    
+    border: 1px solid #0B0B11;
+    border-radius: 5px;
+}
+/* games overlay section */
+.relativeoverlay {
+  position: relative;
+ 
+}
+.overlay {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .3s ease;
+    background-color: #484545a8;
+}
+.relativeoverlay:hover .overlay {
+  opacity: 1;
+}
+.icon {
+  color: white;
+  font-size: 10px;
+  position: absolute;
+  top: 50%;
+  left: -4%;
+  transform: translate(10%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.fa-user:hover {
+  color: #eee;
+}
+
+/* <!-- start tabs sections --> */
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #6931f9;
+}
+.nav-pills .nav-link {
+    border-radius:0;
+}
+.nav-link {
+    display: block;
+    padding:10px 0px;
+font-weight:800;	
+}
+.li-pdr {
+    padding-right: 8px;
+}
+/* .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover { */
+    /* color: #fff; */
+    /* background-color: #6931f9; */
+/* } */
+
+ /* tabs sec start  */
+.tab-content_center{
+    text-align: center;
+}
+.tabbt-rule
+{
+margin-top: 20px;
+    margin-bottom: 10px;
+    border: 0;
+    border-top: 1px solid #6931f9;
+margin-right: 0px;
+}
+
+
+/* <!-- Featured tournament section css --> */
+    
+.mb
+{
+	margin-bottom: 3rem;
+}
+	
+a.nav-link.hover-btrule.active {
+    background: none;
+    border-bottom: 2px solid #6932F9;
+	color:#fff;
+}
+span.dot1,.dot2,.dot3 {
+    padding-right: 5px;
+	vertical-align: middle;	
+}
+
+h1.Featured {
+    color: #fff;
+    font-weight: 800;
+}
+li.Tour1 {
+    display: inline;
+    font-size: 20px;
+    font-weight: 800;
+    color: #fff;
+  padding-left: 22px;
+}
+}
+ul.right {
+    float: right;
+}
+/* .Featured-btrule { */
+    /* border: 0; */
+    /* border-top: 2px solid #93030B; */
+    /* margin-right: 0px; */
+/* } */
+.rectacngle
+{
+width: 100%;
+    height: auto;}
+	
+	/* .relative-banner1 { */
+/* position: relative; */
+/* /* margin-top: 7rem; */ */
+/* } */
+
+/* .absolute-banner1 { */
+    /* position: absolute; */
+    /* top: -285px; */
+    /* left: 86px; */
+    /* padding: 0px; */
+/* } */
+	
+
+h2.prize {
+    font-weight: 800;
+}
+.bt-align{
+vertical-align: bottom;
+}
+hr.Prize_rule {
+    margin-right: 50%;
+    border-top: 2px solid #eee;
+}
+
+
+.copytight-sec
+{
+color:#fff;
+text-align:center;
+  padding: 15px;
+}
+
+/* what to do section */
+a.nav-link.tab-txtcolor {
+    color: #fff;
+}
+ul.nav.nav-pills.nav-justified.whattodo {
+    font-size: 15px;
+}
+h5.Ladders {
+    margin-top: 20px;
+    font-weight: 800;
+    margin-bottom: 20px;
+	 font-weight: 900;
+    /* font-family: sans-serif; */
+    font-family: sans-serif;
+
+}
+
+p.workyour {
+    
+        font-size: 17px;
+    
+}
+ul#myTabs {   
+    font-size: 14px;
+    font-weight: 800;
+}
+.navbar {
+    position: relative;   
+    margin-bottom: 10px;
+}
+	
+
+/* Future tornament tabs images styles */
+.Featured {
+    margin-top: 11px;
+}
+.future-mt {
+    margin-top: 7rem
+}
+.nav-lifont {
+    font-size: 20px;
+    flex-wrap: 40px;
+}
+.navli-pdlr {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    background-color: transparent;
+}
+a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+.relative {
+position: relative;
+/* margin-top: 7rem; */
+}
+
+
+.absolute {
+    position: absolute;
+    top: 285px;
+    left: 86px;
+    padding: 0px;
+}
+hr.destory {
+    margin-top: 20px;
+    /* margin-bottom: 20px; */
+    border: 0;
+    border-top: 1.5px solid #fff;
+}
+.media-img {
+    width: 130px;
+}
+/* More deatail sections */
+img.more-ml {
+    margin-left: 15px;
+	width:10%;
+}
+.morebtn:hover {
+    box-shadow: -22px 0px 0px 0px rgba(105,49,249,0.4);
+	color:#fff;
+	transition: 2s;
+}
+.card-hover:hover {
+    background: rgba(105, 49, 249, 0.12);    
+    transition: 2s;
+}
+
+
+/* other pages css */
+/* menu sections-bhub-3 */
+.txtcolor-white{
+	color:#fff;
+}
+img.menu-img {
+    width: 50%;
+    height: auto;
+    margin-top: -11px;
+	float:right;
+}
+
+.appexsecpd {
+    padding: 10rem 0px 4rem 0px;
+}
+.appexsecpd1{
+    padding: 14rem 0px 4rem 0px;
+}
+
+p.bhub3-appexhubplay {
+    font-size: 14px;
+    font-weight: 900;
+	margin-bottom: 3px;
+}
+button.btn.rigsterbtn {
+    float: right;
+    background-color: #6932F9;
+    color: #fff;
+    font-weight: bold;
+    font-size: 11px;
+    width: 30%;
+    height: 38px;
+    border-radius: 0;
+}
+.regbtnsec-pdl0
+{
+	padding-left:0;
+}
+/* .regbtnsec-pdrl0 */
+/* { */
+	/* padding-right:0; */
+/* } */
+/* standard tournaments section */
+.bhub3-invietfriends
+{	
+color:#fff;	
+background-color:#202028;
+    margin-bottom: 27px;
+}
+.col-md-2.bhub3-invite {
+    text-align: center;
+}
+.row.stand-secpd {
+    padding: 19px 0px 0px 0px;    
+}
+.stand-secpd1 {
+    padding: 19px 0px 0px 19px;    
+}
+
+
+.bhub3-tabspd
+{
+	padding-right:3rem;
+}
+.row.bhub3-pdl {
+    padding-left: 35px;
+	 padding-bottom: 20px;
+	  padding-top: 14px;
+}
+}
+.place
+{
+	   font-weight: 900;
+    font-size: 12px;
+}
+.bhub3-lh
+{
+	line-height: 24.5px;
+}
+img.advbanner {
+    width: 100%;
+       
+}
+
+/* bhub3 sections all images in page */
+
+img.img-responsive.advbanner2 {
+    width: 100%;
+    height: 100%;
+}
+.bhub4-mediamt {
+    margin-top: 60px;
+}
+
+/* last secusertournament */
+ .usertourbtn-mt
+ {
+	 margin-top:72px;
+ }
+ .rowtop-mt {
+    margin-top: 120px;
+}
+.Createtournamentbtn
+{
+	margin-left:14px;
+}
+.upcoming {
+    width: 100%;	
+}
+.upcoming-bg {
+    color: #fff;
+    background-color: #202028;
+	padding: 0;
+}
+.upcoming-bg1 {
+    color: #fff;
+    background-color: #202028;
+	padding: 0;
+}
+.callofduty-btn
+{
+background: none;
+    padding: 5;    
+    height: 30px;
+    border-color: #6932F9;
+    color: #fff;   
+    font-size: 12px;
+    border-radius: 0px; 
+margin-bottom: 14px;	
+}
+.btn:hover {
+    color: #fff;
+    text-decoration: none;
+}
+.calendar {
+    margin-right: 6px;
+}
+.wedndesday {
+    margin-right: 1rem;
+}
+.callofduty-sec {
+    padding: 15px 25px 12px 25px;
+}
+.Welcometo {
+    margin-top: 3rem;   
+	margin-bottom:1rem;
+}
+.upcome-head {
+    margin-top: 30px;
+    margin-bottom: 20px;
+	    margin-left: 14px;
+}
+.body-fpara {
+    padding-left: 9rem!important;
+}
+.videoimg
+{
+	width:100%;
+}
+
+
+
+/* start myprofile page sec */
+button.btn.editprofilebtn {
+    float: left;
+    background-color: #6932F9;
+    color: #fff;
+    font-weight: bold;
+    font-size: 11px;
+    width: 30%;
+    height: 38px;
+    border-radius: 0;
+}
+.myprofile-appexsecpd1 {
+    padding-top: 9rem;
+}
+
+/* .inner-body article.top { */
+    /* -webkit-align-items: center; */
+    /* align-items: center; */
+/* } */
+
+/* .myprofile-appexsecpd1 { */
+    /* padding: 9rem 0px 4rem 0px; */
+/* } */
+/* .myprofile-mediamt { */
+    /* margin-top: 20px; */
+/* } */
+/* .inner-body { */
+    /* background-color: #202028; */
+    /* padding: 34px 30px; */
+    /* margin-bottom: 50px; */
+/* } */
+
+/* .inner-body article { */
+    /* color: #60626d; */
+    /* display: -webkit-flex; */
+    /* display: flex; */
+    /* -webkit-flex-direction: row; */
+    /* flex-direction: row; */
+    /* font-family: "Montserrat", sans-serif; */
+/* } */
+/* .inner-body article .col { */
+    /* display: -webkit-flex; */
+    /* display: flex; */
+/* } */
+/* .inner-body article.top .col.left.detail-left-list ul.only-mobile { */
+    /* display: none; */
+/* } */
+/* .inner-body article.top .col.left.detail-left-list ul { */
+    /* display: -webkit-flex; */
+    /* display: flex; */
+/* } */
+/* .inner-page .inner-body article.top { */
+    /* border-bottom: 1px solid #333; */
+/* } */
+/* ul { */
+    /* padding: 0; */
+    /* margin: 0; */
+    /* list-style-type: none; */
+/* } */
+/* .inner-body article.top .col.left.detail-left-list ul li { */
+    /* padding: 16px 40px 16px 0; */
+    /* margin: 0 40px 0 0; */
+    /* border-right: 1px solid #333; */
+/* } */
+/* .name { */
+    /* text-align: center !important; */
+		/* font-size:16px; */
+/* } */
+/* .inner-body article.top p { */
+    /* font-size: .875em; */
+/* } */
+/* .inner-body article p { */
+    /* margin-bottom: 10px; */
+/* } */
+/* .inner-body article p { */
+    /* font-size: .875em; */
+    /* font-weight: 500; */
+    /* line-height: 25px; */
+    /* color: #dadae0; */
+/* } */
+/* .inner-body article.top p { */
+    /* font-size: .875em; */
+/* } */
+/* .your-points { */
+    /* text-align: center; */
+    /* font-size: 24px !important; */
+    /* font-weight: bold !important; */
+/* } */
+/* .inner-body article .col.left { */
+    /* -webkit-flex-direction: column; */
+    /* flex-direction: column; */
+    /* margin-right: auto; */
+/* } */
+/* .inner-body article .col { */
+    /* display: -webkit-flex; */
+    /* display: flex; */
+/* } */
+/* ul.addt-list li { */
+    /* font-size: 14px; */
+/* } */
+
+/* @media screen and (min-width: 1024px) */
+/* { */
+/* li.profile-banner { */
+    /* padding: 0 !important; */
+    /* margin: 0 !important; */
+    /* border-right: 0 !important; */
+/* } */
+/* } */
+
+ .inner-body-bg {
+    background-color: #202028;
+    /* padding: 34px 30px; */
+    padding:40px;
+}
+section.profile-playeraddinfo h4 {
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+}
+.col-md-2.right-rule {
+    border-right: 1px solid #333;
+}
+.social-list {  
+    display: flex;
+	display: -webkit-flex;
+}
+.text-head
+{
+	    display: flex;
+	display: -webkit-flex;
+}
+section.profile-playeraddinfo .text-head ul li:not(:last-child) {
+    margin-right: 15px;
+}
+img.li-icon {
+    /* display: block; */
+    /* width: 30px; */
+    height: 30px;
+    margin: 0 auto;
+    display: table;
+}
+
+ul.stats.player-stats.pull-right li:not(:last-child) {
+    padding-right: 40px;   
+}
+ul.stats.player-stats li {
+ padding-left: 35px;
+}
+
+	
+/* ul.stats.player-stats li { */
+    /* border-right: 1px solid red; */
+/* } */
+ul.stats.player-stats.pull-right li:not(:last-child) {
+    padding-left: red;
+    /* padding-left: 0px!important; */
+    border-right: 1px solid #333;
+}
+.right-rule {
+    border-right: 1px solid #333;
+}
+
+
+
+/* satrt player history */
+.teams .tab-nav {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    /* height: 50px; */
+    width: fit-content;
+    margin: 0 auto 54px;
+}
+
+.tabshows {
+    font-family: "Montserrat",sans-serif !important;
+    font-weight: 600 !important;
+}
+.match-box {
+    background-color: rgba(29, 28, 32, .67);
+    border: 1px solid rgba(255, 255, 255, .05);
+    box-shadow: 0px 0px 24px rgba(0, 0, 0, .18);
+    padding: 18px;
+    color: #fff;  
+    border-radius: 8px;
+   
+
+}
+
+.tab-nav li {
+    margin: 0 1px;
+}
+
+/* .teams a.nav-link.active { */
+    /* padding: 10px 20px; */
+/* } */
+section.teams.nav-item li a {
+    background-color: rgba(105,49,249,0.42);
+}
+
+.teams li.nav-item a {
+    /* background: red; */
+    background-color: rgba(105,49,249,0.42); 
+    padding: 10px 30px;	
+font-size: 16px;	
+}
+section.teams li.nav-item {   
+    margin: 1px 1px;		
+}
+section.teams a.nav-link:hover {
+    background-color: #6931f9;
+}
+
+#upcoming-match .profile1 {
+    width: 60px;
+    height: 60px;
+    line-height: 50px;
+}
+.left1 {
+	float: left;
+   
+}
+.right2 {
+ float: right;
+    
+}
+.left3 {
+	float: left;
+    
+}
+.right4 {
+	float: right;
+    
+}
+
+.match-box {    
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.profile1 {
+    /* width: 55px; */
+    /* height: 59px; */
+    border-radius: 50%;
+    background: #6831f9;
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+    padding: 18px 23px;
+    line-height: 32px;
+   
+}
+section.teams span.date {
+    font: 500 12px "Montserrat", sans-serif;
+    color: #727b84;
+    letter-spacing: 2px;
+    margin: 2px 0;
+}
+section.teams span.result {
+    font: 900 30px "Montserrat", sans-serif;      
+    letter-spacing: 2px;
+}
+section.teams span.game-name {
+    text-align: center;    
+    color: #59636b;
+    text-transform: uppercase;
+}
+.match-box
+{
+	/* padding:40px; */
+}
+
+/* card sec */
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+
+
+.w3-card_bg {
+    background-color: #202028;
+	padding:0 0 17px 0;
+}
+.label.label-green {
+    background-color: #8dbe0a;
+	    padding: 6px;
+}
+section h4.title {
+    font-size: 16px;    
+}
+section .w3-card_bg .subtitle {
+    margin: 6px 0 8px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #60626d;
+}
+
+.product-img-mt {
+    margin-top: 44px;
+}
+.buynowbtn {
+    background-color: #6932F9;
+    padding: 18px 50px;
+    font-size: 15px;
+    font-weight: 800;
+}
+.buynowbtn:hover {
+    box-shadow: 22px 0px 0px 0px rgba(105,49,249,0.4);
+    color: #fff;
+    transition: .5s;
+}
+/*end player history */
+/* form sec */
+.myprofile-form-bg
+ {
+	background-color: rgba(29, 28, 32, 0.67);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.18);
+    padding: 18px 18px 0px 18px;
+ }
+ section.myprofile-pt {
+    /* margin-top: 27px; */
+    padding-top: 3rem;
+}
+section.myprofile-form.myprofile-pt form input.form-control {  
+    font-size: 12px;
+}
+.submitbtn {
+    background-color: #6932F9;
+    padding: 16px 40px;
+    font-size: 12px;
+    font-weight: 800;
+    border-radius: none;
+    border-radius: 0px;
+    margin: 0 auto;
+    display: table;
+	color:#fff;
+}
+.submitbtn-ml
+{
+    margin-left: 7px;
+    width: 15%;
+	}
+	.submitbtn:hover {
+    box-shadow: 22px 0px 0px 0px rgba(105,49,249,0.4);
+    color: #fff;
+    transition: .5s;
+}
+
+
+
+/* test css */
+.team-list {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: -18px;
+}
+.tabshows {
+    font-family: "Montserrat",sans-serif !important;
+    font-weight: 600 !important;
+}
+
+ul#upcoming-match {
+    padding: 5px;
+}
+#upcoming-match {
+    width: 100%;
+}
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+.tabshows {
+    font-family: "Montserrat",sans-serif !important;
+    font-weight: 600 !important;
+}
+
+.match-box{
+	background-color: rgba(29, 28, 32, .67);
+    border: 1px solid rgba(255, 255, 255, .05);
+    box-shadow: 0px 0px 24px rgba(0, 0, 0, .18);
+    padding: 18px;
+    color: #fff;
+    border-radius: 8px;	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* end myprofile page sec */

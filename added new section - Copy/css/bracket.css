@@ -1,0 +1,184 @@
+
+
+.brackets .zoomInOut {
+    direction: ltr;
+    float: right;
+}
+
+.brackets .zoomInOut button {
+    background-color: rgba(105,49,249,0.06);
+}
+.brackets .zoomInOut button {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(153,153,153,0.06);
+    border: 2px solid #2b3641;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-transition: all .6s ease-in-out;
+    transition: all .6s ease-in-out;
+    font-size: .875em;
+    color: #fff;
+    box-shadow: 0px 0px 18px rgba(0,0,0,0.24);
+}
+
+.brackets .bracket-wrapper {
+    display: -webkit-flex;
+    display: flex;
+    /* -webkit-justify-content: center; */
+    /* justify-content: center; */
+    overflow: hidden;
+    height: 780px;
+}
+div.jQBracket {
+    font-family: Arial;
+    font-size: 14px;
+    position: relative;
+}
+div.jQBracket .bracket {
+    float: right;
+    clear: left;
+}
+div.jQBracket .round {
+    position: relative;
+    float: left;
+}
+div.jQBracket .match {
+    position: relative;
+}
+div.jQBracket .teamContainer {
+    z-index: 1;
+    position: relative;
+    float: left;
+}
+.brackets .bracket-wrapper .jQBracket .team, .brackets .bracket-wrapper .jQBracket .team.lose {
+    height: 46px;
+    color: #fff;
+    background-color: rgba(153,153,153,0.06);
+    box-shadow: 0px 0px 18px rgba(0,0,0,0.25);
+    border: 2px solid #2b3641;
+    transition: all 0.4s;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    border-radius: 6px;
+}
+.brackets .bracket-wrapper .jQBracket .team:first-child {
+    margin-bottom: 10px;
+}
+div.jQBracket .team.lose {
+    background-color: #DDD;
+    color: #999;
+}
+div.jQBracket .team:first-child {
+    border-bottom: 1px solid #999;
+}
+div.jQBracket .team {
+    position: relative;
+    z-index: 1;
+    float: left;
+    background-color: #EEE;
+    cursor: default;
+}
+.brackets .bracket-wrapper .jQBracket .team.highlight, .brackets .bracket-wrapper .jQBracket .team:hover, .brackets .bracket-wrapper .jQBracket .team.win, .brackets .bracket-wrapper .jQBracket .team.lose:hover, .brackets .bracket-wrapper .jQBracket .team.lose.win, .brackets .bracket-wrapper .jQBracket .team.lose.highlight, .brackets .bracket-wrapper .jQBracket .team.lose:hover, .brackets .bracket-wrapper .jQBracket .team.lose.win {
+    background-color: rgba(105,49,249,0.09);
+}
+.brackets .bracket-wrapper .jQBracket .team .score, .brackets .bracket-wrapper .jQBracket .team .label, .brackets .bracket-wrapper .jQBracket .team.lose .score, .brackets .bracket-wrapper .jQBracket .team.lose .label {
+    font: 600 0.875em/1 "Montserrat",sans-serif;
+    height: 100%;
+    line-height: 40px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.brackets .bracket-wrapper .jQBracket .team .label, .brackets .bracket-wrapper .jQBracket .team.lose .label {
+    margin-left: 8px;
+}
+div.jQBracket .team {
+    position: relative;
+    z-index: 1;
+    float: left;
+    background-color: #EEE;
+    cursor: default;
+}
+div.jQBracket .team div.label {
+    padding: 3px;
+    position: absolute;
+    height: 22px;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.brackets .bracket-wrapper .jQBracket .team .label img, .brackets .bracket-wrapper .jQBracket .team.lose .label img {
+    margin-right: 8px;
+    max-width: 34px;
+    max-height: 32px;
+}
+.brackets .bracket-wrapper .jQBracket .team .score, .brackets .bracket-wrapper .jQBracket .team.lose .score {
+    color: #fff;
+    background-color: transparent;
+}
+div.jQBracket .team.lose div.score {
+    color: #900;
+}
+div.jQBracket .team div.score {
+    float: right;
+    padding: 3px;
+    background-color: rgba(255,255,255,.3);
+    text-align: center;
+    box-sizing: border-box;
+}
+.brackets .bracket-wrapper .jQBracket .team .score:before, .brackets .bracket-wrapper .jQBracket .team.lose .score:before {
+    content: '';
+    background-color: #6931f9;
+    width: 1px;
+    height: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    left: 0;
+}
+div.jQBracket .team.win {
+    color: #333;
+}
+.brackets .bracket-wrapper .jQBracket .connector, .brackets .bracket-wrapper .jQBracket .connector.highlightWinner, .brackets .bracket-wrapper .jQBracket .connector.highlightLoser {
+    border-color: #2b3641;
+}
+div.jQBracket .connector {
+    border: 2px solid #666;
+    border-left-style: none;
+    position: absolute;
+    z-index: 1;
+}
+div.jQBracket .connector div.connector {
+    border: 0;
+    border-bottom: 2px solid #666;
+    height: 0;
+    position: absolute;
+}
+div.jQBracket .connector {
+    border: 2px solid #666;
+    border-left-style: none;
+    position: absolute;
+    z-index: 1;
+}
+div.jQBracket .match {
+    position: relative;
+}
+div.jQBracket .teamContainer {
+    z-index: 1;
+    position: relative;
+    float: left;
+}
+
+.relative, ul.members li, .featured-box, .container, .news-container, header, header .nav-placeholder, header .nav-placeholder .navbar li, header .nav-placeholder .search, header .slider-progress-bar, header .slider-progress-bar .progress-line, header .slider-thumbnails, .section-header ul li, .news-container aside .sidebar-widget .small, .news-container aside .sidebar-widget .small .overlay, .stream-list .stream-box, .tournament-list .tournament-box, .shop .product-details, .shop-boxes .box, .hero, .teams .filter-list li .checkbox-container, .matches .filter-list li .checkbox-container, .match-page .filter-list li .checkbox-container, .gallery .gallery-images a, .single-page .comment-container>ul, .sponsors .sp-list .sp-box, .tournament .match-schedule .wrapper .match-details, .brackets .bracket-wrapper .jQBracket .team .score, .brackets .bracket-wrapper .jQBracket .team.lose .score {
+    position: relative;
+}
+.brackets .bracket-wrapper .jQBracket .team.highlight, .brackets .bracket-wrapper .jQBracket .team:hover, .brackets .bracket-wrapper .jQBracket .team.win, .brackets .bracket-wrapper .jQBracket .team.lose:hover, .brackets .bracket-wrapper .jQBracket .team.lose.win, .brackets .bracket-wrapper .jQBracket .team.lose.highlight, .brackets .bracket-wrapper .jQBracket .team.lose:hover, .brackets .bracket-wrapper .jQBracket .team.lose.win {
+    border: 2px solid #6931f9;
+    background-color: rgba(189,223,3,0.09);
+    box-shadow: 0px 0px 18px rgba(0,0,0,0.24);
+}
