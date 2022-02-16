@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>BL-FORM</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+<style>
+@media screen and (max-width: 768px)
+{
+.mq-regform-mt {    
+    width: 100%!important;
+	}
+}
+
+@media screen and (max-width: 767px)
+{
+.col-md-6.mq-regform-mt {
+    margin-top: 10px;
+	}
+.mq-regform-mt {    
+    width: 100%!important;
+	}
+}
+
+body{
+ 
+background:#0f0f17;
+}
+.login-title
+{
+font-size:14px;
+color:#fff;
+text-align:center;
+margin-bottom:1.5rem;
+}
+
+<!-- .form-submitbtn { -->
+    <!-- background: #6924fb; -->
+    <!-- border-radius: 0px; -->
+    <!-- width: 45%; -->
+	<!-- font-size:14px; -->
+<!-- } -->
+
+button.btn.btn-dfault.btn-signin {
+    background: #6924fb;
+    border-radius: 0px;    
+    font-size: 14px;
+    padding: 8px 35px;
+    color: #fff;
+}
+button.btn.btn-dfault.btn-signup {
+    background: #6924fb;
+    border-radius: 0px;    
+    font-size: 14px;
+    padding: 8px 50px;
+    color: #fff;
+}
+
+
+.form-check
+{
+padding-left:0px;
+}
+input.form-control.radius0 {
+    border-radius: 0px;
+    background: #1e1e2f;
+    border: 0px;
+    font-size:12px;
+    padding: 20px!important;
+    
+}
+#custom-select select {
+  /* Hide default arrow */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  /* Style the dropdown box */
+  width: 100%;
+  padding: 0 20px;
+}
+#custom-select::after{
+color:gray;}
+
+#custom-select {
+  position: relative;
+  width: 100%; 
+  color:#6932F9;
+}
+
+#custom-select select, #custom-select::after {
+  height: 40px;
+}
+ 
+#custom-select::after {
+  content: "\25bc"; /* HTML symbol */
+  /* Reposition */
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 10px;
+  line-height: 40px; /* Vertical center text */
+  color:#6932F9;
+  font-size: 12px;
+}
+
+
+<!-- custom-select:focus { -->
+    <!-- color: none; -->
+    <!-- <!-- background-color: #0b0b11; --> -->
+    <!-- <!-- border-color: #80bdff; --> -->
+    <!-- outline: 0; -->
+    <!-- box-shadow: 0 0 0 0.2rem red; -->
+	    <!-- border-radius:0; -->
+<!-- } -->
+#custom-select select:focus {
+    outline: 0px!important;
+}
+
+</style>
+
+</head>
+<body>
+<!-- strat login form -->
+<div class="container"> 
+<div class="mq-regform-mt" style="width: 25%; margin: 0 auto;" > 
+  <form action="">
+  <h4 class="login-title">Login Into Your Account</h4>
+    <div class="form-group">      
+      <input type="email" class="form-control  radius0" id="email" placeholder="Email" name="email">
+    </div>
+    <div class="form-group">      
+      <input type="password" class="form-control radius0" id="pwd" placeholder="Password" name="pswd">
+    </div>
+    <div class="form-group form-check mb-3" style="margin: 0 auto;display: table; color:#561fce;font-size:14px;">
+      <label class="form-check-label">
+        Forget password?
+      </label>
+    </div>
+    <!-- <button type="submit" class="btn form-submitbtn text-white" style="margin: 0 auto;display: table;">Sign In</button> -->
+	<button type="submit" class="btn btn-dfault btn-signin" style="margin: 0 auto;display: table; font-weight:bold">Sign In</button>
+  </form>
+  </div> 
+</div>
+<!-- end login form -->
+
+<br>
+<br>
+<br>
+
+<!-- start rigister form -->
+
+<div class="container">
+<div class="mq-regform-mt" style="width: 50%; margin: 0 auto;">
+  <form action="" >
+    <div class="row">
+      <div class="col-md-6 no-gutter">
+        <input type="text" class="form-control  radius0" id="firstname" placeholder="First Name" name="firstname">
+      </div>
+      <div class="col-md-6 mq-regform-mt">
+        <input type="text" class="form-control  radius0" placeholder="Last Name" name="lastname">
+      </div>
+    </div>
+	 <div class="row mt-3">
+      <div class="col-md-6">
+        <input type="text" class="form-control  radius0" id="Username" placeholder="Username" name="Username">
+      </div>
+      <div class="col-md-6 mq-regform-mt">
+        <input type="text" class="form-control  radius0" placeholder="Email" name="email">
+      </div>
+    </div>
+	 <div class="row mt-3">      
+      <div class="col-md-12">        
+					<div id="custom-select">
+						  <select style="background: #1e1e2f;color: gray;border: 0px #353535; border-radius:0px;font-size:12px">
+							<option>Select States / Province</option>
+							<option>Evil Cate</option>
+							<option>Sneezing Panda</option>
+							<option>Confession Bear</option>
+							<option>Fabulous Llama</option>
+						  </select>
+					</div>
+      </div>
+    </div>
+	 <div class="row mt-3">
+      <div class="col-md-6">
+        <input type="password" class="form-control  radius0" id="password" placeholder="Password" name="password">
+      </div>
+      <div class="col-md-6 mq-regform-mt">
+        <input type="password" class="form-control  radius0" placeholder="Confirm Password" name="confirmpassword">
+      </div>
+    </div>
+    <button type="submit" class="btn btn-dfault btn-signup mt-4" style="margin: 0 auto;display: table; font-weight:bold">Sign Up</button>
+  </form>
+  </div>   
+</div>
+<!-- end rigister form -->
+
+</body>
+</html>

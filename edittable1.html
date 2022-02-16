@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>edit table</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<style>
+
+.edittable{
+	font-size:12px;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+
+}
+.table-bordered {
+    border: 1px solid #ddd;
+}
+.table td, .table th {
+    padding:3px;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+	<!-- border: 0.5px solid red; -->
+    
+}
+	td input {
+    border: 0;
+	}
+	td input:focus {
+    box-shadow: 0 0 0 0.1rem #6931f9!important;
+	}
+	input.form-control.input-name {
+    border: 0;
+	}	
+
+	
+	.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #dff0d8;
+    <!-- background-color: #dff0d859; -->
+}
+	
+	
+	
+.table-hover tbody tr:hover {
+	color: #212529;
+	background-color: rgba(0,0,0,.075);
+	}
+
+input.form-control.input-name {
+    background: transparent;
+	color:#555555;
+	font-size:12px;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	padding-top: 0;
+    padding-bottom: 0;
+}
+
+.table-hover tbody tr:hover {
+    color: #212529;
+    background-color: #F2FC9C;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">      
+  <table class="table table-bordered  table-hover table-striped edittable">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+			<input type="text" class="form-control input-name" name="" value="text">
+		</td>
+		
+        <td><input type="text" class="form-control input-name" name="" value="Doe"></td>		
+        <td><input type="text" class="form-control input-name" name="" value="john@example.com"></td>
+      </tr>
+      <tr>
+        <td><input type="text" class="form-control input-name" name="" value="Mary"></td>
+        <td><input type="text" class="form-control input-name" name="" value="Moe"></td>
+        <td><input type="text" class="form-control input-name" name="" value="mary@example.com"></td>
+      </tr>
+      <tr>
+        <td><input type="text" class="form-control input-name" name="" value="July"></td>
+        <td><input type="text" class="form-control input-name" name="" value="Dooley"></td>
+        <td><input type="text" class="form-control input-name" name="" value="july@example.com"></td>
+      </tr>
+    </tbody>
+  </table>
+  
+
+
+
+
+</body>
+</html>

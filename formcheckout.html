@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>form-checkout</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">  
+</head>
+<body>
+
+<div class="container">
+<div class="col-md-10">
+<h6 class="text-center">BTF – PROPOSED SINGLE PAGE CHECKOUT OPTION</h6>
+  <form> 
+  <!-- row sec 1 -->
+    <div class="form-row mt-3">	
+      <div class="col-md-5 ">
+	   <label for="deliverylocation">Delivery Location</label><br>        
+			  <select class="form-control" name="deliverylocation" id="deliverylocation">
+				<option value="volvo">Select Location</option>
+				<option value="volvo">Thambaram</option>
+				<option value="saab">thiruvanmiyur</option>
+				<option value="opel">gundy</option>
+				<option value="audi">chennai</option>
+			  </select>
+      </div>
+      <div class="col-md-5">
+	   <label for="deliverydate">Delivery Date</label><br>        
+		<input type="date" class="form-control" id="deliverydate" name="deliverydate">		
+      </div>
+	  <div class="col-md-2"></div>
+	  </div>
+	  <!-- row sec 2 -->
+	  <div class="form-row mt-3" style="text-align: center;margin: 0 auto;display: table;margin-top: 25px;margin-bottom:15px;">
+			<div class="radio-inline">
+				<label><input type="radio" name="optradio" value="1"> By Delivery</label>
+				<label><input type="radio" name="optradio" value="2"> Store Pick Up </label>
+			</div> 
+	  </div>
+	  
+<!-- row sec 3 -->
+	  <div class="form-row mt-3 row3hide">	
+      <div class="col-md-4 bydeliverydiv">
+	   <label for="select_deliveryslot">Select Delivery Slot</label><br>        
+			  <select class="form-control" name="select_deliveryslot" id="select_deliveryslot">
+				<option value="">Select Location</option>
+				<option value="Thambaram">Thambaram</option>
+				<option value="thiruvanmiyur">thiruvanmiyur</option>
+				<option value="gundy">gundy</option>
+				<option value="chennai">chennai</option>
+			  </select>
+      </div>
+      <div class="col-md-4 storepickupdiv">
+	   <label for="deliverylocation">Select Store Pickup</label><br>        
+			  <select class="form-control" name="deliverylocation" id="deliverylocation">
+				<option value="">Select Location</option>
+				<option value="Thambaram">Thambaram</option>
+				<option value="thiruvanmiyur">thiruvanmiyur</option>
+				<option value="gundy">gundy</option>
+				<option value="chennai">chennai</option>
+			  </select>
+      </div>
+	  <div class="col-md-4 deliveryfeetablediv">
+	   <label for="deliverydate">Delivery Fee Table</label><br>        
+		<input type="text" class="form-control" id="deliveryfeetable" name="deliveryfeetable">		
+      </div>
+	  </div>
+
+<!-- row sec 4 -->
+	  <div class="form-row  mt-3">	
+       <div class="col-md-4">
+		   <label for="yourname">Your Name</label><br>        
+			<input type="text" class="form-control" id="yourname" name="yourname">		
+      </div>
+      <div class="col-md-4">			
+		   <label for="email">Your E. Mail</label><br>        
+			<input type="text" class="form-control" id="email" name="email">				  
+      </div>
+	  <div class="col-md-4">
+		   <label for="phoneno">Your Phone No</label><br>        
+			<input type="text" class="form-control" id="phoneno" placeholder="" name="phoneno">		
+      </div>
+	  </div>
+	  
+ <!-- row sec 5 -->
+	  <div class="form-row mt-3">	
+       <div class="col-md-4">
+		   <label for="Recipient_name">Recipient Name</label><br>        
+			<input type="text" class="form-control" id="Recipient_name" name="Recipient_name">		
+      </div>
+      <div class="col-md-4">			
+		   <label for="Recipient_email">Recipient E. Mail</label><br>        
+			<input type="text" class="form-control" id="Recipient_email" name="Recipient_email">				  
+      </div>
+	  <div class="col-md-4">
+		   <label for="Recipient_Phoneno">Recipient Phone No</label><br>        
+			<input type="text" class="form-control" id="Recipient_Phoneno" placeholder="" name="Recipient_Phoneno">		
+      </div>
+	  </div>
+	  
+<!-- row sec 6 -->
+	  <div class="form-row mt-3">	
+		   <div class="col-md-12">
+			   <label for="Recipient_name">Recipient Address</label><br>        
+				<input type="text" class="form-control" id="Recipient_name" name="Recipient_name">		
+		  </div>      
+	  </div>
+	  
+<!-- row sec 7 -->
+	  <div class="form-row mt-3">	
+		   <div class="col-md-3">
+			   <label for="Recipient_name">Delivery Location</label><br>        
+				<input type="text" class="form-control" id="Recipient_name" name="Recipient_name">		
+		  </div> 
+		<div class="col-md-3">
+			   <label for="Recipient_name">City</label><br>        
+				<input type="text" class="form-control" id="Recipient_name" name="Recipient_name">		
+		  </div>
+		<div class="col-md-3">
+			   <label for="Recipient_name">State</label><br>        
+				<input type="text" class="form-control" id="Recipient_name" name="Recipient_name">		
+		  </div>
+		<div class="col-md-3">
+			   <label for="Recipient_name">Post Code / ZIP Code</label><br>        
+				<input type="text" class="form-control" id="Recipient_name" name="Recipient_name">		
+		  </div>		  
+	  </div>
+	  
+<!-- row sec 8 -->
+	  <div class="form-row mt-3">	
+		   <div class="col-md-4">
+			   <label for="Recipient_name">Delivery Location Type</label><br>        
+				<input type="text" class="form-control" id="Recipient_name" name="Recipient_name">		
+		  </div> 
+		<div class="col-md-4">
+			   <label for="Recipient_name">Call Me Before Delivery</label><br>        
+				<input type="text" class="form-control" id="Recipient_name" name="Recipient_name">		
+		  </div>
+		<div class="col-md-4">
+			   <label for="Recipient_name">Is it a Surprise Gift?</label><br>        
+				<input type="text" class="form-control" id="Recipient_name" name="Recipient_name">		
+		  </div>				  
+	  </div>
+	  
+	<!-- row sec 9 -->
+	  <div class="form-row mt-3">	
+		   <div class="col-md-12">
+			   <label for="Recipient_name">Special Delivery Instruction</label><br>        
+				<input type="text" class="form-control" id="Recipient_name"placeholder="Type your message here for our delivery team" name="Recipient_name">		
+		  </div>      
+	  </div>
+<!-- row sec 10 -->
+	  <div class="form-row mt-3">	
+		   <div class="col-md-12">
+			   <label for="Recipient_name">Billing Address (OPTIONAL]</label><br>        
+				<input type="text" class="form-control" id="Recipient_name"placeholder="" name="Recipient_name">		
+		  </div>      
+	  </div>
+	  
+<!-- row sec 11 -->
+	  <div class="form-row mt-3">	
+		   <div class="col-md-3">
+			   <label for="Recipient_name">City	</label><br>        
+				<input type="text" class="form-control" id="Recipient_name" name="Recipient_name">		
+		  </div> 
+		<div class="col-md-3">
+			   <label for="Recipient_name">State</label><br>        
+				<input type="text" class="form-control" id="Recipient_name" name="Recipient_name">		
+		  </div>
+		<div class="col-md-3">
+			   <label for="Recipient_name">Country</label><br>        
+				<select class="form-control" name="deliverylocation" id="deliverylocation">
+				<option value="">Select Country</option>
+				<option value="Afghanistan">Afghanistan.</option>
+				<option value="Albania">Albania</option>
+				<option value="Andorra">Andorra</option>
+				<option value="India">India</option>
+			  </select>	
+		  </div>
+		<div class="col-md-3">
+			   <label for="Recipient_name">Post Code / ZIP Code</label><br>        
+				<input type="text" class="form-control" id="Recipient_name" name="Recipient_name">		
+		  </div>		  
+	  </div>
+  </form>
+  </div>
+  <div class="col-md-2"></div>  
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+
+
+$( document ).ready(function() {
+$(".radio-inline").hide();
+<!-- $(".row3hide").hide(); -->
+$(".bydeliverydiv").hide();
+$(".storepickupdiv").hide();
+$(".deliveryfeetablediv").hide();
+       
+$("#deliverydate").change(function(){   
+  if($(this).val()!="")
+  {
+	$(".radio-inline").show();	
+  }	
+});
+
+$("input[name='optradio']").change(function(){  
+if($(this).val()==1)
+  { 
+	$(".bydeliverydiv").show();
+	$(".deliveryfeetablediv").show();
+	$(".storepickupdiv").hide();
+	
+  }	
+  else if($(this).val()==2)
+  {
+	$(".bydeliverydiv").hide();
+  	 $(".storepickupdiv").show();
+	 $(".deliveryfeetablediv").show();
+  }
+
+});
+
+
+});
+	
+
+</script>
+
+</body>
+</html>

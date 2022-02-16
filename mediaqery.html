@@ -1,0 +1,147 @@
+
+<!DOCTYPE html> 
+<html> 
+  <title>Bootstrap Example</title>
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+
+<head> 
+<style> 
+body { 
+  
+} 
+
+.my_class{
+    border: 1px solid #000 !important;
+    background:yellow !important;
+}
+
+  
+<!-- /* On screens that are 992px wide or less,  -->
+   <!-- the background color is green */  -->
+<!-- @media screen and (max-width: 767px) {  -->
+  <!-- body {  -->
+    <!-- background-color: red;  -->
+    <!-- color: black;  -->
+  <!-- }  -->
+<!-- }  -->
+  
+
+<!-- @media only screen  -->
+  <!-- and (min-device-width: 320px)  -->
+  <!-- and (max-device-width: 480px) -->
+ <!-- {   -->
+    <!-- body {  -->
+    <!-- background-color: red;  -->
+   
+  <!-- }  -->
+<!-- } -->
+
+<!-- @media only screen  -->
+  <!-- and (min-device-width: 481px)  -->
+  <!-- and (max-device-width: 768px) -->
+  <!-- {   -->
+    <!-- body {  -->
+    <!-- background-color: blue;  -->
+   
+  <!-- }  -->
+<!-- } -->
+
+
+
+
+
+<!-- boots4 -->
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 576px) { 
+body { 
+    background-color: blue; 
+    color: black; 
+	}
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (min-width: 768px) { 
+body { 
+    background-color: red; 
+    color: black; 
+	}
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+
+
+
+@media (min-width: 768px) and (max-width: 991px)
+  {
+  .mq-font {
+    font-size: 14px;
+    color: red;
+	}
+  }
+ 
+</style> 
+</head> 
+<body> 
+<h1 class="mq-font"> font check GEEKS FOR GEEKS</h1> 
+<h1>Resize the browser window to see the effect!</h1> 
+<p>By default, the background color of  
+   the document is "green".</p> 
+<p> If it is 600px or less,  
+     it will change to "Yellow".</p> 
+	 
+	 
+https://css-tricks.com/snippets/css/media-queries-for-standard-devices/ 
+	 
+<h1>Bootstrap 4 grid tiers and media query breakpoints</h1>
+<p>xs = Extra small <576px
+Max container width None (auto)</p>
+
+<p>sm = Small ≥576px
+Max container width 540px</p
+
+<p>md = Medium ≥768px
+Max container width 720px</p>
+
+<p>lg = Large ≥992px
+Max container width 960px</p>
+
+<p>xl = Extra large ≥1200px
+Max container width 1140px</p>
+
+
+<div style="background:orange" class="draggable">This is draggable</div>
+    
+
+<script>
+function test()
+{
+alert("red");
+	 $(".draggable").draggable({
+     start: function( event, ui ) {
+         $(this).addClass('my_class'); 
+     },
+     stop: function( event, ui ) {
+         $(this).removeClass('my_class'); 
+     }
+	});
+}
+
+
+</script>
+  
+</body> 
+</html> 
+

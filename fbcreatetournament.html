@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Create Tournament</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <!-- <link rel="stylesheet" id="google-fonts-css" href="//fonts.googleapis.com/css?family=Montserrat%3A300%2C400%2C500%2C700%2C900&amp;ver=1.0.0" type="text/css" media="all"> -->
+  <link rel="stylesheet" href="css/stylemine.css">
+  <!-- <link rel="stylesheet" href="css/stylebhub3.css"> -->
+  <script src="js/style.js"></script>
+<style>
+.foot-sec {
+    color: #fff;
+    text-align: center;
+    margin-top: 11rem;
+    padding: 26px;
+	font-weight: 800;
+}
+
+.bhub3-banner
+{
+background-image: url("images/game banner.png");
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-position: bottom;    
+    height: 500px;
+    width: 100%;
+	 <!-- box-shadow: inset -2px -12px 20px 20px #0b0b11; -->
+}
+
+
+
+
+label.cabinet{
+    display: block;
+    cursor: pointer;
+}
+
+label.cabinet input.file{
+    position: relative;
+    height: 100%;
+    width: auto;
+    opacity: 0;
+    -moz-opacity: 0;
+  	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+  	margin-top:-30px;
+}
+
+#upload-demo{
+    width: 250px;
+    height: 250px;
+  	padding-bottom:25px;
+}
+figure figcaption {
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    width: 100%;
+    padding-left: 9px;
+    padding-bottom: 5px;
+    text-shadow: 0 0 10px #000;
+}
+.img-thumbnail {
+	border-radius: 50%;
+	height: 150px;
+	min-width: 150px;
+	max-width: 150px;
+	object-fit: cover;
+}
+.relative-cropicon
+{
+	position:relative;
+}
+.position-rightcrop-icon {
+	position: absolute;
+    left: 100px;
+    right: 0;
+    top: 108px;
+}
+
+
+
+input.item-img.file.center-block {
+    display: none;
+}
+.usertourbtn-mt {   
+    position: absolute;
+    bottom: 0!important;
+    position: absolute;   
+    right: 0;
+}
+
+</style>
+</head>
+<body> 
+<div class="">
+<br>
+<div class="container">
+<nav class="navbar navbar-expand-sm navbar-dark">
+  <!-- Brand -->
+  <a class="" href="#"><img src="images/logo.png" alt="" class="logo"></a>  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"> </span>
+  </button>
+
+  <!-- Links -->
+   <div class="collapse navbar-collapse" id="collapsibleNavbar">
+  <ul class="navbar-nav ml-auto">    
+    <!-- Dropdown -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        GMAMES
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Link 1</a>
+        <a class="dropdown-item" href="#">Link 2</a>
+        <a class="dropdown-item" href="#">Link 3</a>
+      </div>
+    </li>
+	<li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        TOURNAMENTS
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Link 1</a>
+        <a class="dropdown-item" href="#">Link 2</a>
+        <a class="dropdown-item" href="#">Link 3</a>
+      </div>
+    </li>
+	<li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        LEADERBOARDS
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Link 1</a>
+        <a class="dropdown-item" href="#">Link 2</a>
+        <a class="dropdown-item" href="#">Link 3</a>
+      </div>
+    </li>
+	<li class="nav-item dropdown">
+      <a class="nav-link" href="#" id="navbardrop" data-toggle="dropdown">
+        SUPPORTS
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Link 1</a>
+        <a class="dropdown-item" href="#">Link 2</a>
+        <a class="dropdown-item" href="#">Link 3</a>
+      </div>
+    </li>
+	<li class="nav-item dropdown">
+      <a class="nav-link" href="#" id="navbardrop" data-toggle="dropdown">
+        /
+      </a>     
+    </li>
+	
+     <li class="nav-item dropdown">
+      <a class="nav-link" href="#" id="navbardrop" data-toggle="dropdown">
+        KUMSTEST
+      </a>     
+    </li>
+	<li class="nav-item dropdown">
+      <a class="nav-link" href="#" id="navbardrop" data-toggle="dropdown">
+        <img src="images/Ellipse 5.png" alt="" class="menu-img mq-menuimg mq-menuimg1">
+      </a>      
+    </li>
+	
+  </ul>
+  </div>
+</nav>
+</div>
+ <!--/end menu section -->
+ 
+ <!-- start cup iocn section -->
+<div class="container-fluid bhub3-banner"> 
+<!-- <div class="container"> -->
+<!-- <!-- <img src="images/game banner.png" alt="" class="bhub3-banner"> --> -->
+<!-- <div class="appexsecpd1"> -->
+<!-- <div class="row rowtop-mt mq-homeplay-mt " style="color:#fff"> -->
+<!-- <div class="col-md-6 col-xs-6"> -->
+<!-- <div class="media mt-3"> -->
+  <!-- <img src="images/Ellipse 6.png" class="align-self-center mr-3" style="width:130px"> -->
+  <!-- <div class="media-body bhub4-mediamt mq-headermediamt"> -->
+    <!-- <h4 class="mq-meida_palypage">HOME PLAY PAGE</h4>        -->
+  <!-- </div> -->
+<!-- </div> -->
+<!-- </div> -->
+<!-- <div class="col-md-6 col-xs-6 regbtnsec-pdrl0 usertourbtn-mt mq-usertourbtn-mt"> -->
+<!-- <button type="button" class="btn rigsterbtn Createtournamentbtn">Manage</button> -->
+<!-- <button type="button" class="btn rigsterbtn mq-rigsterbtn"> Create Tournament</button> -->
+<!-- </div> -->
+<!-- </div> -->
+ <!-- </div> -->
+ <!-- </div> -->
+ <div class="container">
+    <!-- <img src="images/game banner.png" alt="" class="bhub3-banner"> -->
+        <div class="">
+            <div class="row rowtop-mt mq-homeplay-mt " style="color:#fff;position: relative;">
+            <div class="col-md-6 col-xs-6" style="padding-left:0px;">
+                <div class="media mt-3">
+                <!-- <img src="/public/theme/images/Ellipse 6.png" class="align-self-center mr-3" style="width:130px"> -->
+                    <label class="cabinet center-block" style="width:170px;margin-bottom:0px;">
+                        <figure class="relative-cropicon">
+                                                            <img class="img-thumbnail" src="images/cropyicon.png" style="width:200px" id="item-img-output">
+                                                        
+                            <figcaption class="position-rightcrop-icon" style="width:0px;"><i class="fa fa-camera"></i>
+                            </figcaption>
+                        </figure>
+                        <input type="file" class="item-img file center-block" name="file_photo" style="width : 20%">
+                    </label>
+                    <div class="media-body " style="position:absolute;bottom:0px;left:11rem;">
+                                                    <h4 class="mq-meida_palypage">sundar 1 Tournaments</h4> 
+                                                <a href="#follower"><p style="margin-bottom:0;">0 Followers</p></a>                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xs-6 regbtnsec-pdrl0 usertourbtn-mt mq-usertourbtn-mt">
+            <!-- data-toggle="modal" data-target="#manageModal" -->
+                <!-- <button type="button" class="btn rigsterbtn Createtournamentbtn mq-rigsterbtn" onClick="openManageModal()">Modal Manage Tournament</button> -->
+                <button type="button" class="btn rigsterbtn Createtournamentbtn mq-rigsterbtn" style="background: #e4e6eb;border-radius: 6px;"><a href="https://battlelounge.io/player/user-dashboard" style="color:#000;"><i class="fa fa-camera mr-1"></i> Add cover photo</a></button>                
+            </div>
+            </div>
+        </div>
+    </div>
+ </div>
+ <div class="container Welcometo">
+ <div class="row">
+ <div class="col-md-12">
+ <h6 class="txtcolor-white body-fpara mq-body-fpara1">Welcome to  oraganization Page! Your Tournament and Staff will  be dispalyed here. Prior to major incidents in the OvrWatch League.</h6>
+ </div>
+ </div>
+ </div>
+ <div class="container">
+ <hr>
+ <div class="row">
+ <div class="col-md-12" >
+	  <button type="button" class="btn rigsterbtn Createtournamentbtn mq-rigsterbtn"><a href="https://battlelounge.io/player/user-dashboard">Manage Dashboard</a></button>
+	   <button type="button" class="btn rigsterbtn mq-rigsterbtn"><a href="https://battlelounge.io/player/create-tournament">Edit page</a></button>
+ </div>
+ </div>
+
+ 
+ </div>
+ <div class="container">
+ <div class="row">
+ <div><h5 class="txtcolor-white upcome-head">UPCOMING TOURNAMENTS</h5></div>
+ <div class="col-md-10">
+ <div class="row">
+ <div class="col-md-6 ">
+ <div> <img src="images/thumb1.png" class="upcoming"></div>
+ <div class="upcoming-bg">
+ <div class="callofduty-sec">
+ <button type="button" class="btn callofduty-btn">Call of Duty</button>
+ <p>PLAY TOURNAMENT</p>
+ <p><span class="calendar"><i class="fa fa-calendar" style="font-size:10px;color:#6932F9"></i></span><span class="wedndesday">Wednesday, June </span><span class="calendar"><i class="fa fa-calendar" style="font-size:10px;color:#6932F9"></i></span><span>2nd 1:00 PM EST</span></p>
+ <hr>
+<p><span>HUB PLAY PAGE</span> </p>
+ </div>
+ </div>
+ </div>
+ <div class="col-md-6">
+ <div> <img src="images/thumb1.png" class="upcoming"></div>
+ <div class="upcoming-bg">
+ <div class="callofduty-sec">
+ <button type="button" class="btn callofduty-btn">Call of Duty</button>
+ <p>PLAY TOURNAMENT</p>
+ <p><span class="calendar"><i class="fa fa-calendar" style="font-size:10px;color:#6932F9"></i></span><span class="wedndesday">Wednesday, June </span><span class="calendar"><i class="fa fa-calendar" style="font-size:10px;color:#6932F9"></i></span><span>2nd 1:00 PM EST</span></p>
+ <hr>
+<p><span>HUB PLAY PAGE</span> </p>
+ </div>
+ </div>
+ </div>
+ </div>
+ 
+<div><h5 class="txtcolor-white upcome-head">PAST TOURNAMENTS</h5></div>
+ <div class="row">
+ <div class="col-md-6">
+ <div> <img src="images/thumb3.png" class="upcoming"></div>
+ <div class="upcoming-bg">
+ <div class="callofduty-sec">
+ <button type="button" class="btn callofduty-btn">Call of Duty</button>
+ <p>PLAY TOURNAMENT</p>
+ <p><span class="calendar"><i class="fa fa-calendar" style="font-size:10px;color:#6932F9"></i></span><span class="wedndesday">Wednesday, June </span><span class="calendar"><i class="fa fa-calendar" style="font-size:10px;color:#6932F9"></i></span><span>2nd 1:00 PM EST</span></p>
+ <hr>
+<p><span>HUB PLAY PAGE</span> </p>
+ </div>
+ </div>
+ </div>
+ <div class="col-md-6">
+ <div> <img src="images/thumb4.png" class="upcoming"></div>
+ <div class="upcoming-bg">
+ <div class="callofduty-sec">
+ <button type="button" class="btn callofduty-btn">Call of Duty</button>
+ <p>PLAY TOURNAMENT</p>
+ <p><span class="calendar"><i class="fa fa-calendar" style="font-size:10px;color:#6932F9"></i></span><span class="wedndesday">Wednesday, June </span><span class="calendar"><i class="fa fa-calendar" style="font-size:10px;color:#6932F9"></i></span><span>2nd 1:00 PM EST</span></p>
+ <hr>
+<p><span>HUB PLAY PAGE</span> </p>
+ </div>
+ </div>
+ </div>
+ </div>  
+ </div>  
+<div class="col-md-2"><img src="images/adv banner1.png" class="img-responsive advbanner2"></div>
+ </div>
+ </div>
+ <div class="container">
+ <div class="row">
+ <div><h5 class="txtcolor-white upcome-head">VIDEO STREAM</h5></div>
+<div><img src="images/dummyvideo.png" class="videoimg"></div>
+ </div>
+ </div>
+ 
+ 
+
+
+ 
+
+		   	  
+<!-- start footer -->	   
+<footer class="megalink-bg foot-sec">
+ <span> Privacy Policy / Terms / About us</span><br>
+ <span> C game Site 2020 All Rights Reserved</span>  
+</footer>
+<!-- /end footer -->	  
+</body>
+</html>

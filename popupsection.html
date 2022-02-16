@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>popupsection</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+  <!-- <link rel="stylesheet" id="google-fonts-css" href="//fonts.googleapis.com/css?family=Montserrat%3A300%2C400%2C500%2C700%2C900&amp;ver=1.0.0" type="text/css" media="all"> -->
+  <!-- <link rel="stylesheet" href="css/stylemine.css"> -->
+
+<!-- background-color: #ffffff; -->
+<style>
+.submitscore-bg
+{
+background: #6932F9;
+    color: #fff;
+	padding:14px;
+	font-size:12px;
+	font-weight:700;
+	}
+	.submitbody-bg {
+    
+   background: #ffffff!important;
+	    padding: 15px 77px;
+}
+.row.submitbody-bg {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.matchesprofile-icon_caption {
+    font-size: 14px;
+	margin: 10px;
+}
+.matchesprofile-icon {   
+    height: 75px;
+    min-width: 75px;
+    max-width: 75px;
+    object-fit: cover;
+    border-radius: 50%!important;
+}
+.enteryourscore
+{
+border: 1px solid #6932F9;
+	border-radius:0px;
+	font-size:12px;
+	   padding: 9px 35px;
+}
+button.btn.btn-default {
+    border: 1px solid #daccfd;
+	border-radius:0px;
+	font-size:12px;
+	    padding: 9px 56px;
+}
+.submitscore-btn
+{
+background-color: #6932F9;
+color:#fff;
+border-radius:0;
+}
+button.submitscore-btn.btn.btn-default:hover 
+{
+color: #fff;
+}
+button.submitscore-btn.btn.btn-default:focus {
+    outline: 0px!important;
+    box-shadow: 0;
+    color: #fff;
+    box-shadow: none;
+}
+	
+</style>
+<body>
+<div class="container">
+<div style="width:50%;height:auto;">
+<div class="submitscore-bg">SUBMIT SCORE <i class="fa fa-times-circle-o" aria-hidden="true" style="float:right"></i></div>
+<div class="row submitbody-bg">
+  <div class="col-md-6">
+    <figure class="match-icon1 text-center" id="">
+		  <img src="images/matchesprofile-icon1.png" alt="Trulli" style="" class=" matchesprofile-icon">
+		  <figcaption class="text-black matchesprofile-icon_caption">Peter Dager</figcaption>		  		  
+	</figure>
+	<!-- <button class="btn btn-default">ENTER YOUR SCORE</button> -->
+	<input type="text" class=" enteryourscore" id="enteryourscore" name="enteryourscore" placeholder="ENTER YOUR SCORE">
+  </div>
+  <div class="col-md-6">
+	   <figure class="match-icon1 text-center" id="">
+		  <img src="images/matchesprofile-icon2.png" alt="Trulli" style="" class=" rounded matchesprofile-icon">
+		  <figcaption class="text-black matchesprofile-icon_caption">Andres Hojesleth</figcaption>		  		  
+		</figure>				
+		<input type="text" class=" enteryourscore" id="enteryourscore" name="enteryourscore" placeholder="ENTER YOUR SCORE">		
+		<!-- <button class="btn btn-default">ENTER YOUR SCORE</button> -->
+  </div>
+<div class="col-md-12 mt-4"><button class="submitscore-btn btn btn-default" style="margin:0 auto; display:table;">SUBMIT SCORE</button></div>    
+</div>
+</div>	
+</div>	
+</body>
+	  
+
+</html>
