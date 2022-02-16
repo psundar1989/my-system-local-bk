@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<br>
+
+<div class="container">
+  <h2>Toggleable Pills</h2>
+  <br>
+  <!-- Nav pills -->
+  <ul class="nav nav-pills" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="pill" href="#home">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="pill" href="#menu1">Menu 1</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="pill" href="#menu2">Menu 2</a>
+    </li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div id="home" class="container tab-pane active"><br>
+      <h3>HOME</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <div id="menu1" class="container tab-pane fade"><br>
+      <h3>Menu 1</h3>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <div id="menu2" class="container tab-pane fade"><br>
+      <h3>Menu 2</h3>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+    <div class="row future-mt mq-featuredsec">
+        <div class="col-sm-6 col-xs-6">
+            <h4 class="Featured" style="color:#fff;font-weight: 800;">All Tournaments</h4>
+        </div>
+    </div>
+    <hr class="tabbt-rule">
+    <div class="row">
+        <div class="tab-content" style="position: relative;">
+            <div id="tab-1" class="container tab-pane fade show active">
+                <br>
+                <img src="featured-banner.png" class="rectacngle img11">
+                <div style="position: absolute;bottom: 5px;left: 50px;">
+                    <div class="media mt-3">
+                        <img src="sub-banner.png" class="align-self-center mr-3 media-img mq-media_img">
+                        <div class="media-body bhub4-mediamt">
+                            <h5 class="meidaobject-Pick mq-eu2v2">EU 2v2 Search and Destory 06-01<br> Prize:$300 USD/10 Credits</h5> 
+                        </div>
+                    </div>
+                    <hr class="destory mq-destory">
+                    <div class="Starts">
+                        <p>Starts :<br>Mon Jun 1 @ 9:25 PM IST</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
