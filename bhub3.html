@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>bhub-3</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+  <!-- <link rel="stylesheet" id="google-fonts-css" href="//fonts.googleapis.com/css?family=Montserrat%3A300%2C400%2C500%2C700%2C900&amp;ver=1.0.0" type="text/css" media="all"> -->
+  <link rel="stylesheet" href="css/stylemine.css">
+  <!-- <link rel="stylesheet" href="css/stylebhub3.css"> -->
+  <script src="js/style.js"></script>
+
+<style>
+.foot-sec {
+    color: #fff;
+    text-align: center;
+    margin-top: 11rem;
+    padding: 26px;
+	font-weight: 800;
+}
+
+.bhub3-banner
+{
+background-image: url("images/game banner.png");
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-position: bottom;    
+    height: 500px;
+    width: 100%;
+	 box-shadow: inset -2px -12px 20px 20px #0b0b11;
+}
+
+
+
+
+button.matchesbtn {
+    background-color: #6932F9;
+    padding: 12px 20px;
+    border: 0px;
+    color: #fff;
+    outline-style: none!important;
+	margin: 0 auto;
+    display: table;
+}	
+	
+	figcaption.matchesprofile-icon_caption {
+    font-size: 10px;
+}
+.matchesbtn-ml
+{
+    margin-left: 6px;
+    width: 5%;
+}
+.stand-secpd1
+{
+padding:50px 20px;
+}
+.matches-invietfriends {
+margin-top:20px;
+    color: #fff;
+    background-color: #202028;    
+}
+
+.matchesprofile-icon {   
+    height: 75px;
+    min-width: 75px;
+    max-width: 75px;
+    object-fit: cover;
+    border-radius: 50%!important;
+}
+.pdlr{
+padding: 0px 130px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.chater {
+    border-bottom: 0.1px solid #dedede40;  
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.darker {
+  border-color: #ccc;
+  background-color: #ddd;
+}
+
+.chater::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.chater img {
+  float: left;
+  max-width: 30px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.chater img.right {
+  float: right;
+  margin-left: 20px;
+  margin-right:0;
+}
+
+.time-right {
+  float: right;
+  color: #aaa;
+}
+
+.time-left {
+  float: left;
+  color: #999;
+}
+
+.chat-div{
+	background: #29293e;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.chat-div_title{
+	font-variant: all-small-caps;
+	text-align:center;
+	margin-bottom: 15px;
+}
+input.form-control.chatdiv_input {
+    border-radius: 0px;
+    background: #29293e;
+    border: 0px;
+    font-size: 12px;
+    padding: 20px 15px!important;
+	border-right: 1px solid;
+
+}
+
+.input-group-text1 {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: .375rem .75rem;
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #29293e;    
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+input.form-control.chatdiv_input:focus {
+    box-shadow: 0 0 0 0.1rem #6931f9;
+}
+
+.chat-div {
+    overflow: auto;
+    height: 350px;
+}
+
+.chat-div::-webkit-scrollbar {
+    width: 5px;
+}
+
+.chat-div::-webkit-scrollbar-corner {
+    background: rgba(0,0,0,0);
+}
+.chat-div::-webkit-scrollbar-track
+{
+	background-color: #222;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+	box-shadow: inset 0 0 15px #2b3641;
+}
+
+.chat-div::-webkit-scrollbar-thumb
+{
+	 -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #6931f9; 
+}
+
+
+
+
+
+    
+
+
+</style>
+</head>
+<body> 
+<div class="">
+<br>
+<div class="container">
+<nav class="navbar navbar-expand-sm navbar-dark">
+  <!-- Brand -->
+  <a class="" href="#"><img src="images/logo.png" alt="" class="logo"></a>  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"> </span>
+  </button>
+
+  <!-- Links -->
+   <div class="collapse navbar-collapse" id="collapsibleNavbar">
+  <ul class="navbar-nav ml-auto">    
+    <!-- Dropdown -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        GMAMES
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Link 1</a>
+        <a class="dropdown-item" href="#">Link 2</a>
+        <a class="dropdown-item" href="#">Link 3</a>
+      </div>
+    </li>
+	<li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        TOURNAMENTS
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Link 1</a>
+        <a class="dropdown-item" href="#">Link 2</a>
+        <a class="dropdown-item" href="#">Link 3</a>
+      </div>
+    </li>
+	<li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        LEADERBOARDS
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Link 1</a>
+        <a class="dropdown-item" href="#">Link 2</a>
+        <a class="dropdown-item" href="#">Link 3</a>
+      </div>
+    </li>
+	<li class="nav-item dropdown">
+      <a class="nav-link" href="#" id="navbardrop" data-toggle="dropdown">
+        SUPPORTS
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Link 1</a>
+        <a class="dropdown-item" href="#">Link 2</a>
+        <a class="dropdown-item" href="#">Link 3</a>
+      </div>
+    </li>
+	<li class="nav-item dropdown">
+      <a class="nav-link" href="#" id="navbardrop" data-toggle="dropdown">
+        /
+      </a>     
+    </li>
+	
+     <li class="nav-item dropdown">
+      <a class="nav-link" href="#" id="navbardrop" data-toggle="dropdown">
+        KUMSTEST
+      </a>     
+    </li>
+	<li class="nav-item dropdown">
+      <a class="nav-link" href="#" id="navbardrop" data-toggle="dropdown">        
+		<img src="images/Ellipse 5.png" alt="" class="menu-img mq-menuimg mq-menuimg1">
+      </a>      
+    </li>
+	
+  </ul>
+  </div>
+</nav>
+</div>
+ <!--/end menu section -->
+ 
+ <!-- start cup iocn section -->
+<div class="container-fluid bhub3-banner"> 
+<div class="container">
+<!-- <img src="images/game banner.png" alt="" class="bhub3-banner"> -->
+<!-- <div class=""> -->
+<div class="row appexsecpd" style="color:#fff">
+<div class="col-md-4">
+<p class="appeximg"><img src="images/apex logo.png"></p><br>
+<p class="bhub3-appexhubplay">HUP PLAY PAGE</p><br>
+<p class="bhub3-appexhubplay">29 FEB 2020 12:00 PM EST</p>
+</div>
+
+<div class="col-md-8"></div>
+</div>
+<div class="row">
+<div class="col-md-6"><img src="images/dummyimg.png"></div>
+<div class="col-md-6 regbtnsec-pdrl0"><button type="button" class="btn rigsterbtn">RIGISTER NOW</button></div>
+</div>
+ <!-- </div> -->
+ </div>
+ </div>
+ <br>
+ <br>
+ <br>
+ <div class="container bhub3-invietfriends">
+ <div class="row stand-secpd">
+ <div class="col-md-10">
+ <h6>STANDARD TOURNAMENT</h6>
+ <br>
+ <p>This is tournament is a standard single-elimination tournament<br> for Apex Legents. Win each round to be the Champion. Battle on!.</p>
+ </div>
+ <div class="col-md-2 bhub3-invite">
+ <p style="color:#6932F9">INVITE FRIENDS</p>
+ <br>
+ <p>0/16<br>REGISTERED</p>
+ </div> 
+ </div>  
+ </div>
+ 
+ <!-- start matches sec -->
+<section>
+<div class="container matches-invietfriends">	
+		 <div class="row stand-secpd1">
+		<div class="col-md-12 p-0"><h6>MATCHES</h6></div>
+			<div class=" col-lg-3  col-md-3"></div>
+			  <div class="col-lg-6 col-md-6">
+					<div class="row pdlr">
+						 <div class="col">
+						   <figure class="match-icon1 text-center" id="">
+							  <img src="images/matchesprofile-icon1.png" alt="Trulli" style="" class=" rounded matchesprofile-icon">
+							  <figcaption class="text-black matchesprofile-icon_caption">Peter Dager</figcaption>		  		  
+							</figure>						
+						 </div>
+						  <div class="col">
+						   <figure class="match-icon1 text-center" id="">
+							  <img src="images/matchesprofile-icon2.png" alt="Trulli" style="" class=" rounded matchesprofile-icon">
+							  <figcaption class="text-black matchesprofile-icon_caption">Andres Hojesleth</figcaption>		  		  
+							</figure>						
+						 </div>
+						
+					</div>				
+			<button class="matchesbtn">YES WE HAVE COMPLETED THE GAME <img src="images/Icon awesome-arrow-right.png" class="matchesbtn-ml"></button>			
+		      </div>
+			<div class=" col-lg-3 col-md-3"></div>		
+	</div>
+ </div>
+ </section>
+ <!-- end matches sec -->
+ <br>
+ <br>
+ <!-- new -->
+	<div class="container bhub3-invietfriends">
+	<div class="row stand-secpd">
+		<div class="col-md-8">
+			<div class="row">
+				<div class="col-md-10 mq-mtilte">
+					<h6>MATCH DETAILS</h6></div>
+			</div>
+			<div class="row">
+				<div class="col-md-2"></div>
+				<div class="col-md-8" style="width:100%;height:auto;">
+					<!-- <div class="submitscore-bg">SUBMIT SCORE <i class="fa fa-times-circle-o" aria-hidden="true" style="float:right"></i></div> -->
+					<div class="row pagesubmitbody-bg">
+						<div class="col-md-6 avatar-mobile-view">
+							<figure class="match-icon1 text-center" id="">
+								<!-- <img src="/public/theme/images/matchesprofile-icon1.png" alt="Trulli" style="" class=" matchesprofile-icon"> -->
+								<div class="avatar-img alignlft avatar_opt" id="avatartxt">S</div>
+								<figcaption class="text-black matchesprofile-icon_caption">sundar 1</figcaption>
+							</figure>
+							<input type="hidden" class="enteryourscore form-control radiusone mq-enteryourscore" id="myscore" name="myscore" placeholder="ENTER YOUR SCORE" value="0"> </div>
+						<div class="col-md-6 avatar-mobile-view">
+							<figure class="match-icon1 text-center" id="">
+								<div class="avatar-img alignlft avatar_opt" id="avatartxt">Y</div>
+								<!-- <img src="/public/theme/images/matchesprofile-icon2.png" alt="Trulli" style="" class=" rounded matchesprofile-icon"> -->
+								<figcaption class="text-black matchesprofile-icon_caption">YahooBro</figcaption>
+							</figure>
+							<input type="hidden" class="form-control radiusone mq-enteryourscore" id="opsdscore" placeholder="ENTER YOUR SCORE" value="0">
+							<!-- <div class="versus scoresubdis">0</div> --></div>
+						<div class="col-md-12 mt-4">
+							<!-- <button class="submitscore-btn btn btn-default" style="margin:0 auto; display:table;">SUBMIT SCORE</button> -->
+							<div>
+								<form name="gamecomplete" id="gamecomplete3" method="post" action="https://dev.battlelounge.io/player/game-complete-action">
+									<input type="hidden" name="url" value="https://dev.battlelounge.io/player/tournament_detail/13/0">
+									<input type="hidden" name="_token" value="w55vc228gzcnX5sVxLx5kdBGK3BpOmQhzJ9bTRuT">
+									<input type="hidden" name="trnmtid" value="13">
+									<input type="hidden" name="matchautoId" value="55">
+									<input type="hidden" name="myid" value="138">
+									<button type="submit" style="margin:0 auto; display:table;" class="submitscore-btn btn btn-default" id="gamecomplete" name="gamecomplete">YES WE HAVE COMPLETED THE GAME<img src="/public/theme/images/icon-awesome-arrow-right.png" class="matchesbtn-ml"></button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2"></div>
+			</div>
+		</div>
+		<div class="col-md-4" style="border-left: 1px solid #dedede40;padding: 15px 15 15px 20px">
+			<h6 class="chat-div_title">BATTLE LOUNGE CHAT </h6>
+			<div class="chat-div" style="">				
+				<div class="chater">
+				  <img src="images/Ellipse13.png" alt="Avatar" style="width:100%;">			
+				  <p>Hello. How are you today?</p>
+				  <span class="time-right">11:00</span>
+				</div>
+
+				<div class="chater ">
+				  <img src="images/Ellipse6.png" alt="Avatar" class="right" style="width:100%;">					
+				  <p>Hey! I'm fine. Thanks for asking!</i></p>
+				  <span class="time-left">11:01</span>
+				</div>
+
+				<div class="chater">
+				  <img src="images/Ellipse6.png" alt="Avatar" style="width:100%;">
+				  <p>Sweet! So, what do you wanna do today?</p>
+				  <span class="time-right">11:02</span>
+				</div>
+
+				<div class="chater ">
+				  <img src="images/Ellipse13.png" alt="Avatar" class="right" style="width:100%;">
+				  <p>Nah, I dunno. Play soccer.. or learn more coding perhaps?</p>
+				  <span class="time-left">11:05</span>
+				</div>							
+			</div>
+			
+			<div class="input-group mb-3 mt-3">
+				<input type="text" class="form-control chatdiv_input " placeholder="Type your message here" style="border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
+				<div class="input-group-append">
+					<span class=" input-group-text1 glyphicon"><i style="font-size:14px;color:#6931f9" class="fa">&#xf1d9;</i> </span>
+				</div>		
+			</div>
+	</div>
+	<!-- match div start -->
+	<!-- <div class="row row stand-secpd"></div> -->
+	<!-- match div end -->
+</div>
+</div>
+ 
+ <!-- /new -->
+ 
+ <br>
+ <br>
+ <br>
+ 
+
+ 
+ <div class="container mt-4"> 
+ <hr> 
+ </div>
+
+<div class="container">
+<div class="row bhub3-pdl">
+  <ul class="nav nav-pills  justify-content-end">
+    <li class="nav-item showdot1">
+    <a class="nav-link active hover-btrule" data-toggle="pill" href="#Prize-1">Prize</a>
+    </li>
+    <li class="navli-pdlr showdot2">
+     <a class="nav-link hover-btrule" data-toggle="pill" href="#Brackets">Brackets</a>
+    </li>
+	<li class="nav-item">
+    <a class="nav-link hover-btrule" data-toggle="pill" href="#Brackets2">Support</a>
+    </li>
+	<li class="navli-pdlr showdot4">
+      <a class="nav-link hover-btrule" data-toggle="pill" href="#Rules">Rules</a>
+    </li>
+  </ul>
+</div>
+</div>
+ <div class="container"> 
+ <div class="row">
+ <div class="col-md-10 bhub3-invietfriends stand-secpd1"> 
+  <div class="tab-content">
+    <div id="Prize" class="tab-pane show in active">
+      <p>Prizes for 64 Teams</p>
+      <p class="place">1st Place</p>
+	  <ul class="bhub3-lh">
+	  <li>The first Place Team shall receive $300.00 USD</li>
+	  <li>5 Credits Per Player</li>
+	  <li>Each Player shall recive an achivement</li>
+	  </ul>
+	  <br>
+	  <p class="place">2st Place</p>
+	  <ul class="bhub3-lh">
+	  <li>The first Place Team shall receive $300.00 USD</li>
+	  <li>6 Credits Per Player</li>
+	  <li>Each Player shall recive an achivement</li>
+	  </ul>
+    </div>
+    <div id="Brackets" class="tab-pane fade">
+      <p>Prizes for 64 Teams</p>
+      <p class="place">1st Place</p>
+	  <ul class="bhub3-lh">
+	  <li>The first Place Team shall receive $300.00 USD</li>
+	  <li>5 Credits Per Player</li>
+	  <li>Each Player shall recive an achivement</li>
+	  </ul>
+	  <br>
+	  <p class="place">2st Place</p>
+	  <ul class="bhub3-lh">
+	  <li>The first Place Team shall receive $300.00 USD</li>
+	  <li>5 Credits Per Player</li>
+	  <li>Each Player shall recive an achivement</li>
+	  </ul>
+    </div>
+    <div id="Support" class="tab-pane fade">
+      <p>Prizes for 64 Teams</p>
+      <p class="place">1st Place</p>
+	  <ul class="bhub3-lh">
+	  <li>The first Place Team shall receive $300.00 USD</li>
+	  <li>5 Credits Per Player</li>
+	  <li>Each Player shall recive an achivement</li>
+	  </ul>
+	  <br>
+	  <p class="place">2st Place</p>
+	  <ul class="bhub3-lh">
+	  <li>The first Place Team shall receive $300.00 USD</li>
+	  <li>5 Credits Per Player</li>
+	  <li>Each Player shall recive an achivement</li>
+	  </ul>
+    </div>
+    <div id="Rules" class="tab-pane fade">      
+      <p>Prizes for 64 Teams</p>
+      <p class="place">1st Place</p>
+	  <ul class="bhub3-lh">
+	  <li>The first Place Team shall receive $300.00 USD</li>
+	  <li>5 Credits Per Player</li>
+	  <li>Each Player shall recive an achivement</li>
+	  </ul>
+	  <br>
+	  <p class="place">2st Place</p>
+	  <ul class="bhub3-lh">
+	  <li>The first Place Team shall receive $300.00 USD</li>
+	  <li>5 Credits Per Player</li>
+	  <li>Each Player shall recive an achivement</li>
+	  </ul>
+    </div>
+  </div>
+ </div>
+ 
+<div class="col bhub3-invite">
+ <img src="images/adv banner1.png" alt="" class="advbanner">
+ </div>  
+ </div>  
+ </div>
+		   	  
+<!-- start footer -->	   
+<footer class="megalink-bg foot-sec">
+ <span> Privacy Policy / Terms / About us</span><br>
+ <span> C game Site 2020 All Rights Reserved</span>  
+</footer>
+<!-- /end footer -->	  
+</body>
+</html>
